@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-04-30 11:21:03
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-06 20:19:43
+ * @LastEditTime: 2024-05-06 22:17:26
  * @FilePath: /Project/my_Server/log/log.cpp
  * @Description: 
  * 
@@ -19,6 +19,7 @@
 #include <string.h>
 bool log::init(bool close_log,const char* log_path,int log_buf_size,int split_lines,int max_queue_size){
     if(close_log)return false;
+    mCloseLog=false;
     if(log_buf_size<=0||split_lines<=0||max_queue_size<0)return false;
     mLogPath=log_path;
     mLogBufSize=log_buf_size;
@@ -111,7 +112,6 @@ void log::write(const int level,const char*format,...){
         mBuf[m+n]='\n';
         mBuf[m+n+1]='\0';
         logStr=mBuf;
-        printf("%s",mBuf);
         //异步，且不满
         if(mIsAsync&&!mQue->full()){
             mQue->push(logStr);

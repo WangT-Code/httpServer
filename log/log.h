@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-04-30 11:21:13
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-06 18:19:47
+ * @LastEditTime: 2024-05-06 22:17:49
  * @FilePath: /Project/my_Server/log/log.h
  * @Description: 
  * 
@@ -38,8 +38,17 @@ public:
     void write(const int level,const char*format,...);
     void writeLevelInfo(char* buf,const int level);
     static void callBack(){
-        printf("线程创建成功\n");
         log::getInstance()->asyncWriteLog();
+    }
+    bool isClose(){
+        return mCloseLog;
+    }
+    // 刷新写入流缓冲区
+    void flush(){
+        {
+            std::lock_guard<std::mutex> lock(mMutex);
+            fflush(mFp);
+        }
     }
 private:
     void asyncWriteLog(){
@@ -66,9 +75,10 @@ private:
     FILE* mFp;//文件指针
     char * mBuf;//日志缓存
     blockQueue<std::string> * mQue;//日志队列
-    
+    bool mCloseLog;
 private:
     log(){
+        mCloseLog=true;
         mIsAsync=false;
         mLogPath=nullptr;
         mLogName=nullptr;
@@ -82,6 +92,10 @@ private:
     }
     ~log(){};
 };
+#define LOG_DEBUG(format, ...) if(!log::getInstance()->isClose()) {log::getInstance()->write(0,format,##__VA_ARGS__); log::getInstance()->flush();}
+#define LOG_INFO(format, ...) if(!log::getInstance()->isClose()) {log::getInstance()->write(1,format,##__VA_ARGS__); log::getInstance()->flush();}
+#define LOG_WARN(format, ...) if(!log::getInstance()->isClose()) {log::getInstance()->write(2,format,##__VA_ARGS__); log::getInstance()->flush();}
+#define LOG_ERROR(format, ...) if(!log::getInstance()->isClose()) {log::getInstance()->write(3,format,##__VA_ARGS__); log::getInstance()->flush();}
 
 
 
