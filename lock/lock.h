@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-04-29 20:05:32
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-04-29 21:55:26
+ * @LastEditTime: 2024-05-06 16:16:21
  * @FilePath: /Project/my_Server/lock/lock.h
  * @Description: 线程同步机制包装类
  * 
@@ -12,6 +12,7 @@
 #define LOCK_H
 #include <exception>
 #include <semaphore.h>
+#include <pthread.h>
 #include <assert.h>
 
 class sem{
