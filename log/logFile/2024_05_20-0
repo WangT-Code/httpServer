@@ -1,0 +1,190 @@
+2024-05-20 12:27:04.397542 [info]: accept a new client
+2024-05-20 12:31:14.471109 [erro]: bind error
+2024-05-20 12:31:51.273389 [erro]: bind error
+2024-05-20 12:32:02.912727 [info]: accept a new client
+2024-05-20 12:32:02.912838 [debug]: begin recv;
+2024-05-20 12:34:30.277936 [erro]: bind error
+2024-05-20 12:37:26.054698 [erro]: bind error
+2024-05-20 12:37:30.907116 [erro]: bind error
+2024-05-20 14:49:12.407061 [info]: accept a new client
+2024-05-20 14:49:12.407139 [debug]: begin recv
+2024-05-20 14:49:25.966933 [debug]: 对方关闭连接
+2024-05-20 14:49:59.235484 [info]: accept a new client
+2024-05-20 14:49:59.235547 [debug]: begin recv
+2024-05-20 14:57:25.404149 [info]: accept a new client:16
+2024-05-20 14:57:25.404259 [debug]: begin recv
+2024-05-20 20:57:39.283751 [info]: accept a new client:16
+2024-05-20 21:01:12.170029 [info]: accept a new client:16
+2024-05-20 21:01:12.170571 [debug]: begin recv
+2024-05-20 21:08:10.451492 [erro]: bind error
+2024-05-20 21:09:17.002602 [info]: accept a new client:16
+2024-05-20 21:09:17.002748 [debug]: begin recv
+2024-05-20 21:09:30.376589 [info]: accept a new client:16
+2024-05-20 21:09:30.376690 [debug]: begin recv
+2024-05-20 21:17:45.606646 [info]: accept a new client:16
+2024-05-20 21:17:45.606709 [debug]: begin recv
+2024-05-20 21:17:45.606868 [debug]: EAGIN
+2024-05-20 21:17:45.606916 [info]: process
+2024-05-20 21:17:45.606935 [info]: GET /video.html HTTP/1.1
+2024-05-20 21:17:45.648448 [info]: Host: 127.0.0.1
+2024-05-20 21:17:45.648551 [info]: Origin: http://127.0.0.1
+2024-05-20 21:17:45.648573 [info]: Connection: keep-alive
+2024-05-20 21:23:14.353832 [info]: accept a new client:16
+2024-05-20 21:23:14.353906 [debug]: begin recv
+2024-05-20 21:23:14.354058 [debug]: EAGIN
+2024-05-20 21:23:14.354087 [info]: process
+2024-05-20 21:23:14.354099 [info]: GET /video.html HTTP/1.1
+2024-05-20 21:23:14.354225 [info]: Host: 127.0.0.1
+2024-05-20 21:23:14.354281 [info]: Origin: http://127.0.0.1
+2024-05-20 21:23:14.354306 [info]: Connection: keep-alive
+2024-05-20 21:24:13.185370 [erro]: bind error
+2024-05-20 21:24:20.634628 [info]: accept a new client:16
+2024-05-20 21:24:20.634704 [debug]: begin recv
+2024-05-20 21:24:20.634756 [debug]: EAGIN
+2024-05-20 21:24:20.634868 [info]: process
+2024-05-20 21:24:20.634877 [info]: GET /video.html HTTP/1.1
+2024-05-20 21:24:20.634949 [info]: Host: 127.0.0.1
+2024-05-20 21:24:20.635019 [info]: Origin: http://127.0.0.1
+2024-05-20 21:24:20.635067 [info]: Connection: keep-alive
+2024-05-20 21:24:20.635089 [info]: 
+2024-05-20 21:29:04.755618 [info]: accept a new client:16
+2024-05-20 21:29:04.772048 [debug]: begin recv
+2024-05-20 21:29:04.772116 [debug]: EAGIN
+2024-05-20 21:29:04.772137 [info]: process
+2024-05-20 21:29:04.772154 [info]: GET /video.html HTTP/1.1
+2024-05-20 21:29:04.772250 [info]: Host: 127.0.0.1
+2024-05-20 21:29:04.772296 [info]: Origin: http://127.0.0.1
+2024-05-20 21:29:04.772329 [info]: Connection: keep-alive
+2024-05-20 21:29:04.772360 [info]: 
+2024-05-20 21:29:04.772399 [info]: request parse success!
+2024-05-20 21:32:07.209161 [info]: accept a new client:16
+2024-05-20 21:32:07.209230 [debug]: begin recv
+2024-05-20 21:32:07.209254 [debug]: EAGIN
+2024-05-20 21:32:07.209261 [info]: process
+2024-05-20 21:32:07.209331 [info]: GET /video.html HTTP/1.1
+2024-05-20 21:32:07.209408 [info]: Host: 127.0.0.1
+2024-05-20 21:32:07.209564 [info]: Origin: http://127.0.0.1
+2024-05-20 21:32:07.209588 [info]: Connection: keep-alive
+2024-05-20 21:32:07.209614 [info]: 
+2024-05-20 21:34:41.429701 [info]: accept a new client:16
+2024-05-20 21:34:41.429871 [debug]: begin recv
+2024-05-20 21:34:41.430013 [debug]: EAGIN
+2024-05-20 21:34:41.430024 [info]: process
+2024-05-20 21:34:41.430035 [info]: GET /video.html HTTP/1.1
+2024-05-20 21:34:41.430103 [info]: Host: 127.0.0.1
+2024-05-20 21:34:41.430130 [info]: Origin: http://127.0.0.1
+2024-05-20 21:34:41.430153 [info]: Connection: keep-alive
+2024-05-20 21:34:41.430175 [info]: 
+2024-05-20 21:42:32.526875 [info]: accept a new client:16
+2024-05-20 21:42:32.526951 [debug]: begin recv
+2024-05-20 21:42:32.527017 [debug]: EAGIN
+2024-05-20 21:42:32.527127 [info]: process
+2024-05-20 21:42:32.527142 [info]: GET /video.html HTTP/1.1
+2024-05-20 21:42:32.527235 [info]: Host: 127.0.0.1
+2024-05-20 21:42:32.527290 [info]: Origin: http://127.0.0.1
+2024-05-20 21:42:32.527314 [info]: Connection: keep-alive
+2024-05-20 21:42:32.527337 [info]: 
+2024-05-20 21:42:32.527358 [info]: request parse success!
+2024-05-20 21:42:32.527402 [info]: request realFile:[../resources/video.html]
+2024-05-20 21:42:32.527428 [info]: mmap file [../resources/video.html] success!
+2024-05-20 21:42:32.543605 [info]: write complete
+2024-05-20 22:11:48.366180 [info]: accept a new client:16
+2024-05-20 22:11:48.366256 [debug]: begin recv
+2024-05-20 22:11:48.366346 [debug]: EAGIN
+2024-05-20 22:11:48.366450 [info]: process
+2024-05-20 22:11:48.366478 [info]: GET /video.html HTTP/1.1
+2024-05-20 22:11:48.366587 [info]: Host: 127.0.0.1
+2024-05-20 22:11:48.366679 [info]: Origin: http://127.0.0.1
+2024-05-20 22:11:48.366725 [info]: Connection: keep-alive
+2024-05-20 22:11:48.366768 [info]: 
+2024-05-20 22:11:48.366789 [info]: request parse success!
+2024-05-20 22:11:48.366804 [info]: request realFile:[../resources/video.html]
+2024-05-20 22:13:37.825229 [info]: accept a new client:16
+2024-05-20 22:13:37.825299 [debug]: begin recv
+2024-05-20 22:13:37.825324 [debug]: EAGIN
+2024-05-20 22:13:37.825331 [info]: process
+2024-05-20 22:13:37.825335 [info]: GET /video.html HTTP/1.1
+2024-05-20 22:13:37.825422 [info]: Host: 127.0.0.1
+2024-05-20 22:13:37.825549 [info]: Origin: http://127.0.0.1
+2024-05-20 22:13:37.825571 [info]: Connection: keep-alive
+2024-05-20 22:13:37.825596 [info]: 
+2024-05-20 22:13:37.825618 [info]: request parse success!
+2024-05-20 22:13:37.825648 [info]: request realFile:[../resources/video.html]
+2024-05-20 22:13:37.825677 [info]: mmap file [../resources/video.html] success!
+2024-05-20 22:13:37.825702 [info]: write complete
+2024-05-20 22:13:37.825907 [debug]: begin recv
+2024-05-20 22:13:37.825953 [debug]: 对方关闭连接
+2024-05-20 22:13:44.100121 [info]: accept a new client:16
+2024-05-20 22:13:44.100224 [debug]: begin recv
+2024-05-20 22:13:44.100273 [debug]: EAGIN
+2024-05-20 22:13:44.100305 [info]: process
+2024-05-20 22:13:44.100317 [info]: GET /video.html HTTP/1.1
+2024-05-20 22:13:44.100383 [info]: Host: 127.0.0.1
+2024-05-20 22:13:44.100410 [info]: Origin: http://127.0.0.1
+2024-05-20 22:13:44.100433 [info]: Connection: keep-alive
+2024-05-20 22:13:44.100456 [info]: 
+2024-05-20 22:13:44.100478 [info]: request parse success!
+2024-05-20 22:13:44.100505 [info]: request realFile:[../resources/video.html]
+2024-05-20 22:13:44.100542 [info]: mmap file [../resources/video.html] success!
+2024-05-20 22:13:44.100565 [info]: write complete
+2024-05-20 22:13:44.100876 [debug]: begin recv
+2024-05-20 22:13:44.100978 [debug]: 对方关闭连接
+2024-05-20 22:13:45.472465 [info]: accept a new client:16
+2024-05-20 22:13:45.472632 [debug]: begin recv
+2024-05-20 22:13:45.472678 [debug]: EAGIN
+2024-05-20 22:13:45.472690 [info]: process
+2024-05-20 22:13:45.472698 [info]: GET /video.html HTTP/1.1
+2024-05-20 22:13:45.472780 [info]: Host: 127.0.0.1
+2024-05-20 22:13:45.472817 [info]: Origin: http://127.0.0.1
+2024-05-20 22:13:45.472846 [info]: Connection: keep-alive
+2024-05-20 22:13:45.472872 [info]: 
+2024-05-20 22:13:45.472900 [info]: request parse success!
+2024-05-20 22:13:45.472925 [info]: request realFile:[../resources/video.html]
+2024-05-20 22:13:45.472998 [info]: mmap file [../resources/video.html] success!
+2024-05-20 22:13:45.473047 [info]: write complete
+2024-05-20 22:13:45.473469 [debug]: begin recv
+2024-05-20 22:13:45.473497 [debug]: 对方关闭连接
+2024-05-20 22:13:46.486459 [info]: accept a new client:16
+2024-05-20 22:13:46.486690 [debug]: begin recv
+2024-05-20 22:13:46.486839 [debug]: EAGIN
+2024-05-20 22:13:46.486885 [info]: process
+2024-05-20 22:13:46.486905 [info]: GET /video.html HTTP/1.1
+2024-05-20 22:13:46.487304 [info]: Host: 127.0.0.1
+2024-05-20 22:13:46.487382 [info]: Origin: http://127.0.0.1
+2024-05-20 22:13:46.487428 [info]: Connection: keep-alive
+2024-05-20 22:13:46.487478 [info]: 
+2024-05-20 22:13:46.487533 [info]: request parse success!
+2024-05-20 22:13:46.487571 [info]: request realFile:[../resources/video.html]
+2024-05-20 22:13:46.487648 [info]: mmap file [../resources/video.html] success!
+2024-05-20 22:13:46.487710 [info]: write complete
+2024-05-20 22:13:46.487993 [debug]: begin recv
+2024-05-20 22:13:46.488037 [debug]: 对方关闭连接
+2024-05-20 22:13:47.994728 [info]: accept a new client:16
+2024-05-20 22:13:47.994794 [debug]: begin recv
+2024-05-20 22:13:47.994809 [debug]: EAGIN
+2024-05-20 22:13:47.994815 [info]: process
+2024-05-20 22:13:47.994818 [info]: GET /video.html HTTP/1.1
+2024-05-20 22:13:47.994881 [info]: Host: 127.0.0.1
+2024-05-20 22:13:47.994904 [info]: Origin: http://127.0.0.1
+2024-05-20 22:13:47.994936 [info]: Connection: keep-alive
+2024-05-20 22:13:47.994960 [info]: 
+2024-05-20 22:13:47.994983 [info]: request parse success!
+2024-05-20 22:13:47.995008 [info]: request realFile:[../resources/video.html]
+2024-05-20 22:13:47.995028 [info]: mmap file [../resources/video.html] success!
+2024-05-20 22:13:47.995054 [info]: write complete
+2024-05-20 22:13:47.995240 [debug]: begin recv
+2024-05-20 22:13:47.995268 [debug]: 对方关闭连接
+2024-05-20 22:13:57.276064 [info]: accept a new client:16
+2024-05-20 22:13:57.276147 [debug]: begin recv
+2024-05-20 22:13:57.276194 [debug]: EAGIN
+2024-05-20 22:13:57.276222 [info]: process
+2024-05-20 22:13:57.276234 [info]: GET /video.html HTTP/1.1
+2024-05-20 22:13:57.276308 [info]: Host: 127.0.0.1
+2024-05-20 22:13:57.276344 [info]: Origin: http://127.0.0.1
+2024-05-20 22:13:57.276370 [info]: Connection: keep-alive
+2024-05-20 22:13:57.276393 [info]: 
+2024-05-20 22:13:57.276415 [info]: request parse success!
+2024-05-20 22:13:57.276430 [info]: request realFile:[../resources/video.html]
+2024-05-20 22:13:57.276452 [info]: mmap file [../resources/video.html] success!
+2024-05-20 22:13:57.276496 [info]: write complete
+2024-05-20 22:13:57.276777 [debug]: begin recv

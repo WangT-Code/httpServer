@@ -1,0 +1,294 @@
+2024-05-10 10:38:28.041320 [info]: POST /login.html HTTP/1.1
+2024-05-10 10:38:28.041469 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 10:38:28.041521 [info]: Host: 127.0.0.1
+2024-05-10 10:38:28.041741 [info]: Content-Length: 44
+2024-05-10 10:38:28.041832 [info]: Origin: http://127.0.0.1
+2024-05-10 10:38:28.041857 [info]: Connection: keep-alive
+2024-05-10 10:38:28.041923 [info]: 
+2024-05-10 10:39:49.762569 [info]: POST /login.html HTTP/1.1
+2024-05-10 10:39:49.762723 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 10:39:49.762949 [info]: Host: 127.0.0.1
+2024-05-10 10:39:49.763020 [info]: Content-Length: 44
+2024-05-10 10:39:49.763083 [info]: Origin: http://127.0.0.1
+2024-05-10 10:39:49.763181 [info]: Connection: keep-alive
+2024-05-10 10:39:49.763265 [info]: 
+2024-05-10 10:39:49.763382 [info]: username=2421177510&password=wt200003228631
+2024-05-10 10:39:49.763449 [debug]: client ip is:127.0.0.1 , tag:1
+2024-05-10 10:42:55.103600 [info]: POST /login.html HTTP/1.1
+2024-05-10 10:42:55.103722 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 10:42:55.103816 [info]: Host: 127.0.0.1
+2024-05-10 10:42:55.103851 [info]: Content-Length: 44
+2024-05-10 10:42:55.103874 [info]: Origin: http://127.0.0.1
+2024-05-10 10:42:55.103895 [info]: Connection: keep-alive
+2024-05-10 10:42:55.103916 [info]: 
+2024-05-10 10:42:55.103937 [info]: username=2421177510&password=wt200003228631
+2024-05-10 10:42:55.103984 [debug]: client ip is:127.0.0.1 , tag:1
+2024-05-10 10:44:15.150446 [info]: POST /login.html HTTP/1.1
+2024-05-10 10:44:15.150607 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 10:44:15.150867 [info]: Host: 127.0.0.1
+2024-05-10 10:44:15.150927 [info]: Content-Length: 44
+2024-05-10 10:44:15.150979 [info]: Origin: http://127.0.0.1
+2024-05-10 10:44:15.151011 [info]: Connection: keep-alive
+2024-05-10 10:44:15.151034 [info]: 
+2024-05-10 10:44:15.151069 [info]: username=2421177510&password=wt200003228631
+2024-05-10 10:44:15.151098 [debug]: client ip is:127.0.0.1 , tag:1
+2024-05-10 10:48:32.656783 [info]: POST /login.html HTTP/1.1
+2024-05-10 10:48:32.656893 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 10:48:32.656926 [info]: Host: 127.0.0.1
+2024-05-10 10:48:32.656950 [info]: Content-Length: 44
+2024-05-10 10:48:32.656983 [info]: Origin: http://127.0.0.1
+2024-05-10 10:48:32.657115 [info]: Connection: keep-alive
+2024-05-10 10:48:32.657433 [info]: 
+2024-05-10 10:48:32.657771 [info]: username=2421177510&password=wt200003228631
+2024-05-10 10:48:32.657935 [debug]: client ip is:127.0.0.1 , tag:1
+2024-05-10 10:48:32.658092 [debug]: verify name: 2421177510 pwd: wt200003228631
+2024-05-10 10:48:32.658309 [info]: MYSQL RAII Successful
+2024-05-10 10:48:32.658326 [debug]: login
+2024-05-10 10:48:32.658330 [debug]: sqlOrder:SELECT username,passwd FROM user WHERE username='2421177510' LIMIT 1
+2024-05-10 10:48:33.418389 [debug]: MYSQL row: 2421177510 wt200003228631
+2024-05-10 10:48:33.418528 [debug]: Login failed!
+2024-05-10 10:48:33.418541 [info]: client ip is:127.0.0.1 login fail
+2024-05-10 10:56:42.304982 [info]: POST /login.html HTTP/1.1
+2024-05-10 10:56:42.305339 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 10:56:42.305605 [info]: Host: 127.0.0.1
+2024-05-10 10:56:42.305757 [info]: Content-Length: 44
+2024-05-10 10:56:42.305869 [info]: Origin: http://127.0.0.1
+2024-05-10 10:56:42.305911 [info]: Connection: keep-alive
+2024-05-10 10:56:42.306020 [info]: 
+2024-05-10 10:56:42.306142 [info]: username=2421177510&password=wt200003228631
+2024-05-10 10:56:42.306309 [debug]: client ip is:127.0.0.1 , tag:1
+2024-05-10 10:56:42.306437 [debug]: verify name: 2421177510 pwd: wt200003228631
+2024-05-10 10:56:42.306534 [info]: MYSQL RAII Successful
+2024-05-10 10:56:42.306555 [debug]: login
+2024-05-10 10:56:42.306680 [debug]: sqlOrder:SELECT username,passwd FROM user WHERE username='2421177510' LIMIT 1
+2024-05-10 10:56:42.370731 [debug]: MYSQL row: 2421177510 wt200003228631
+2024-05-10 10:56:42.370819 [debug]: Login success!
+2024-05-10 10:56:42.370844 [info]: client ip is:127.0.0.1 login success
+2024-05-10 11:00:00.998545 [info]: POST /register.html HTTP/1.1
+2024-05-10 11:00:00.998884 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 11:00:00.998972 [info]: Host: 127.0.0.1
+2024-05-10 11:00:00.999088 [info]: Content-Length: 44
+2024-05-10 11:00:00.999198 [info]: Origin: http://127.0.0.1
+2024-05-10 11:00:00.999276 [info]: Connection: keep-alive
+2024-05-10 11:00:00.999382 [info]: 
+2024-05-10 11:00:00.999497 [info]: username=2421177510&password=wt200003228631
+2024-05-10 11:00:00.999799 [debug]: client ip is:127.0.0.1 , tag:0
+2024-05-10 11:00:00.999997 [debug]: verify name: 2421177510 pwd: wt200003228631
+2024-05-10 11:00:01.000038 [info]: MYSQL RAII Successful
+2024-05-10 11:00:01.000061 [debug]: Register!
+2024-05-10 11:00:01.000077 [debug]: sqlOrder:SELECT username,passwd FROM user WHERE username='2421177510' LIMIT 1
+2024-05-10 11:00:01.016523 [debug]: user used!
+2024-05-10 11:00:01.016701 [info]: client ip is:127.0.0.1 login fail
+2024-05-10 11:00:45.151297 [info]: POST /register.html HTTP/1.1
+2024-05-10 11:00:45.151429 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 11:00:45.151529 [info]: Host: 127.0.0.1
+2024-05-10 11:00:45.151602 [info]: Content-Length: 44
+2024-05-10 11:00:45.151629 [info]: Origin: http://127.0.0.1
+2024-05-10 11:00:45.151692 [info]: Connection: keep-alive
+2024-05-10 11:00:45.151761 [info]: 
+2024-05-10 11:00:45.151786 [info]: username=3114417423&password=wt200003228631
+2024-05-10 11:00:45.151876 [debug]: client ip is:127.0.0.1 , tag:0
+2024-05-10 11:00:45.151916 [debug]: verify name: 3114417423 pwd: wt200003228631
+2024-05-10 11:00:45.151932 [info]: MYSQL RAII Successful
+2024-05-10 11:00:45.151934 [debug]: Register!
+2024-05-10 11:00:45.151937 [debug]: sqlOrder:SELECT username,passwd FROM user WHERE username='3114417423' LIMIT 1
+2024-05-10 11:00:45.154651 [debug]: user used!
+2024-05-10 11:00:45.154721 [info]: client ip is:127.0.0.1 login fail
+2024-05-10 11:07:40.374681 [info]: POST /register.html HTTP/1.1
+2024-05-10 11:07:40.374818 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 11:07:40.374863 [info]: Host: 127.0.0.1
+2024-05-10 11:07:40.375034 [info]: Content-Length: 44
+2024-05-10 11:07:40.375061 [info]: Origin: http://127.0.0.1
+2024-05-10 11:07:40.375139 [info]: Connection: keep-alive
+2024-05-10 11:07:40.375339 [info]: 
+2024-05-10 11:07:40.375408 [info]: username=3114417423&password=wt200003228631
+2024-05-10 11:07:40.375470 [debug]: client ip is:127.0.0.1 , tag:0
+2024-05-10 11:07:40.375525 [debug]: verify name: 3114417423 pwd: wt200003228631
+2024-05-10 11:07:40.375547 [info]: MYSQL RAII Successful
+2024-05-10 11:07:40.375550 [debug]: Register!
+2024-05-10 11:07:40.375553 [debug]: sqlOrder:SELECT username,passwd FROM user WHERE username='3114417423' LIMIT 1
+2024-05-10 11:07:40.398046 [debug]: user used!
+2024-05-10 11:07:40.398123 [info]: client ip is:127.0.0.1 login fail
+2024-05-10 11:13:08.567751 [info]: POST /register.html HTTP/1.1
+2024-05-10 11:13:08.567875 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 11:13:08.568053 [info]: Host: 127.0.0.1
+2024-05-10 11:13:08.568079 [info]: Content-Length: 44
+2024-05-10 11:13:08.568142 [info]: Origin: http://127.0.0.1
+2024-05-10 11:13:08.568167 [info]: Connection: keep-alive
+2024-05-10 11:13:08.568228 [info]: 
+2024-05-10 11:13:08.568251 [info]: username=3114417423&password=wt200003228631
+2024-05-10 11:13:08.568298 [debug]: client ip is:127.0.0.1 , tag:0
+2024-05-10 11:13:08.568323 [debug]: verify name: 3114417423 pwd: wt200003228631
+2024-05-10 11:13:08.568336 [info]: MYSQL RAII Successful
+2024-05-10 11:13:08.568339 [debug]: Register!
+2024-05-10 11:13:08.568342 [debug]: sqlOrder:SELECT username,passwd FROM user WHERE username='3114417423' LIMIT 1
+2024-05-10 11:13:08.584032 [debug]: user used!
+2024-05-10 11:13:08.584135 [info]: client ip is:127.0.0.1 login fail
+2024-05-10 11:15:26.179737 [info]: POST /register.html HTTP/1.1
+2024-05-10 11:15:26.179939 [info]: Content-Type: application/x-www-form-urlencoded
+2024-05-10 11:15:26.179999 [info]: Host: 127.0.0.1
+2024-05-10 11:15:26.180036 [info]: Content-Length: 44
+2024-05-10 11:15:26.180077 [info]: Origin: http://127.0.0.1
+2024-05-10 11:15:26.180112 [info]: Connection: keep-alive
+2024-05-10 11:15:26.180145 [info]: 
+2024-05-10 11:15:26.180190 [info]: username=3114417423&password=wt200003228631
+2024-05-10 11:15:26.180220 [debug]: client ip is:127.0.0.1 , tag:0
+2024-05-10 11:15:26.180238 [debug]: verify name: 3114417423 pwd: wt200003228631
+2024-05-10 11:15:26.180253 [info]: MYSQL RAII Successful
+2024-05-10 11:15:26.180267 [debug]: Register!
+2024-05-10 11:15:26.180282 [debug]: sqlOrder:SELECT username,passwd FROM user WHERE username='3114417423' LIMIT 1
+2024-05-10 11:15:26.191793 [debug]: sqlOrder:INSERT INTO user(username, passwd) VALUES('3114417423','')
+2024-05-10 11:15:26.317801 [debug]: INSERT success:3114417423 
+
+2024-05-10 11:15:26.317890 [debug]: user regirster success!
+2024-05-10 11:15:26.317929 [info]: client ip is:127.0.0.1 login success
+2024-05-10 11:27:37.315856 [info]: POST /upload HTTP/1.1
+2024-05-10 11:27:37.316083 [info]: Host: example.com
+2024-05-10 11:27:37.316251 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:27:37.316779 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:27:37.316845 [info]: 
+2024-05-10 11:29:02.195407 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:29:02.195570 [info]: Host: example.com
+2024-05-10 11:29:02.195721 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:29:02.195774 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:29:02.195829 [info]: 
+2024-05-10 11:35:18.590719 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:35:18.590914 [info]: Host: example.com
+2024-05-10 11:35:18.591138 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:35:18.591165 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:35:18.591254 [info]: Content-Length: 107
+2024-05-10 11:35:18.591344 [info]: 
+2024-05-10 11:35:18.591368 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:35:18.591545 [info]: client ip is:127.0.0.1 upload file:ê™wœ˝ success!
+2024-05-10 11:37:37.780129 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:37:37.780342 [info]: Host: example.com
+2024-05-10 11:37:37.780496 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:37:37.780544 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:37:37.780577 [info]: Content-Length: 107
+2024-05-10 11:37:37.780598 [info]: 
+2024-05-10 11:37:37.780618 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:37:37.780777 [info]: client ip is:127.0.0.1 upload file:‡»úî˝ success!
+2024-05-10 11:41:12.882012 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:41:12.882317 [info]: Host: example.com
+2024-05-10 11:41:12.882363 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:41:12.882399 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:41:12.882444 [info]: Content-Length: 107
+2024-05-10 11:41:12.882479 [info]: 
+2024-05-10 11:41:12.882512 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:41:12.882758 [info]: client ip is:127.0.0.1 upload file:0ˇ*<˝ success!
+2024-05-10 11:44:42.736770 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:44:42.736942 [info]: Host: example.com
+2024-05-10 11:44:42.737802 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:44:42.737891 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:44:42.737929 [info]: Content-Length: 107
+2024-05-10 11:44:42.738006 [info]: 
+2024-05-10 11:44:42.738030 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:44:42.738220 [info]: client ip is:127.0.0.1 upload file:haha.txt success!
+2024-05-10 11:47:51.042068 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:47:51.042460 [info]: Host: example.com
+2024-05-10 11:47:51.042726 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:47:51.042819 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:47:51.043235 [info]: Content-Length: 107
+2024-05-10 11:47:51.043298 [info]: 
+2024-05-10 11:47:51.043471 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:47:51.043998 [info]: client ip is:127.0.0.1 upload file:haha.txt success!
+2024-05-10 11:48:10.365840 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:48:10.366015 [info]: Host: example.com
+2024-05-10 11:48:10.366089 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:48:10.366117 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:48:10.366214 [info]: Content-Length: 107
+2024-05-10 11:48:10.366285 [info]: 
+2024-05-10 11:48:10.366397 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:48:10.366550 [info]: client ip is:127.0.0.1 upload file:haha.txt success!
+2024-05-10 11:48:53.245572 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:48:53.245724 [info]: Host: example.com
+2024-05-10 11:48:53.245809 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:48:53.245863 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:48:53.245940 [info]: Content-Length: 107
+2024-05-10 11:48:53.246005 [info]: 
+2024-05-10 11:48:53.246029 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:48:53.246318 [info]: client ip is:127.0.0.1 upload file:haha.txt success!
+2024-05-10 11:49:13.755988 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:49:13.756161 [info]: Host: example.com
+2024-05-10 11:49:13.756285 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:49:13.756312 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:49:13.756370 [info]: Content-Length: 107
+2024-05-10 11:49:13.756423 [info]: 
+2024-05-10 11:49:13.756446 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:49:13.756515 [info]: client ip is:127.0.0.1 upload file:haha.txt success!
+2024-05-10 11:49:59.875307 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:49:59.875579 [info]: Host: example.com
+2024-05-10 11:49:59.875646 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:49:59.875692 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:49:59.875755 [info]: Content-Length: 107
+2024-05-10 11:49:59.875846 [info]: 
+2024-05-10 11:49:59.875917 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:49:59.876169 [info]: client ip is:127.0.0.1 upload file:haha.txt success!
+2024-05-10 11:52:12.107358 [info]: POST /upload.html HTTP/1.1
+2024-05-10 11:52:12.107472 [info]: Host: example.com
+2024-05-10 11:52:12.107611 [info]: User-Agent: Your-Application/1.0
+2024-05-10 11:52:12.107638 [info]: Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+2024-05-10 11:52:12.107776 [info]: Content-Length: 107
+2024-05-10 11:52:12.107798 [info]: 
+2024-05-10 11:52:12.107816 [info]: ------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="haha.txt"
+Content-Type: text/plain
+
+Hello, World!
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+2024-05-10 11:52:12.108037 [info]: client ip is:127.0.0.1 upload file:haha.txt success!

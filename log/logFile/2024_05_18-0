@@ -1,0 +1,117 @@
+2024-05-18 17:52:06.162733 [info]: process
+2024-05-18 17:52:06.162788 [info]: GET /video HTTP/1.1
+2024-05-18 17:52:06.162868 [info]: Host: 127.0.0.1
+2024-05-18 17:52:06.163047 [info]: Origin: http://127.0.0.1
+2024-05-18 17:52:06.163069 [info]: Connection: keep-alive
+2024-05-18 17:52:06.163139 [info]: 
+2024-05-18 17:52:06.163160 [info]: request realFile:[../resources/video]
+2024-05-18 17:52:06.163169 [erro]: stat error:[../resources/video],file is not exist!
+2024-05-18 17:52:06.163172 [info]: addResponse:HTTP/1.1 404 Not Found
+
+2024-05-18 17:52:06.163175 [info]: addResponse:HTTP/1.1 404 Not Found
+Content-Length:49
+
+2024-05-18 17:52:06.163177 [info]: addResponse:HTTP/1.1 404 Not Found
+Content-Length:49
+Connection:keep-alive
+
+2024-05-18 17:52:06.163179 [info]: addResponse:HTTP/1.1 404 Not Found
+Content-Length:49
+Connection:keep-alive
+Content-Type:text/html
+
+
+2024-05-18 17:52:06.163181 [info]: addResponse:HTTP/1.1 404 Not Found
+Content-Length:49
+Connection:keep-alive
+Content-Type:text/html
+
+The requested file was not found on this server.
+
+2024-05-18 17:55:13.506627 [info]: process
+2024-05-18 17:55:13.506700 [info]: GET /video.html HTTP/1.1
+2024-05-18 17:55:13.506791 [info]: Host: 127.0.0.1
+2024-05-18 17:55:13.506952 [info]: Origin: http://127.0.0.1
+2024-05-18 17:55:13.507007 [info]: Connection: keep-alive
+2024-05-18 17:55:13.507051 [info]: 
+2024-05-18 17:55:13.507094 [info]: request realFile:[../resources/video.html]
+2024-05-18 17:55:13.507122 [info]: addResponse:HTTP/1.1 200 OK
+
+2024-05-18 17:55:13.507128 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+
+2024-05-18 17:55:13.507152 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+Content-Length:82
+
+2024-05-18 17:55:13.507170 [info]: mmap file [../resources/video.html] success!
+2024-05-18 17:55:13.507192 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+Content-Length:82
+Content-Length:82
+
+2024-05-18 17:55:13.507197 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+Content-Length:82
+Content-Length:82
+Content-Type:text/html
+
+
+2024-05-18 17:58:36.405405 [info]: process
+2024-05-18 17:58:36.405460 [info]: GET /video.html HTTP/1.1
+2024-05-18 17:58:36.405544 [info]: Host: 127.0.0.1
+2024-05-18 17:58:36.405670 [info]: Origin: http://127.0.0.1
+2024-05-18 17:58:36.405693 [info]: Connection: keep-alive
+2024-05-18 17:58:36.405710 [info]: 
+2024-05-18 17:58:36.405750 [info]: request realFile:[../resources/video.html]
+2024-05-18 17:58:36.405759 [info]: addResponse:HTTP/1.1 200 OK
+
+2024-05-18 17:58:36.405762 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+
+2024-05-18 17:58:36.405765 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+Content-Length:82
+
+2024-05-18 17:58:36.405778 [info]: mmap file [../resources/video.html] success!
+2024-05-18 17:58:36.405781 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+Content-Length:82
+Content-Length:82
+
+2024-05-18 17:58:36.405784 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+Content-Length:82
+Content-Length:82
+Content-Type:text/html
+
+
+2024-05-18 18:02:40.231611 [info]: process
+2024-05-18 18:02:40.231648 [info]: GET /video.html HTTP/1.1
+2024-05-18 18:02:40.231720 [info]: Host: 127.0.0.1
+2024-05-18 18:02:40.231858 [info]: Origin: http://127.0.0.1
+2024-05-18 18:02:40.231880 [info]: Connection: keep-alive
+2024-05-18 18:02:40.231903 [info]: 
+2024-05-18 18:02:40.231943 [info]: request realFile:[../resources/video.html]
+2024-05-18 18:02:40.231952 [info]: addResponse:HTTP/1.1 200 OK
+
+2024-05-18 18:02:40.231955 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+
+2024-05-18 18:02:40.231959 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+Content-Length:82
+
+2024-05-18 18:02:40.231972 [info]: mmap file [../resources/video.html] success!
+2024-05-18 18:02:40.231985 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+Content-Length:82
+Content-Length:82
+
+2024-05-18 18:02:40.231990 [info]: addResponse:HTTP/1.1 200 OK
+Connection:keep-alive
+Content-Length:82
+Content-Length:82
+Content-Type:text/html
+
+

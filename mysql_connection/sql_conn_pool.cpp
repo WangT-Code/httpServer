@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-02 14:50:32
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-06 22:18:30
+ * @LastEditTime: 2024-05-10 20:05:54
  * @FilePath: /Project/my_Server/mysql_connection/sql_conn_pool.cpp
  * @Description: 
  * 
@@ -77,10 +77,11 @@ sqlConnect::sqlConnect(sql_conn_pool* connPool,MYSQL**conn){
         throw std::exception();
     }
     this->sqlConn=connPool->getMySqlConn();
-    LOG_INFO("MYSQL RAII Successful");
+    LOG_INFO("MYSQL RAII Successful!");
     *conn=this->sqlConn;
     this->sqlConnectPool=connPool;
 } 
 sqlConnect::~sqlConnect(){
+    LOG_INFO("MYSQL RAII Release!")
     this->sqlConnectPool->releaseMySqlConn(this->sqlConn);
 }

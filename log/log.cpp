@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-04-30 11:21:03
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-06 22:17:26
+ * @LastEditTime: 2024-05-21 12:46:03
  * @FilePath: /Project/my_Server/log/log.cpp
  * @Description: 
  * 
@@ -97,9 +97,11 @@ void log::write(const int level,const char*format,...){
         }
         mFp=fopen(newLog,"a");
     }
-    {   //向缓存中写入数据，加锁
+    std::string logStr;//存储日志消息
+     //向缓存中写入数据，加锁
+    {        
         std::lock_guard<std::mutex> lock(mMutex);
-        std::string logStr;//存储日志消息
+        
         ++mCountLine;
         va_list vaList;
         va_start(vaList, format);
@@ -112,15 +114,18 @@ void log::write(const int level,const char*format,...){
         mBuf[m+n]='\n';
         mBuf[m+n+1]='\0';
         logStr=mBuf;
+        va_end(vaList);
+    }
         //异步，且不满
         if(mIsAsync&&!mQue->full()){
             mQue->push(logStr);
         }
         else{
+            std::lock_guard<std::mutex> lock(mMutex);
             fputs(logStr.c_str(),mFp);
         }
-        va_end(vaList);
-    }
+        
+    
 }
 
 /// @brief 根据日志等级，向buf中写入日志等级标签

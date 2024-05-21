@@ -1,0 +1,2 @@
+test_server:
+	g++ -std=c++11 -g http_conn.h  http_conn.cpp  httprequest.h httprequest.cpp httpresponse.h httpresponse.cpp util.h ../log/log.h ../log/log.cpp ../mysql_connection/sql_conn_pool.h ../mysql_connection/sql_conn_pool.cpp test_server.cpp ../lock/lock.h -o test_server -L/usr/lib64/mysql -lmysqlclient

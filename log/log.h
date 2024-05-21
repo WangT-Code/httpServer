@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-04-30 11:21:13
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-06 22:17:49
+ * @LastEditTime: 2024-05-21 12:46:00
  * @FilePath: /Project/my_Server/log/log.h
  * @Description: 
  * 
@@ -56,7 +56,6 @@ private:
         while(mQue->pop(logStr)){
             std::lock_guard<std::mutex> lock(mMutex);
             fputs(logStr.c_str(),mFp);
-
         }
         return;
     }

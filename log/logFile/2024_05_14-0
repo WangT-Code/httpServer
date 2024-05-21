@@ -1,0 +1,76 @@
+2024-05-14 16:30:02.248321 [info]: [process]
+2024-05-14 16:30:02.248456 [info]: POST /video HTTP/1.1
+2024-05-14 16:30:02.248744 [info]: Host: 127.0.0.1
+2024-05-14 16:30:02.248937 [info]: Origin: http://127.0.0.1
+2024-05-14 16:30:02.248972 [info]: Connection: keep-alive
+2024-05-14 16:30:02.248994 [info]: 
+2024-05-14 16:31:11.042823 [info]: [process]
+2024-05-14 16:31:11.042874 [info]: GET /video HTTP/1.1
+2024-05-14 16:31:11.042946 [info]: Host: 127.0.0.1
+2024-05-14 16:31:11.043031 [info]: Origin: http://127.0.0.1
+2024-05-14 16:31:11.043071 [info]: Connection: keep-alive
+2024-05-14 16:31:11.043090 [info]: 
+2024-05-14 16:31:11.043398 [info]: request realFile:../resource/video
+2024-05-14 16:31:11.043406 [erro]: stat error:../resource/video,file is not exist!
+2024-05-14 16:36:55.254148 [info]: [process]
+2024-05-14 16:36:55.254200 [info]: GET /video.html HTTP/1.1
+2024-05-14 16:36:55.254304 [info]: Host: 127.0.0.1
+2024-05-14 16:36:55.254567 [info]: Origin: http://127.0.0.1
+2024-05-14 16:36:55.254735 [info]: Connection: keep-alive
+2024-05-14 16:36:55.254906 [info]: 
+2024-05-14 16:36:55.254931 [info]: request realFile:../resource/video.html
+2024-05-14 16:36:55.255021 [erro]: stat error:../resource/video.html,file is not exist!
+2024-05-14 16:39:48.352918 [info]: [process]
+2024-05-14 16:39:48.353004 [info]: GET /video.html HTTP/1.1
+2024-05-14 16:39:48.353086 [info]: Host: 127.0.0.1
+2024-05-14 16:39:48.353173 [info]: Origin: http://127.0.0.1
+2024-05-14 16:39:48.353195 [info]: Connection: keep-alive
+2024-05-14 16:39:48.353252 [info]: 
+2024-05-14 16:39:48.353274 [info]: request realFile:../resource/video.html
+2024-05-14 16:39:48.353295 [erro]: stat error:../resource/video.html,file is not exist!
+2024-05-14 16:40:43.775075 [info]: [process]
+2024-05-14 16:40:43.775127 [info]: GET /video.html HTTP/1.1
+2024-05-14 16:40:43.775224 [info]: Host: 127.0.0.1
+2024-05-14 16:40:43.775350 [info]: Origin: http://127.0.0.1
+2024-05-14 16:40:43.775373 [info]: Connection: keep-alive
+2024-05-14 16:40:43.775413 [info]: 
+2024-05-14 16:40:43.775466 [info]: request realFile:../resources/video.html
+2024-05-14 16:40:43.775477 [erro]: mmap error:../resources/video.html
+2024-05-14 16:42:35.737701 [info]: [process]
+2024-05-14 16:42:35.737884 [info]: GET /video.html HTTP/1.1
+2024-05-14 16:42:35.738040 [info]: Host: 127.0.0.1
+2024-05-14 16:42:35.738170 [info]: Origin: http://127.0.0.1
+2024-05-14 16:42:35.738257 [info]: Connection: keep-alive
+2024-05-14 16:42:35.738281 [info]: 
+2024-05-14 16:42:35.738311 [info]: request realFile:../resources/video.html
+2024-05-14 16:42:59.188880 [info]: [process]
+2024-05-14 16:42:59.188934 [info]: GET /video.html HTTP/1.1
+2024-05-14 16:42:59.189015 [info]: Host: 127.0.0.1
+2024-05-14 16:42:59.189326 [info]: Origin: http://127.0.0.1
+2024-05-14 16:42:59.189350 [info]: Connection: keep-alive
+2024-05-14 16:42:59.189448 [info]: 
+2024-05-14 16:42:59.189542 [info]: request realFile:../resources/video.html
+2024-05-14 16:44:26.729479 [info]: [process]
+2024-05-14 16:44:26.729532 [info]: GET /video.html HTTP/1.1
+2024-05-14 16:44:26.729616 [info]: Host: 127.0.0.1
+2024-05-14 16:44:26.729811 [info]: Origin: http://127.0.0.1
+2024-05-14 16:44:26.729840 [info]: Connection: keep-alive
+2024-05-14 16:44:26.729913 [info]: 
+2024-05-14 16:44:26.729953 [info]: request realFile:../resources/video.html
+2024-05-14 16:44:26.730019 [info]: mmap file [../resources/video.html] success!
+2024-05-14 16:45:41.737857 [info]: [process]
+2024-05-14 16:45:41.737907 [info]: GET /video HTTP/1.1
+2024-05-14 16:45:41.737995 [info]: Host: 127.0.0.1
+2024-05-14 16:45:41.738113 [info]: Origin: http://127.0.0.1
+2024-05-14 16:45:41.738159 [info]: Connection: keep-alive
+2024-05-14 16:45:41.738234 [info]: 
+2024-05-14 16:45:41.738257 [info]: request realFile:[../resources/video]
+2024-05-14 16:45:41.738288 [erro]: stat error:[../resources/video],file is not exist!
+2024-05-14 16:51:54.509069 [info]: [process]
+2024-05-14 16:51:54.509155 [info]: GET /video HTTP/1.1
+2024-05-14 16:51:54.509282 [info]: Host: 127.0.0.1
+2024-05-14 16:51:54.509557 [info]: Origin: http://127.0.0.1
+2024-05-14 16:51:54.509632 [info]: Connection: keep-alive
+2024-05-14 16:51:54.509692 [info]: 
+2024-05-14 16:51:54.509798 [info]: request realFile:[../resources/video]
+2024-05-14 16:51:54.509877 [erro]: stat error:[../resources/video],file is not exist!
