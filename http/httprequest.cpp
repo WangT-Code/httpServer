@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:34
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-22 11:21:19
+ * @LastEditTime: 2024-05-22 22:32:04
  * @FilePath: /Project/my_Server/http/httprequest.cpp
  * @Description: 
  * 
@@ -94,12 +94,14 @@ bool httpRequest::read(int sockfd,int * saveError){
     }
     readedIdx=0;
     int byteRead=0;
+    tempRead=0;
     LOG_DEBUG("begin recv");
     while(true){
-        byteRead=recv(sockfd,readBuf+readedIdx,READBUFSIZE-readedIdx,0);
+        byteRead=recv(sockfd,readBuf+readedIdx,READBUFSIZE-1-readedIdx,0);
         if(byteRead<0){
             printf("%d读取的内容:%s\n",sockfd,readBuf);
             if(errno==EAGAIN||errno==EWOULDBLOCK){
+                //读取完毕
                 LOG_DEBUG("EAGIN");
                 *saveError=errno;
                 break;
@@ -112,7 +114,13 @@ bool httpRequest::read(int sockfd,int * saveError){
             return false;
         }
         readedIdx+=byteRead;
+        tempRead+=byteRead;
+        if(tempRead>=READBUFSIZE-1){
+            code=parse();
+            startLine=0;
+        }
     }
+    code=parse();
     return true;
 }
 httpRequest::LINE_STATUS httpRequest::parseLine()
@@ -187,15 +195,19 @@ httpRequest::HTTP_CODE httpRequest::parseRequestHead(char* text){
 }
 
 httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
-    if(readedIdx<(contentLen+checkedIdx)){
-        return NO_REQUEST;
-    }
-    text[readedIdx] = '\0';
-    parseState=FINISH;
-    body=text;
+    
     //登录或者注册
     if(method=="POST"&&headers["Content-Type"]=="application/x-www-form-urlencoded")
     {   
+        if(readedIdx<(contentLen+checkedIdx)){
+            //可以将部分数据写入文件
+            //先判断是否已经获得文件名字，如果没有则返回NO_REQUEST,否则打开文件将部分数据先写入文件
+            return NO_REQUEST;
+        }
+        text[readedIdx] = '\0';
+        parseState=FINISH;
+        body=text;
+        curBody=text;
         parseFromUrlEncoded();//解析表单数据
         if(DEFAULTHTMLTAG.count(path)){
             int tag=DEFAULTHTMLTAG.find(path)->second;
@@ -212,8 +224,47 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
     }
     //文件上传
     else if(method=="POST"&&headers["Content-Type"].find("multipart/form-data")!=std::string::npos)
-    {
-        parseFormData();
+    {   
+        if(fileInfo.find("filename")==fileInfo.end()){
+            text[readedIdx] = '\0';//感觉这句不加也ok
+            body=text;
+            curBody=text;
+            //解析form-data的部分数据
+            parseFormData();
+        }
+        //此时的checkedIdx是请求体的起始位置
+        if(readedIdx<(checkedIdx+contentLen)){
+            //可以将部分数据写入文件
+            //先判断是否已经获得文件名字，如果没有则返回NO_REQUEST,否则打开文件将部分数据先写入文件
+            if(fileInfo.find("filename")!=fileInfo.end()){
+                std::ofstream ofs;
+                // 如果文件分多次发送，应该采用app，同时为避免重复上传，应该用md5做校验
+                ofs.open("/home/wt/Project/my_Server/resources/" +fileInfo["filename"], std::ios::ate);
+                if(!ofs.is_open()){
+                    LOG_ERROR("open file error");
+                }
+                st=0;
+                // 解析文件内容，文件内容以\r\n\r\n开始
+                if((st=body.find("\r\n\r\n"))!=string::npos){
+                    st+=strlen("\r\n\r\n");
+                }
+                if((st=body.rfind(boundary,st))!=string::npos){
+                    //找到了
+                    ed = body.rfind(boundary, st) - 2; // 文件结尾也有\r\n
+                    // 在结尾添加\0
+                    curBody[ed]='\0';
+                }
+                else{
+                    curBody[tempRead]='\0';
+                }
+                ofs<<&curBody[st];
+                ofs.close();
+                //已经读取到文件名字
+                // 向已有的文件添加内容
+                LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),strlen(&curBody[st]));
+            }
+            return NO_REQUEST;
+        }
         LOG_INFO("client ip is:%s upload file:%s success!",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str());
         std::ofstream ofs;
         ofs.open("./resources/response.txt", std::ios::ate);
@@ -278,30 +329,16 @@ void httpRequest::parseFromUrlEncoded(){
 }
 void httpRequest::parseFormData(){
     if (body.size() == 0) return;
-    size_t st = 0, ed = 0;
+    
     ed = body.find(CRLF);
-    string boundary = body.substr(0, ed);
+    boundary = body.substr(0, ed);
 
     // 解析文件信息
     st = body.find("filename=\"", ed) + strlen("filename=\"");
     ed = body.find("\"", st);
     fileInfo["filename"] = body.substr(st, ed - st);
+
     
-    // 解析文件内容，文件内容以\r\n\r\n开始
-    st = body.find("\r\n\r\n", ed) + strlen("\r\n\r\n");
-    ed = body.find(boundary, st) - 2; // 文件结尾也有\r\n
-    string content = body.substr(st, ed - st);
-    std::ofstream ofs;
-    // 如果文件分多次发送，应该采用app，同时为避免重复上传，应该用md5做校验
-    ofs.open("/home/wt/Project/my_Server/resources/" +fileInfo["filename"], std::ios::ate);
-    if(ofs.is_open())
-    {
-        ofs << content;
-        ofs.close();
-    }
-    else{
-        LOG_ERROR("open file error");
-    }
 }
 httpRequest::HTTP_CODE httpRequest::parse(){
     LINE_STATUS lineState=LINE_OK;
@@ -328,7 +365,6 @@ httpRequest::HTTP_CODE httpRequest::parse(){
                 }else if(ret==GET_REQUEST){
                     return GET_REQUEST;
                 }   
-                
                 break;
             case BODY:
                 // 解析body,登录，文件上传

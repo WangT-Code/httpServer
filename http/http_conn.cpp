@@ -32,7 +32,7 @@ void http_conn::init(int connectfd,const sockaddr_in& client)
 void http_conn::process(){
     // 执行到process说明已经将当前connectFd内的数据读取完毕，但http请求可能仍然不完整
     LOG_INFO("process");
-    int ret=request.parse();
+    
     printf("method: %s\n,url: %s\n",request.getMethod().c_str(),request.getUrl().c_str());
     //request.parse()只会返回3种结果，NO_request,BAD_request,GET_request;
     if(ret==httpRequest::NO_REQUEST){

@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:25
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-21 10:34:59
+ * @LastEditTime: 2024-05-22 22:33:33
  * @FilePath: /Project/my_Server/http/httprequest.h
  * @Description: 
  * 
@@ -129,9 +129,17 @@ private:
     size_t startLine;
     char readBuf[READBUFSIZE];//存储报文数据
     PARSE_STATE parseState;//当前的解析状态
-    string method,path,version,body;
+    string method,path,version,body,boundary;
+    // int tempRead;//记录一次读取的数据的个数
+    int tempRead;
+    // size_t st = 0, ed = 0;
+    size_t st=0,ed=0;
     bool linger;//是否是长连接
     size_t contentLen;//存储请求体的长度
+    int code;
+    char* curBody;
+    // int code;
+    // char* curBody;
     unordered_map<string,string> headers;//存储请求头中的信息
     unordered_map<string,string> postUser;//存储用户登陆注册时的信息
     unordered_map<string,string> fileInfo;//存储用户上传文件的信息

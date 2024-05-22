@@ -95,6 +95,7 @@ private:
     HTTP_CODE code;//状态码
     struct stat fileState;
     char* fileAddress;
+    int ret;
     httpRequest request;
     httpResponse response;
 public:
