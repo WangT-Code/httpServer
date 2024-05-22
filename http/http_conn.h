@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 17:35:02
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-21 20:28:55
+ * @LastEditTime: 2024-05-22 10:15:39
  * @FilePath: /Project/my_Server/http/http_conn.h
  * @Description: 
  * 
@@ -78,7 +78,6 @@ public:
     bool write(int* saveErrno){
         bool ans = response.write(connectFd,saveErrno);
         request.init();
-        response.init();
         return ans;
     };
     // bool process_read();

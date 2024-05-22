@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:34
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-21 16:51:42
+ * @LastEditTime: 2024-05-22 11:21:19
  * @FilePath: /Project/my_Server/http/httprequest.cpp
  * @Description: 
  * 
@@ -98,7 +98,7 @@ bool httpRequest::read(int sockfd,int * saveError){
     while(true){
         byteRead=recv(sockfd,readBuf+readedIdx,READBUFSIZE-readedIdx,0);
         if(byteRead<0){
-            printf("读取的内容:%s\n",readBuf);
+            printf("%d读取的内容:%s\n",sockfd,readBuf);
             if(errno==EAGAIN||errno==EWOULDBLOCK){
                 LOG_DEBUG("EAGIN");
                 *saveError=errno;

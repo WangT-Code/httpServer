@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-20 10:54:29
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-21 22:04:59
+ * @LastEditTime: 2024-05-22 10:24:04
  * @FilePath: /Project/my_Server/http/test_server.cpp
  * @Description: 
  * 
@@ -97,7 +97,7 @@ int main(){
             }
             else if(events[i].events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)){
                 http_conn::userCount--;
-                printf("对方关闭连接\n");
+                printf("%d对方关闭连接\n",events[i].data.fd);
                 LOG_DEBUG("%d closed!",events[i].data.fd);
                 conn[events[i].data.fd].closeConn();//关闭连接:将连接从epoll中删除，关闭了fd
             }
@@ -118,8 +118,14 @@ int main(){
             else if(events[i].events&EPOLLOUT){
                 printf("开始返回报文\n");
                 int err;
-                conn[events[i].data.fd].write(&err);
-                printf("%d返回完毕\n",events[i].data.fd);
+                if(conn[events[i].data.fd].write(&err)){
+                    printf("返回成功\n");
+                    //调整定时器
+                }
+                else{
+                    printf("关闭连接\n");
+                    conn[events[i].data.fd].closeConn();
+                }
             }
         }
     }

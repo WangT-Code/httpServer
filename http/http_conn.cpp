@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 17:35:14
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-21 21:57:31
+ * @LastEditTime: 2024-05-22 09:59:11
  * @FilePath: /Project/my_Server/http/http_conn.cpp
  * @Description: 
  * 
@@ -112,9 +112,8 @@ void http_conn::process(){
                 // request.init();
                 // return ;
             }
-            
             code=FILE_REQUEST;
-            LOG_INFO("[%s]s is exist!",realFile.c_str());
+            LOG_INFO("[%s] is exist!file size is: %ld",realFile.c_str(),fileState.st_size);
             this->response.init(realFile,code,this->request.isLinger());
             this->response.makeResponse();
             epollUtil::instance().modfd(connectFd,EPOLLOUT);
@@ -134,10 +133,6 @@ void http_conn::process(){
     }
     printf("重置request对象\n");
     request.init();
-    if(request.isKeepAlive()){
-        printf("重置request对象\n");
-        request.init();
-    }
     return ;
 }
 void http_conn::closeConn(){

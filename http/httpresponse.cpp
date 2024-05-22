@@ -194,17 +194,19 @@ bool httpResponse::addContent(){
 }
 bool httpResponse::write( int sockfd,int *saveErrno){
     if(byteToSend==0){
-        printf("bytesToSend is zero\n");
+        printf("%d bytesToSend is zero\n",sockfd);
         epollUtil::instance().modfd(sockfd,EPOLLIN);
         unMapFile();
         return true;
     }
     while(1){
         int bytes_write=writev(sockfd,writeV,writeVcnt);
-        printf("%d此次返回%d字节数据\n",sockfd,bytes_write);
+        printf("%d此次返回%d字节数据,错误代码为:%d\n",sockfd,bytes_write,errno);
         if(bytes_write==0)sleep(2);
         if(-1==bytes_write){
             if(errno==EAGAIN){
+                *saveErrno = errno;
+                LOG_INFO("write EAGAIN");
                 epollUtil::instance().modfd(sockfd,EPOLLOUT);
                 return true;
             }
@@ -224,6 +226,11 @@ bool httpResponse::write( int sockfd,int *saveErrno){
         else{
             writeV[0].iov_base=writeBuf+byteHaveSend;
             writeV[0].iov_len-=byteHaveSend;
+        }
+        if(byteToSend>0 && errno ==EAGAIN){
+            LOG_INFO("write EAGAIN");
+            epollUtil::instance().modfd(sockfd,EPOLLOUT);
+            return true;
         }
         if(byteToSend<=0){
             LOG_INFO("write complete");
