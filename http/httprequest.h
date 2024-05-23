@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:25
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-22 22:33:33
+ * @LastEditTime: 2024-05-23 16:32:07
  * @FilePath: /Project/my_Server/http/httprequest.h
  * @Description: 
  * 
@@ -114,6 +114,9 @@ public:
     int getReadedIdx()const{
         return readedIdx;
     }
+    int getCode(){
+        return code;
+    }
     std::unordered_map<std::string,std::string>& getHeaders(){
         return headers;
     }
@@ -130,8 +133,10 @@ private:
     char readBuf[READBUFSIZE];//存储报文数据
     PARSE_STATE parseState;//当前的解析状态
     string method,path,version,body,boundary;
-    // int tempRead;//记录一次读取的数据的个数
-    int tempRead;
+   //记录一次读取的数据的个数
+    int tempRead=0;
+    //记录一次读取中的所有字节数量
+    int totalBytes=0;
     // size_t st = 0, ed = 0;
     size_t st=0,ed=0;
     bool linger;//是否是长连接
@@ -146,6 +151,5 @@ private:
     static const unordered_set<string> DEFAULTHTML;//网站默认页面带.html的页面
     static const unordered_set<string> DEFAULTHTMLWITHOUTHTML;//网站页面不带.html
     static const unordered_map<string,int> DEFAULTHTMLTAG;//用户post的页面
-    
 };
 #endif

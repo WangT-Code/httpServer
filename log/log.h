@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-04-30 11:21:13
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-21 12:46:00
+ * @LastEditTime: 2024-05-23 22:20:18
  * @FilePath: /Project/my_Server/log/log.h
  * @Description: 
  * 
@@ -34,7 +34,7 @@ public:
     /// @param log_buf_size 缓存大小
     /// @param split_lines 日志文件的最大行数
     /// @param max_queue_size 日志队列的大小
-    bool init(bool close_log,const char* log_path="./logFile",int log_buf_size=2048,int split_lines=5000000,int max_queue_size=100);
+    bool init(bool close_log,const char* log_path="./logFile",int log_buf_size=10240,int split_lines=5000000,int max_queue_size=100);
     void write(const int level,const char*format,...);
     void writeLevelInfo(char* buf,const int level);
     static void callBack(){
@@ -89,7 +89,10 @@ private:
         mBuf=nullptr;
         mQue=nullptr;
     }
-    ~log(){};
+    ~log(){
+        delete [] mBuf;
+        delete [] mLogName;
+    };
 };
 #define LOG_DEBUG(format, ...) if(!log::getInstance()->isClose()) {log::getInstance()->write(0,format,##__VA_ARGS__); log::getInstance()->flush();}
 #define LOG_INFO(format, ...) if(!log::getInstance()->isClose()) {log::getInstance()->write(1,format,##__VA_ARGS__); log::getInstance()->flush();}

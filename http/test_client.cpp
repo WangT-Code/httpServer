@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-20 11:07:59
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-22 10:36:17
+ * @LastEditTime: 2024-05-23 15:19:59
  * @FilePath: /Project/my_Server/http/test_client.cpp
  * @Description:    
  * 
@@ -37,8 +37,10 @@ int main(){
     }
     printf("发送成功\n");
     int readEdIdx=0;
+    memset(receiveBuf,'\0',8192);
+    printf("接收到的数据为：\n");
     while(1){
-        int res=recv(sockfd,receiveBuf+readEdIdx,8192-readEdIdx,0);
+        int res=recv(sockfd,receiveBuf,8191,0);
         if(res<0){
             if(errno==EAGAIN||errno==EWOULDBLOCK){
                 continue;
@@ -49,12 +51,8 @@ int main(){
             printf("对方关闭连接\n");
             break;
         }
-        readEdIdx+=res;
-        if(readEdIdx==1566336){
-            printf("接受完毕\n");
-            break;
-        }
+        printf("%s",receiveBuf);
+        memset(receiveBuf,'\0',8192);
     }
-    printf("receive:\n%s",receiveBuf);
     close(sockfd);
 }

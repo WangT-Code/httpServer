@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 17:35:14
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-22 09:59:11
+ * @LastEditTime: 2024-05-23 15:00:40
  * @FilePath: /Project/my_Server/http/http_conn.cpp
  * @Description: 
  * 
@@ -32,10 +32,11 @@ void http_conn::init(int connectfd,const sockaddr_in& client)
 void http_conn::process(){
     // 执行到process说明已经将当前connectFd内的数据读取完毕，但http请求可能仍然不完整
     LOG_INFO("process");
-    
-    printf("method: %s\n,url: %s\n",request.getMethod().c_str(),request.getUrl().c_str());
+    ret=request.getCode();
+    printf("method: %s\nurl: %s\n",request.getMethod().c_str(),request.getUrl().c_str());
     //request.parse()只会返回3种结果，NO_request,BAD_request,GET_request;
     if(ret==httpRequest::NO_REQUEST){
+        printf("没有获取完整请求\n");
         //没有获取完整的请求
         //这里可以改一下，大文件上传。
         LOG_INFO("%s", "NO_REQUEST");
@@ -47,6 +48,8 @@ void http_conn::process(){
     else if(ret==BAD_REQUEST){
         //给用户写回错误信息
         code=BAD_REQUEST;
+        printf("请求错误\n");
+
         LOG_ERROR("%s", "BAD_REQUEST");
         this->response.init(realFile,code,this->request.isLinger());
         this->response.makeResponse();
@@ -55,6 +58,7 @@ void http_conn::process(){
     }
     else{
         //获取完整的请求
+        printf("获取完整请求\n");
         if(request.getMethod()=="POST"){
             //给用户返回成功信息
             code=GET_REQUEST;
@@ -68,6 +72,7 @@ void http_conn::process(){
             // return;
         }
         else if(request.getMethod() == "GET"){
+            printf("GET 方法\n");
             //给用户返回成功信息
             std::string url=request.getUrl();
             if(url[0]=='/'&&url.size()==1)
