@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:34
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-23 22:50:18
+ * @LastEditTime: 2024-05-28 21:06:28
  * @FilePath: /Project/my_Server/http/httprequest.cpp
  * @Description: 
  * 
@@ -100,17 +100,18 @@ bool httpRequest::read(int sockfd,int * saveError){
     totalBytes=0;
     LOG_DEBUG("begin recv");
     while(true){
+        tempRead=0;
         byteRead=recv(sockfd,readBuf,READBUFSIZE-1,0);
         printf("%d本次读取%d字节的数据,errno:%d\n",sockfd,byteRead,errno);
         LOG_DEBUG("%d本次读取%d字节的数据,errno:%d",sockfd,byteRead,errno);
-        LOG_DEBUG("使用strlen函数的值是:%d",strlen(readBuf));
-        LOG_DEBUG("读取的数据是:%s",readBuf);
+        // LOG_DEBUG("使用strlen函数的值是:%d",strlen(readBuf));
+        // LOG_DEBUG("读取的数据是:%s",readBuf);
         if(byteRead<0){
             //没有更多数据可读
             if((errno==EAGAIN||errno==EWOULDBLOCK)){
                 if(code==GET_REQUEST){
                     printf("total read %d bytesa \n",totalBytes);
-                    LOG_DEBUG("read all data success,total read %d bytesa \n",totalBytes);
+                    LOG_DEBUG("read all data success,total read %d bytesa",totalBytes);
                     *saveError=errno;
                     return true;
                 }
@@ -144,7 +145,6 @@ bool httpRequest::read(int sockfd,int * saveError){
 httpRequest::LINE_STATUS httpRequest::parseLine()
 {   
     // 请求体不用解析
-    // if(parseState==BODY)return LINE_OK;
     LOG_INFO("parseLine");
     char temp;
     for(;checkedIdx<readedIdx;++checkedIdx){
@@ -256,48 +256,97 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
         LOG_DEBUG("readedIdx:%d",readedIdx);
         LOG_DEBUG("checkedIdx:%d",checkedIdx);
         LOG_DEBUG("contentLen:%d",contentLen);
-        if(readedIdx<(checkedIdx+contentLen)){
+        if(readedIdx<=(checkedIdx+contentLen)){
             //可以将部分数据写入文件
             //先判断是否已经获得文件名字，如果没有则返回NO_REQUEST,否则打开文件将部分数据先写入文件
             if(fileInfo.find("filename")!=fileInfo.end()){
                 std::ofstream ofs;
                 // 如果文件分多次发送，应该采用app，同时为避免重复上传，应该用md5做校验
-                ofs.open("/home/wt/Project/my_Server/resources/" +fileInfo["filename"], std::ios::app);
+                ofs.open("/home/wt/Project/my_Server/resources/" +fileInfo["filename"], std::ios::app|std::ios::binary);
                 if(!ofs.is_open()){
                     LOG_ERROR("open file error");
                 }
                 // 解析文件内容，文件内容以\r\n\r\n开始
-                LOG_DEBUG("body:%s",body.c_str());
+                // LOG_DEBUG("body:%s",body.c_str());
                 if((st=body.find("\r\n\r\n"))!=string::npos){
                     st+=strlen("\r\n\r\n");
+                    //这里可以加个标志比如flag=1,然后在if里面进行判断，这样就不用每次都body.find("\r\n\r\n")
                 }
                 else st=0;
                 LOG_DEBUG("开始位置st:%lu",st);
-                LOG_DEBUG("ed:%lu",body.find(boundary));
-                if((ed=body.find(boundary))!=string::npos){
-                    //找到了
-                    ed =ed- 2; // 文件结尾也有\r\n
-                    // 在结尾添加\0
-                    curBody[ed]='\0';
+                if(readedIdx>=(checkedIdx+contentLen)){
+                    //说明是最后一次读取
+                    if(st){
+                        for(int i=0;i<boundary.size();++i){
+                            LOG_DEBUG("compare content is %s",text-checkedIdx+tempRead-boundary.size()-i);
+                            if(memcmp(text-checkedIdx+tempRead-boundary.size()-i,boundary.c_str(),boundary.size())==0){
+                                ed=tempRead-checkedIdx-boundary.size()-i-2;
+                                LOG_DEBUG("tempRead :%d,checkedIdx:%d,boundary.size():%d,i:%d",tempRead,checkedIdx,boundary.size(),i);
+                                LOG_DEBUG("find ok:%s",&text[tempRead-checkedIdx-boundary.size()-i]);
+                                break;
+                            }
+                        }
+                    }
+                    else{
+                        for(int i=0;i<boundary.size();++i){
+                            LOG_DEBUG("compare content is %s",text+tempRead-boundary.size()-i);
+                            if(memcmp(text+tempRead-boundary.size()-i,boundary.c_str(),boundary.size())==0){
+                                ed=tempRead-boundary.size()-i-2;
+                                LOG_DEBUG("tempRead :%d,boundary.size():%d,i:%d",tempRead,boundary.size(),i);
+                                LOG_DEBUG("find ok:%s",&text[tempRead-boundary.size()-i]);
+                                break;
+                            }
+                        }
+                    }
+                    LOG_DEBUG("结束位置ed:%u",ed); 
+                    ofs.write(&text[st],ed-st);
+                    text[ed]='\0';
+                    LOG_DEBUG("写入的结束位置:%d",ed);
+                    LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),ed-st);
+                    // if(st){
+                    //     ofs.write(&text[st],ed-st-checkedIdx);
+                    //     text[ed-checkedIdx]='\0';
+                    //     LOG_DEBUG("写入的结束位置:%d",ed-checkedIdx);
+                    //     LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),ed-st-checkedIdx);
+                    // }
+                    // else{
+                    //     ofs.write(&text[st],ed-st);
+                    //     text[ed]='\0';
+                    //     LOG_DEBUG("写入的结束位置:%d",ed);
+                    //     LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),ed-st);
+                    // }
+                    LOG_DEBUG("写入的文件内容为：%s",&text[st]);
+                    ofs.close();
                 }
-                else{
-                    curBody[tempRead]='\0';
-                }
-                LOG_DEBUG("结束位置ed:%lu",ed);
-                ofs<<&curBody[st];
-                ofs.close();
-                //已经读取到文件名字
-                // 向已有的文件添加内容
-                LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),strlen(&curBody[st]));
+                else {
+                    LOG_DEBUG("结束位置ed:%lu",tempRead);
+                    if(st){
+                        //第一次读取时，还要去掉请求行和请求头的内容长度
+                        ofs.write(&text[st],tempRead-st-checkedIdx);
+                        LOG_DEBUG("写入的结束位置:%d",tempRead-checkedIdx);
+                        LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),tempRead-st-checkedIdx);
+                    }
+                    else{
+                        ofs.write(&text[st],tempRead-st);
+                        LOG_DEBUG("写入的结束位置:%d",tempRead);
+                        LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),tempRead-st);
+                    }
+                    LOG_DEBUG("写入的文件内容为：%s",&text[st]);
+                    ofs.close();  
+                } 
             }
-            return NO_REQUEST;
+            if(readedIdx==(checkedIdx+contentLen)){
+                LOG_INFO("client ip is:%s upload file:%s success!",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str());
+                std::ofstream ofs1;
+                ofs1.open("/home/wt/Project/my_Server/resources/response.txt", std::ios::ate);
+                ofs1 << "/home/wt/Project/my_Server/resources/response.txt" << fileInfo["filename"];
+                ofs1.close();
+                path = "/response.txt";
+                return GET_REQUEST;
+            }
+            else return NO_REQUEST;
         }
-        LOG_INFO("client ip is:%s upload file:%s success!",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str());
-        std::ofstream ofs;
-        ofs.open("./resources/response.txt", std::ios::ate);
-        ofs << "./resources/files/" << fileInfo["filename"];
-        ofs.close();
-        path = "/response.txt";
+        
     }
     return GET_REQUEST;
 }
@@ -358,7 +407,7 @@ void httpRequest::parseFormData(){
     if (body.size() == 0) return;
     ed = body.find(CRLF);
     boundary = body.substr(0, ed);
-    printf("parse boundary:%s",boundary.c_str());
+    printf("parse boundary:%s\n",boundary.c_str());
     // 解析文件信息
     st = body.find("filename=\"", ed) + strlen("filename=\"");
     ed = body.find("\"", st);
@@ -398,8 +447,9 @@ httpRequest::HTTP_CODE httpRequest::parse(){
                     return GET_REQUEST;
                 }else if(ret==BAD_REQUEST){
                     return BAD_REQUEST;
+                }else if(ret==NO_REQUEST){
+                    return NO_REQUEST;
                 }
-                lineState=LINE_OPEN;
                 break;
             default:
                 break;

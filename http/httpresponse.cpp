@@ -106,37 +106,21 @@ bool httpResponse::makeResponse(){
 
     }
     else if(code==FILE_REQUEST||code==GET_REQUEST){
-        if(GET_REQUEST==code){
-            LOG_INFO("user login success and begin to make response.");
-        }
-        LOG_INFO("add response line");
         addResponse("HTTP/1.1 %d %s\r\n",200,ok_200_title);
-        LOG_INFO("add response line success,begin to add headers");
         addResponse("Connection:%s\r\n", (isKeepAlive == true) ? "keep-alive" : "close");
-        LOG_INFO("add connection success and begin to run addContent()");
         byteToSend=writeEdIdx;
         return addContent();
     }
-    else if(code==NO_RESOURSE){
-        printf("无资源\n");
-        printf("开始添加响应行\n");
+    else if(code==NO_RESOURCE){
         addResponse("HTTP/1.1 %d %s\r\n",404,error_404_title);
-        printf("相应请求行添加完毕,开始添加响应头\n");
         addResponse("Content-Length:%d\r\n", strlen(error_404_form));
         addResponse("Connection:%s\r\n", (isKeepAlive == true) ? "keep-alive" : "close");
         addResponse("Content-Type:text/html\r\n\r\n");
-        printf("响应头添加完毕,开始添加响应体\n");
         addResponse("%s",error_404_form);
-        printf("writeV开始设置\n");
         byteToSend=writeEdIdx;
         mapToWriteV();
-        printf("映射完毕\n");
-        printf("返回内容：%s",writeBuf);
-        printf("writeEdIdx:%ld",writeEdIdx);
         LOG_INFO("addResponse:%s",writeBuf);
-        printf("\n添加完毕\n");
         return true;
-
     }
     else{
         addResponse("HTTP/1.1 %d %s\r\n",500,error_500_title);

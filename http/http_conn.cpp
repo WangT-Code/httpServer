@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 17:35:14
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-23 15:00:40
+ * @LastEditTime: 2024-05-27 15:57:25
  * @FilePath: /Project/my_Server/http/http_conn.cpp
  * @Description: 
  * 
@@ -93,12 +93,12 @@ void http_conn::process(){
                 this->response.init(realFile,code,this->request.isLinger());
                 this->response.makeResponse();
                 epollUtil::instance().modfd(connectFd,EPOLLOUT);
-                // request.init();
-                // return;
+                request.init();
+                return;
             }
             if(!(fileState.st_mode&S_IROTH)){
                 //无权限
-                code =FORBIDDEN_REQUEST;
+                code =FORBIDDENT_REQUEST;
                 LOG_ERROR("stat error:[%s],file is not readable!",realFile.c_str());
                 this->response.init(realFile,code,this->request.isLinger());
                 this->response.makeResponse();

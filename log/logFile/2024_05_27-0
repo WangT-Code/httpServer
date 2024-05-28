@@ -1,0 +1,1381 @@
+2024-05-27 15:52:00.893376 [info]: write complete
+2024-05-27 15:52:14.208337 [debug]: begin recv
+2024-05-27 15:52:14.208517 [debug]: 16本次读取545字节的数据,errno:11
+2024-05-27 15:52:14.208534 [info]: parseLine
+2024-05-27 15:52:14.208545 [info]: 此次的行是：GET /download.html HTTP/1.1
+2024-05-27 15:52:14.208569 [info]: checkedIdx: 29
+2024-05-27 15:52:14.208930 [info]: parseLine
+2024-05-27 15:52:14.208977 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.208985 [info]: checkedIdx: 57
+2024-05-27 15:52:14.209093 [info]: parseLine
+2024-05-27 15:52:14.209143 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.209150 [info]: checkedIdx: 81
+2024-05-27 15:52:14.209256 [info]: parseLine
+2024-05-27 15:52:14.209297 [info]: 此次的行是：Upgrade-Insecure-Requests: 1
+2024-05-27 15:52:14.209306 [info]: checkedIdx: 111
+2024-05-27 15:52:14.209414 [info]: parseLine
+2024-05-27 15:52:14.209454 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.209461 [info]: checkedIdx: 250
+2024-05-27 15:52:14.209577 [info]: parseLine
+2024-05-27 15:52:14.209620 [info]: 此次的行是：Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-05-27 15:52:14.209627 [info]: checkedIdx: 395
+2024-05-27 15:52:14.209740 [info]: parseLine
+2024-05-27 15:52:14.209783 [info]: 此次的行是：Referer: http://192.168.159.170:8080/upload.html
+2024-05-27 15:52:14.209790 [info]: checkedIdx: 445
+2024-05-27 15:52:14.209895 [info]: parseLine
+2024-05-27 15:52:14.209934 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.209940 [info]: checkedIdx: 477
+2024-05-27 15:52:14.210034 [info]: parseLine
+2024-05-27 15:52:14.210071 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.210077 [info]: checkedIdx: 543
+2024-05-27 15:52:14.210219 [info]: parseLine
+2024-05-27 15:52:14.210263 [info]: 此次的行是：
+2024-05-27 15:52:14.210270 [info]: checkedIdx: 545
+2024-05-27 15:52:14.210406 [debug]: 16本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.210425 [debug]: read all data success,total read 545 bytesa
+2024-05-27 15:52:14.210432 [info]: process
+2024-05-27 15:52:14.210442 [info]: request realFile:[../resources/download.html]
+2024-05-27 15:52:14.210453 [info]: [../resources/download.html] is exist!file size is: 4294
+2024-05-27 15:52:14.210464 [debug]: addContent file:[../resources/download.html]
+2024-05-27 15:52:14.210485 [debug]: open file:[../resources/download.html] success!
+2024-05-27 15:52:14.210523 [info]: mmap file [../resources/download.html] success!
+2024-05-27 15:52:14.237187 [info]: write complete
+2024-05-27 15:52:14.339767 [debug]: begin recv
+2024-05-27 15:52:14.339892 [debug]: 16本次读取408字节的数据,errno:11
+2024-05-27 15:52:14.339903 [info]: parseLine
+2024-05-27 15:52:14.339917 [info]: 此次的行是：GET /css/bootstrap.min.css HTTP/1.1
+2024-05-27 15:52:14.339930 [info]: checkedIdx: 37
+2024-05-27 15:52:14.340292 [info]: parseLine
+2024-05-27 15:52:14.340361 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.340369 [info]: checkedIdx: 65
+2024-05-27 15:52:14.340506 [info]: parseLine
+2024-05-27 15:52:14.340586 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.340596 [info]: checkedIdx: 89
+2024-05-27 15:52:14.340733 [info]: parseLine
+2024-05-27 15:52:14.340780 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.340789 [info]: checkedIdx: 228
+2024-05-27 15:52:14.340973 [info]: parseLine
+2024-05-27 15:52:14.341031 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:52:14.341041 [info]: checkedIdx: 256
+2024-05-27 15:52:14.341230 [info]: parseLine
+2024-05-27 15:52:14.341291 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.341301 [info]: checkedIdx: 308
+2024-05-27 15:52:14.341556 [info]: parseLine
+2024-05-27 15:52:14.341664 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.341678 [info]: checkedIdx: 340
+2024-05-27 15:52:14.341897 [info]: parseLine
+2024-05-27 15:52:14.341972 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.341981 [info]: checkedIdx: 406
+2024-05-27 15:52:14.342205 [info]: parseLine
+2024-05-27 15:52:14.342286 [info]: 此次的行是：
+2024-05-27 15:52:14.342297 [info]: checkedIdx: 408
+2024-05-27 15:52:14.342575 [debug]: 16本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.342618 [debug]: read all data success,total read 408 bytesa
+2024-05-27 15:52:14.342632 [info]: process
+2024-05-27 15:52:14.342658 [info]: request realFile:[../resources/css/bootstrap.min.css]
+2024-05-27 15:52:14.342680 [info]: [../resources/css/bootstrap.min.css] is exist!file size is: 121214
+2024-05-27 15:52:14.342692 [debug]: addContent file:[../resources/css/bootstrap.min.css]
+2024-05-27 15:52:14.342718 [debug]: open file:[../resources/css/bootstrap.min.css] success!
+2024-05-27 15:52:14.342758 [info]: mmap file [../resources/css/bootstrap.min.css] success!
+2024-05-27 15:52:14.343854 [info]: write complete
+2024-05-27 15:52:14.346143 [debug]: begin recv
+2024-05-27 15:52:14.346290 [debug]: 28本次读取402字节的数据,errno:11
+2024-05-27 15:52:14.346309 [info]: parseLine
+2024-05-27 15:52:14.346321 [info]: 此次的行是：GET /css/animate.css HTTP/1.1
+2024-05-27 15:52:14.346332 [info]: checkedIdx: 31
+2024-05-27 15:52:14.346960 [info]: parseLine
+2024-05-27 15:52:14.347059 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.347067 [info]: checkedIdx: 59
+2024-05-27 15:52:14.347388 [info]: parseLine
+2024-05-27 15:52:14.347437 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.347476 [info]: checkedIdx: 83
+2024-05-27 15:52:14.347712 [info]: parseLine
+2024-05-27 15:52:14.347737 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.347743 [info]: checkedIdx: 222
+2024-05-27 15:52:14.347971 [info]: parseLine
+2024-05-27 15:52:14.348024 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:52:14.348052 [info]: checkedIdx: 250
+2024-05-27 15:52:14.348371 [info]: parseLine
+2024-05-27 15:52:14.348407 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.348413 [info]: checkedIdx: 302
+2024-05-27 15:52:14.348601 [info]: parseLine
+2024-05-27 15:52:14.348650 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.348658 [info]: checkedIdx: 334
+2024-05-27 15:52:14.348791 [info]: parseLine
+2024-05-27 15:52:14.348809 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.348812 [info]: checkedIdx: 400
+2024-05-27 15:52:14.348968 [info]: parseLine
+2024-05-27 15:52:14.349016 [info]: 此次的行是：
+2024-05-27 15:52:14.349045 [info]: checkedIdx: 402
+2024-05-27 15:52:14.349253 [debug]: 28本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.349283 [debug]: read all data success,total read 402 bytesa
+2024-05-27 15:52:14.349293 [info]: process
+2024-05-27 15:52:14.349315 [info]: request realFile:[../resources/css/animate.css]
+2024-05-27 15:52:14.349340 [info]: [../resources/css/animate.css] is exist!file size is: 72922
+2024-05-27 15:52:14.349354 [debug]: addContent file:[../resources/css/animate.css]
+2024-05-27 15:52:14.349396 [debug]: open file:[../resources/css/animate.css] success!
+2024-05-27 15:52:14.349447 [info]: mmap file [../resources/css/animate.css] success!
+2024-05-27 15:52:14.349502 [debug]: begin recv
+2024-05-27 15:52:14.349528 [debug]: 27本次读取409字节的数据,errno:11
+2024-05-27 15:52:14.349549 [info]: parseLine
+2024-05-27 15:52:14.349555 [info]: 此次的行是：GET /css/magnific-popup.css HTTP/1.1
+2024-05-27 15:52:14.349559 [info]: checkedIdx: 38
+2024-05-27 15:52:14.349922 [info]: parseLine
+2024-05-27 15:52:14.349989 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.350009 [info]: checkedIdx: 66
+2024-05-27 15:52:14.350156 [info]: parseLine
+2024-05-27 15:52:14.350194 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.350201 [info]: checkedIdx: 90
+2024-05-27 15:52:14.350322 [info]: parseLine
+2024-05-27 15:52:14.350371 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.350378 [info]: checkedIdx: 229
+2024-05-27 15:52:14.350534 [info]: parseLine
+2024-05-27 15:52:14.350559 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:52:14.350566 [info]: checkedIdx: 257
+2024-05-27 15:52:14.350727 [info]: parseLine
+2024-05-27 15:52:14.350784 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.350790 [info]: checkedIdx: 309
+2024-05-27 15:52:14.350991 [info]: parseLine
+2024-05-27 15:52:14.351019 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.351023 [info]: checkedIdx: 341
+2024-05-27 15:52:14.351132 [info]: parseLine
+2024-05-27 15:52:14.351206 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.351234 [info]: checkedIdx: 407
+2024-05-27 15:52:14.351368 [info]: parseLine
+2024-05-27 15:52:14.351409 [info]: 此次的行是：
+2024-05-27 15:52:14.351414 [info]: checkedIdx: 409
+2024-05-27 15:52:14.351538 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.351552 [debug]: read all data success,total read 409 bytesa
+2024-05-27 15:52:14.351558 [info]: process
+2024-05-27 15:52:14.351572 [info]: request realFile:[../resources/css/magnific-popup.css]
+2024-05-27 15:52:14.351586 [info]: [../resources/css/magnific-popup.css] is exist!file size is: 6951
+2024-05-27 15:52:14.351608 [debug]: addContent file:[../resources/css/magnific-popup.css]
+2024-05-27 15:52:14.351639 [debug]: open file:[../resources/css/magnific-popup.css] success!
+2024-05-27 15:52:14.351696 [info]: mmap file [../resources/css/magnific-popup.css] success!
+2024-05-27 15:52:14.351722 [debug]: begin recv
+2024-05-27 15:52:14.351737 [debug]: 17本次读取411字节的数据,errno:11
+2024-05-27 15:52:14.351745 [info]: parseLine
+2024-05-27 15:52:14.351747 [info]: 此次的行是：GET /css/font-awesome.min.css HTTP/1.1
+2024-05-27 15:52:14.351754 [info]: checkedIdx: 40
+2024-05-27 15:52:14.352002 [info]: parseLine
+2024-05-27 15:52:14.352037 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.352043 [info]: checkedIdx: 68
+2024-05-27 15:52:14.352195 [info]: parseLine
+2024-05-27 15:52:14.352234 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.352240 [info]: checkedIdx: 92
+2024-05-27 15:52:14.352367 [info]: parseLine
+2024-05-27 15:52:14.352405 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.352411 [info]: checkedIdx: 231
+2024-05-27 15:52:14.352541 [info]: parseLine
+2024-05-27 15:52:14.352572 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:52:14.352585 [info]: checkedIdx: 259
+2024-05-27 15:52:14.352685 [info]: parseLine
+2024-05-27 15:52:14.352712 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.352794 [info]: checkedIdx: 311
+2024-05-27 15:52:14.352964 [info]: parseLine
+2024-05-27 15:52:14.353009 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.353021 [info]: checkedIdx: 343
+2024-05-27 15:52:14.353117 [info]: parseLine
+2024-05-27 15:52:14.353144 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.353164 [info]: checkedIdx: 409
+2024-05-27 15:52:14.353266 [info]: parseLine
+2024-05-27 15:52:14.353298 [info]: 此次的行是：
+2024-05-27 15:52:14.353303 [info]: checkedIdx: 411
+2024-05-27 15:52:14.353431 [debug]: 17本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.354476 [debug]: read all data success,total read 411 bytesa
+2024-05-27 15:52:14.354521 [info]: process
+2024-05-27 15:52:14.354542 [info]: request realFile:[../resources/css/font-awesome.min.css]
+2024-05-27 15:52:14.354562 [info]: [../resources/css/font-awesome.min.css] is exist!file size is: 27392
+2024-05-27 15:52:14.354572 [debug]: addContent file:[../resources/css/font-awesome.min.css]
+2024-05-27 15:52:14.354595 [debug]: open file:[../resources/css/font-awesome.min.css] success!
+2024-05-27 15:52:14.354622 [info]: mmap file [../resources/css/font-awesome.min.css] success!
+2024-05-27 15:52:14.354650 [debug]: begin recv
+2024-05-27 15:52:14.354674 [debug]: 26本次读取400字节的数据,errno:11
+2024-05-27 15:52:14.354688 [info]: parseLine
+2024-05-27 15:52:14.354696 [info]: 此次的行是：GET /css/style.css HTTP/1.1
+2024-05-27 15:52:14.354705 [info]: checkedIdx: 29
+2024-05-27 15:52:14.355023 [info]: parseLine
+2024-05-27 15:52:14.355058 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.355071 [info]: checkedIdx: 57
+2024-05-27 15:52:14.355226 [info]: parseLine
+2024-05-27 15:52:14.355257 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.355262 [info]: checkedIdx: 81
+2024-05-27 15:52:14.355402 [info]: parseLine
+2024-05-27 15:52:14.355430 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.355435 [info]: checkedIdx: 220
+2024-05-27 15:52:14.355576 [info]: parseLine
+2024-05-27 15:52:14.355604 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:52:14.355623 [info]: checkedIdx: 248
+2024-05-27 15:52:14.355723 [info]: parseLine
+2024-05-27 15:52:14.355749 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.355760 [info]: checkedIdx: 300
+2024-05-27 15:52:14.355872 [info]: parseLine
+2024-05-27 15:52:14.355904 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.355908 [info]: checkedIdx: 332
+2024-05-27 15:52:14.356034 [info]: parseLine
+2024-05-27 15:52:14.356061 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.356082 [info]: checkedIdx: 398
+2024-05-27 15:52:14.356197 [info]: parseLine
+2024-05-27 15:52:14.356229 [info]: 此次的行是：
+2024-05-27 15:52:14.356243 [info]: checkedIdx: 400
+2024-05-27 15:52:14.356373 [debug]: 26本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.356417 [debug]: read all data success,total read 400 bytesa
+2024-05-27 15:52:14.356452 [info]: process
+2024-05-27 15:52:14.356469 [info]: request realFile:[../resources/css/style.css]
+2024-05-27 15:52:14.356483 [info]: [../resources/css/style.css] is exist!file size is: 9807
+2024-05-27 15:52:14.356491 [debug]: addContent file:[../resources/css/style.css]
+2024-05-27 15:52:14.356505 [debug]: open file:[../resources/css/style.css] success!
+2024-05-27 15:52:14.356523 [info]: mmap file [../resources/css/style.css] success!
+2024-05-27 15:52:14.356544 [debug]: begin recv
+2024-05-27 15:52:14.356557 [debug]: 18本次读取391字节的数据,errno:11
+2024-05-27 15:52:14.356564 [info]: parseLine
+2024-05-27 15:52:14.356566 [info]: 此次的行是：GET /js/bootstrap.min.js HTTP/1.1
+2024-05-27 15:52:14.356573 [info]: checkedIdx: 35
+2024-05-27 15:52:14.356835 [info]: parseLine
+2024-05-27 15:52:14.356864 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.356885 [info]: checkedIdx: 63
+2024-05-27 15:52:14.356995 [info]: parseLine
+2024-05-27 15:52:14.357020 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.357041 [info]: checkedIdx: 87
+2024-05-27 15:52:14.357166 [info]: parseLine
+2024-05-27 15:52:14.357178 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.357187 [info]: checkedIdx: 226
+2024-05-27 15:52:14.357337 [info]: parseLine
+2024-05-27 15:52:14.357391 [info]: 此次的行是：Accept: */*
+2024-05-27 15:52:14.357397 [info]: checkedIdx: 239
+2024-05-27 15:52:14.357532 [info]: parseLine
+2024-05-27 15:52:14.357559 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.357595 [info]: checkedIdx: 291
+2024-05-27 15:52:14.357717 [info]: parseLine
+2024-05-27 15:52:14.357763 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.357785 [info]: checkedIdx: 323
+2024-05-27 15:52:14.357883 [info]: parseLine
+2024-05-27 15:52:14.357942 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.357946 [info]: checkedIdx: 389
+2024-05-27 15:52:14.358077 [info]: parseLine
+2024-05-27 15:52:14.358134 [info]: 此次的行是：
+2024-05-27 15:52:14.358138 [info]: checkedIdx: 391
+2024-05-27 15:52:14.358265 [debug]: 18本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.358314 [debug]: read all data success,total read 391 bytesa
+2024-05-27 15:52:14.358320 [info]: process
+2024-05-27 15:52:14.358332 [info]: request realFile:[../resources/js/bootstrap.min.js]
+2024-05-27 15:52:14.358342 [info]: [../resources/js/bootstrap.min.js] is exist!file size is: 36868
+2024-05-27 15:52:14.358350 [debug]: addContent file:[../resources/js/bootstrap.min.js]
+2024-05-27 15:52:14.358361 [debug]: open file:[../resources/js/bootstrap.min.js] success!
+2024-05-27 15:52:14.358381 [info]: mmap file [../resources/js/bootstrap.min.js] success!
+2024-05-27 15:52:14.358400 [debug]: begin recv
+2024-05-27 15:52:14.358422 [debug]: 16本次读取390字节的数据,errno:11
+2024-05-27 15:52:14.358461 [info]: parseLine
+2024-05-27 15:52:14.358466 [info]: 此次的行是：GET /js/smoothscroll.js HTTP/1.1
+2024-05-27 15:52:14.358472 [info]: checkedIdx: 34
+2024-05-27 15:52:14.358747 [info]: parseLine
+2024-05-27 15:52:14.358777 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.358783 [info]: checkedIdx: 62
+2024-05-27 15:52:14.358956 [info]: parseLine
+2024-05-27 15:52:14.359014 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.359020 [info]: checkedIdx: 86
+2024-05-27 15:52:14.359118 [info]: parseLine
+2024-05-27 15:52:14.359131 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.359136 [info]: checkedIdx: 225
+2024-05-27 15:52:14.359344 [info]: parseLine
+2024-05-27 15:52:14.359391 [info]: 此次的行是：Accept: */*
+2024-05-27 15:52:14.359398 [info]: checkedIdx: 238
+2024-05-27 15:52:14.359591 [info]: parseLine
+2024-05-27 15:52:14.359623 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.359630 [info]: checkedIdx: 290
+2024-05-27 15:52:14.359798 [info]: parseLine
+2024-05-27 15:52:14.359835 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.359841 [info]: checkedIdx: 322
+2024-05-27 15:52:14.360035 [info]: parseLine
+2024-05-27 15:52:14.360073 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.360080 [info]: checkedIdx: 388
+2024-05-27 15:52:14.360260 [info]: parseLine
+2024-05-27 15:52:14.360308 [info]: 此次的行是：
+2024-05-27 15:52:14.360315 [info]: checkedIdx: 390
+2024-05-27 15:52:14.360563 [debug]: 16本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.360619 [debug]: read all data success,total read 390 bytesa
+2024-05-27 15:52:14.360643 [info]: process
+2024-05-27 15:52:14.360672 [info]: request realFile:[../resources/js/smoothscroll.js]
+2024-05-27 15:52:14.360694 [info]: [../resources/js/smoothscroll.js] is exist!file size is: 4474
+2024-05-27 15:52:14.360706 [debug]: addContent file:[../resources/js/smoothscroll.js]
+2024-05-27 15:52:14.360736 [debug]: open file:[../resources/js/smoothscroll.js] success!
+2024-05-27 15:52:14.360787 [info]: mmap file [../resources/js/smoothscroll.js] success!
+2024-05-27 15:52:14.361881 [info]: write complete
+2024-05-27 15:52:14.362161 [info]: write complete
+2024-05-27 15:52:14.362307 [info]: write complete
+2024-05-27 15:52:14.362408 [info]: write complete
+2024-05-27 15:52:14.362509 [info]: write complete
+2024-05-27 15:52:14.362642 [info]: write complete
+2024-05-27 15:52:14.368814 [debug]: begin recv
+2024-05-27 15:52:14.368973 [debug]: 27本次读取403字节的数据,errno:11
+2024-05-27 15:52:14.368994 [info]: parseLine
+2024-05-27 15:52:14.369010 [info]: 此次的行是：GET /js/jquery.magnific-popup.min.js HTTP/1.1
+2024-05-27 15:52:14.369030 [info]: checkedIdx: 47
+2024-05-27 15:52:14.369573 [info]: parseLine
+2024-05-27 15:52:14.369660 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.369671 [info]: checkedIdx: 75
+2024-05-27 15:52:14.369884 [info]: parseLine
+2024-05-27 15:52:14.369913 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.369922 [info]: checkedIdx: 99
+2024-05-27 15:52:14.370148 [info]: parseLine
+2024-05-27 15:52:14.370230 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.370240 [info]: checkedIdx: 238
+2024-05-27 15:52:14.370552 [info]: parseLine
+2024-05-27 15:52:14.370670 [info]: 此次的行是：Accept: */*
+2024-05-27 15:52:14.370708 [info]: checkedIdx: 251
+2024-05-27 15:52:14.370996 [info]: parseLine
+2024-05-27 15:52:14.371070 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.371085 [info]: checkedIdx: 303
+2024-05-27 15:52:14.371496 [info]: parseLine
+2024-05-27 15:52:14.371765 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.373298 [info]: checkedIdx: 335
+2024-05-27 15:52:14.374193 [info]: parseLine
+2024-05-27 15:52:14.374276 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.374286 [info]: checkedIdx: 401
+2024-05-27 15:52:14.374517 [info]: parseLine
+2024-05-27 15:52:14.374535 [info]: 此次的行是：
+2024-05-27 15:52:14.374542 [info]: checkedIdx: 403
+2024-05-27 15:52:14.374819 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.374882 [debug]: read all data success,total read 403 bytesa
+2024-05-27 15:52:14.374895 [info]: process
+2024-05-27 15:52:14.374916 [info]: request realFile:[../resources/js/jquery.magnific-popup.min.js]
+2024-05-27 15:52:14.374937 [info]: [../resources/js/jquery.magnific-popup.min.js] is exist!file size is: 20932
+2024-05-27 15:52:14.374946 [debug]: addContent file:[../resources/js/jquery.magnific-popup.min.js]
+2024-05-27 15:52:14.374987 [debug]: open file:[../resources/js/jquery.magnific-popup.min.js] success!
+2024-05-27 15:52:14.375057 [info]: mmap file [../resources/js/jquery.magnific-popup.min.js] success!
+2024-05-27 15:52:14.375121 [debug]: begin recv
+2024-05-27 15:52:14.375194 [debug]: 26本次读取400字节的数据,errno:11
+2024-05-27 15:52:14.375207 [info]: parseLine
+2024-05-27 15:52:14.375220 [info]: 此次的行是：GET /js/magnific-popup-options.js HTTP/1.1
+2024-05-27 15:52:14.375230 [info]: checkedIdx: 44
+2024-05-27 15:52:14.375667 [info]: parseLine
+2024-05-27 15:52:14.375746 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.375769 [info]: checkedIdx: 72
+2024-05-27 15:52:14.375935 [info]: parseLine
+2024-05-27 15:52:14.375959 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.375963 [info]: checkedIdx: 96
+2024-05-27 15:52:14.376103 [info]: parseLine
+2024-05-27 15:52:14.376173 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.376194 [info]: checkedIdx: 235
+2024-05-27 15:52:14.376381 [info]: parseLine
+2024-05-27 15:52:14.376441 [info]: 此次的行是：Accept: */*
+2024-05-27 15:52:14.376460 [info]: checkedIdx: 248
+2024-05-27 15:52:14.376616 [info]: parseLine
+2024-05-27 15:52:14.376665 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.376676 [info]: checkedIdx: 300
+2024-05-27 15:52:14.376876 [info]: parseLine
+2024-05-27 15:52:14.376938 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.376957 [info]: checkedIdx: 332
+2024-05-27 15:52:14.377107 [info]: parseLine
+2024-05-27 15:52:14.377148 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.377155 [info]: checkedIdx: 398
+2024-05-27 15:52:14.377336 [info]: parseLine
+2024-05-27 15:52:14.377388 [info]: 此次的行是：
+2024-05-27 15:52:14.377397 [info]: checkedIdx: 400
+2024-05-27 15:52:14.377605 [debug]: 26本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.377628 [debug]: read all data success,total read 400 bytesa
+2024-05-27 15:52:14.377638 [info]: process
+2024-05-27 15:52:14.377656 [info]: request realFile:[../resources/js/magnific-popup-options.js]
+2024-05-27 15:52:14.377687 [info]: [../resources/js/magnific-popup-options.js] is exist!file size is: 1069
+2024-05-27 15:52:14.377698 [debug]: addContent file:[../resources/js/magnific-popup-options.js]
+2024-05-27 15:52:14.377733 [debug]: open file:[../resources/js/magnific-popup-options.js] success!
+2024-05-27 15:52:14.377794 [info]: mmap file [../resources/js/magnific-popup-options.js] success!
+2024-05-27 15:52:14.377849 [debug]: begin recv
+2024-05-27 15:52:14.377883 [debug]: 28本次读取385字节的数据,errno:11
+2024-05-27 15:52:14.377893 [info]: parseLine
+2024-05-27 15:52:14.377898 [info]: 此次的行是：GET /js/wow.min.js HTTP/1.1
+2024-05-27 15:52:14.377908 [info]: checkedIdx: 29
+2024-05-27 15:52:14.378310 [info]: parseLine
+2024-05-27 15:52:14.378377 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.378396 [info]: checkedIdx: 57
+2024-05-27 15:52:14.378581 [info]: parseLine
+2024-05-27 15:52:14.378670 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.378676 [info]: checkedIdx: 81
+2024-05-27 15:52:14.378775 [info]: parseLine
+2024-05-27 15:52:14.378807 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.378843 [info]: checkedIdx: 220
+2024-05-27 15:52:14.378955 [info]: parseLine
+2024-05-27 15:52:14.378985 [info]: 此次的行是：Accept: */*
+2024-05-27 15:52:14.378990 [info]: checkedIdx: 233
+2024-05-27 15:52:14.379086 [info]: parseLine
+2024-05-27 15:52:14.379114 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.379119 [info]: checkedIdx: 285
+2024-05-27 15:52:14.379237 [info]: parseLine
+2024-05-27 15:52:14.379298 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.379303 [info]: checkedIdx: 317
+2024-05-27 15:52:14.379433 [info]: parseLine
+2024-05-27 15:52:14.379461 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.379466 [info]: checkedIdx: 383
+2024-05-27 15:52:14.379586 [info]: parseLine
+2024-05-27 15:52:14.379651 [info]: 此次的行是：
+2024-05-27 15:52:14.379657 [info]: checkedIdx: 385
+2024-05-27 15:52:14.379869 [debug]: 28本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.379952 [debug]: read all data success,total read 385 bytesa
+2024-05-27 15:52:14.379972 [info]: process
+2024-05-27 15:52:14.379993 [info]: request realFile:[../resources/js/wow.min.js]
+2024-05-27 15:52:14.380029 [info]: [../resources/js/wow.min.js] is exist!file size is: 7082
+2024-05-27 15:52:14.380043 [debug]: addContent file:[../resources/js/wow.min.js]
+2024-05-27 15:52:14.380073 [debug]: open file:[../resources/js/wow.min.js] success!
+2024-05-27 15:52:14.380127 [info]: mmap file [../resources/js/wow.min.js] success!
+2024-05-27 15:52:14.380186 [debug]: begin recv
+2024-05-27 15:52:14.380242 [debug]: 17本次读取384字节的数据,errno:11
+2024-05-27 15:52:14.380259 [info]: parseLine
+2024-05-27 15:52:14.380263 [info]: 此次的行是：GET /js/custom.js HTTP/1.1
+2024-05-27 15:52:14.380270 [info]: checkedIdx: 28
+2024-05-27 15:52:14.380681 [info]: parseLine
+2024-05-27 15:52:14.380788 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.380875 [info]: checkedIdx: 56
+2024-05-27 15:52:14.381029 [info]: parseLine
+2024-05-27 15:52:14.381078 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.381100 [info]: checkedIdx: 80
+2024-05-27 15:52:14.381224 [info]: parseLine
+2024-05-27 15:52:14.381268 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.381277 [info]: checkedIdx: 219
+2024-05-27 15:52:14.381435 [info]: parseLine
+2024-05-27 15:52:14.381474 [info]: 此次的行是：Accept: */*
+2024-05-27 15:52:14.381481 [info]: checkedIdx: 232
+2024-05-27 15:52:14.381629 [info]: parseLine
+2024-05-27 15:52:14.381666 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.381672 [info]: checkedIdx: 284
+2024-05-27 15:52:14.381783 [info]: parseLine
+2024-05-27 15:52:14.381817 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.381822 [info]: checkedIdx: 316
+2024-05-27 15:52:14.381948 [info]: parseLine
+2024-05-27 15:52:14.382006 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.382013 [info]: checkedIdx: 382
+2024-05-27 15:52:14.382207 [info]: parseLine
+2024-05-27 15:52:14.382244 [info]: 此次的行是：
+2024-05-27 15:52:14.382252 [info]: checkedIdx: 384
+2024-05-27 15:52:14.382498 [debug]: 17本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.382532 [debug]: read all data success,total read 384 bytesa
+2024-05-27 15:52:14.382543 [info]: process
+2024-05-27 15:52:14.382571 [info]: request realFile:[../resources/js/custom.js]
+2024-05-27 15:52:14.382594 [info]: [../resources/js/custom.js] is exist!file size is: 1047
+2024-05-27 15:52:14.382613 [debug]: addContent file:[../resources/js/custom.js]
+2024-05-27 15:52:14.382683 [debug]: open file:[../resources/js/custom.js] success!
+2024-05-27 15:52:14.382820 [info]: mmap file [../resources/js/custom.js] success!
+2024-05-27 15:52:14.382982 [debug]: begin recv
+2024-05-27 15:52:14.383244 [debug]: 18本次读取384字节的数据,errno:11
+2024-05-27 15:52:14.383317 [info]: parseLine
+2024-05-27 15:52:14.383353 [info]: 此次的行是：GET /js/jquery.js HTTP/1.1
+2024-05-27 15:52:14.383379 [info]: checkedIdx: 28
+2024-05-27 15:52:14.383887 [info]: parseLine
+2024-05-27 15:52:14.384115 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.384185 [info]: checkedIdx: 56
+2024-05-27 15:52:14.384531 [info]: parseLine
+2024-05-27 15:52:14.384802 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.384819 [info]: checkedIdx: 80
+2024-05-27 15:52:14.384994 [info]: parseLine
+2024-05-27 15:52:14.385020 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.385025 [info]: checkedIdx: 219
+2024-05-27 15:52:14.385165 [info]: parseLine
+2024-05-27 15:52:14.385183 [info]: 此次的行是：Accept: */*
+2024-05-27 15:52:14.385186 [info]: checkedIdx: 232
+2024-05-27 15:52:14.385276 [info]: parseLine
+2024-05-27 15:52:14.385288 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.385291 [info]: checkedIdx: 284
+2024-05-27 15:52:14.385396 [info]: parseLine
+2024-05-27 15:52:14.385412 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.385419 [info]: checkedIdx: 316
+2024-05-27 15:52:14.385546 [info]: parseLine
+2024-05-27 15:52:14.385561 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.385565 [info]: checkedIdx: 382
+2024-05-27 15:52:14.385665 [info]: parseLine
+2024-05-27 15:52:14.385728 [info]: 此次的行是：
+2024-05-27 15:52:14.385739 [info]: checkedIdx: 384
+2024-05-27 15:52:14.385996 [debug]: 18本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.386054 [debug]: read all data success,total read 384 bytesa
+2024-05-27 15:52:14.386088 [info]: process
+2024-05-27 15:52:14.386148 [info]: request realFile:[../resources/js/jquery.js]
+2024-05-27 15:52:14.386194 [info]: [../resources/js/jquery.js] is exist!file size is: 85658
+2024-05-27 15:52:14.386222 [debug]: addContent file:[../resources/js/jquery.js]
+2024-05-27 15:52:14.386261 [debug]: open file:[../resources/js/jquery.js] success!
+2024-05-27 15:52:14.386322 [info]: mmap file [../resources/js/jquery.js] success!
+2024-05-27 15:52:14.387984 [info]: write complete
+2024-05-27 15:52:14.388589 [info]: write complete
+2024-05-27 15:52:14.388959 [info]: write complete
+2024-05-27 15:52:14.389300 [info]: write complete
+2024-05-27 15:52:14.478501 [info]: write complete
+2024-05-27 15:52:14.502994 [debug]: begin recv
+2024-05-27 15:52:14.503192 [debug]: 18本次读取458字节的数据,errno:11
+2024-05-27 15:52:14.503216 [info]: parseLine
+2024-05-27 15:52:14.503220 [info]: 此次的行是：GET /list.json HTTP/1.1
+2024-05-27 15:52:14.503228 [info]: checkedIdx: 25
+2024-05-27 15:52:14.503589 [info]: parseLine
+2024-05-27 15:52:14.503653 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:14.503661 [info]: checkedIdx: 53
+2024-05-27 15:52:14.503813 [info]: parseLine
+2024-05-27 15:52:14.503862 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:14.503870 [info]: checkedIdx: 77
+2024-05-27 15:52:14.504028 [info]: parseLine
+2024-05-27 15:52:14.504080 [info]: 此次的行是：Accept: application/json, text/javascript, */*; q=0.01
+2024-05-27 15:52:14.504098 [info]: checkedIdx: 133
+2024-05-27 15:52:14.504262 [info]: parseLine
+2024-05-27 15:52:14.504310 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:14.504334 [info]: checkedIdx: 272
+2024-05-27 15:52:14.504515 [info]: parseLine
+2024-05-27 15:52:14.504568 [info]: 此次的行是：X-Requested-With: XMLHttpRequest
+2024-05-27 15:52:14.504589 [info]: checkedIdx: 306
+2024-05-27 15:52:14.504748 [info]: parseLine
+2024-05-27 15:52:14.504804 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:14.504812 [info]: checkedIdx: 358
+2024-05-27 15:52:14.504967 [info]: parseLine
+2024-05-27 15:52:14.505001 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:14.505008 [info]: checkedIdx: 390
+2024-05-27 15:52:14.505118 [info]: parseLine
+2024-05-27 15:52:14.505175 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:14.505184 [info]: checkedIdx: 456
+2024-05-27 15:52:14.505398 [info]: parseLine
+2024-05-27 15:52:14.505531 [info]: 此次的行是：
+2024-05-27 15:52:14.505549 [info]: checkedIdx: 458
+2024-05-27 15:52:14.505961 [debug]: 18本次读取-1字节的数据,errno:11
+2024-05-27 15:52:14.506105 [debug]: read all data success,total read 458 bytesa
+2024-05-27 15:52:14.506173 [info]: process
+2024-05-27 15:52:14.506224 [info]: request realFile:[../resources/list.json]
+2024-05-27 15:52:14.506277 [info]: [../resources/list.json] is exist!file size is: 273
+2024-05-27 15:52:14.506313 [debug]: addContent file:[../resources/list.json]
+2024-05-27 15:52:14.506426 [debug]: open file:[../resources/list.json] success!
+2024-05-27 15:52:14.506620 [info]: mmap file [../resources/list.json] success!
+2024-05-27 15:52:14.510463 [info]: write complete
+2024-05-27 15:52:27.905741 [debug]: begin recv
+2024-05-27 15:52:27.905828 [debug]: 18本次读取370字节的数据,errno:11
+2024-05-27 15:52:27.905835 [info]: parseLine
+2024-05-27 15:52:27.905839 [info]: 此次的行是：GET /files/1.txt HTTP/1.1
+2024-05-27 15:52:27.905842 [info]: checkedIdx: 27
+2024-05-27 15:52:27.906091 [info]: parseLine
+2024-05-27 15:52:27.906120 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:27.906125 [info]: checkedIdx: 55
+2024-05-27 15:52:27.906228 [info]: parseLine
+2024-05-27 15:52:27.906254 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:27.906258 [info]: checkedIdx: 79
+2024-05-27 15:52:27.906357 [info]: parseLine
+2024-05-27 15:52:27.906382 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:27.906386 [info]: checkedIdx: 131
+2024-05-27 15:52:27.906495 [info]: parseLine
+2024-05-27 15:52:27.906522 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:27.906533 [info]: checkedIdx: 270
+2024-05-27 15:52:27.906656 [info]: parseLine
+2024-05-27 15:52:27.906696 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:27.906708 [info]: checkedIdx: 302
+2024-05-27 15:52:27.906802 [info]: parseLine
+2024-05-27 15:52:27.906826 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:27.906840 [info]: checkedIdx: 368
+2024-05-27 15:52:27.906936 [info]: parseLine
+2024-05-27 15:52:27.906961 [info]: 此次的行是：
+2024-05-27 15:52:27.906965 [info]: checkedIdx: 370
+2024-05-27 15:52:27.907081 [debug]: 18本次读取-1字节的数据,errno:11
+2024-05-27 15:52:27.907114 [debug]: read all data success,total read 370 bytesa
+2024-05-27 15:52:27.907128 [info]: process
+2024-05-27 15:52:27.907138 [info]: request realFile:[../resources/files/1.txt]
+2024-05-27 15:52:27.907185 [info]: [../resources/files/1.txt] is exist!file size is: 216
+2024-05-27 15:52:27.907192 [debug]: addContent file:[../resources/files/1.txt]
+2024-05-27 15:52:27.907205 [debug]: open file:[../resources/files/1.txt] success!
+2024-05-27 15:52:27.907221 [info]: mmap file [../resources/files/1.txt] success!
+2024-05-27 15:52:27.907604 [info]: write complete
+2024-05-27 15:52:35.927313 [debug]: begin recv
+2024-05-27 15:52:35.927405 [debug]: 18本次读取420字节的数据,errno:11
+2024-05-27 15:52:35.927410 [info]: parseLine
+2024-05-27 15:52:35.927414 [info]: 此次的行是：GET /files/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240508222727.jpg HTTP/1.1
+2024-05-27 15:52:35.927417 [info]: checkedIdx: 77
+2024-05-27 15:52:35.927693 [info]: parseLine
+2024-05-27 15:52:35.927747 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:52:35.927753 [info]: checkedIdx: 105
+2024-05-27 15:52:35.927869 [info]: parseLine
+2024-05-27 15:52:35.927907 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:52:35.927913 [info]: checkedIdx: 129
+2024-05-27 15:52:35.928020 [info]: parseLine
+2024-05-27 15:52:35.928043 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:52:35.928049 [info]: checkedIdx: 181
+2024-05-27 15:52:35.928192 [info]: parseLine
+2024-05-27 15:52:35.928227 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:52:35.928234 [info]: checkedIdx: 320
+2024-05-27 15:52:35.928369 [info]: parseLine
+2024-05-27 15:52:35.928411 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:52:35.928419 [info]: checkedIdx: 352
+2024-05-27 15:52:35.928551 [info]: parseLine
+2024-05-27 15:52:35.928588 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:52:35.928594 [info]: checkedIdx: 418
+2024-05-27 15:52:35.928719 [info]: parseLine
+2024-05-27 15:52:35.928754 [info]: 此次的行是：
+2024-05-27 15:52:35.928760 [info]: checkedIdx: 420
+2024-05-27 15:52:35.928900 [debug]: 18本次读取-1字节的数据,errno:11
+2024-05-27 15:52:35.928957 [debug]: read all data success,total read 420 bytesa
+2024-05-27 15:52:35.928967 [info]: process
+2024-05-27 15:52:35.928980 [info]: request realFile:[../resources/files/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240508222727.jpg]
+2024-05-27 15:59:28.799886 [info]: accept a new client:16
+2024-05-27 15:59:28.800099 [debug]: begin recv
+2024-05-27 15:59:28.800231 [debug]: 16本次读取547字节的数据,errno:0
+2024-05-27 15:59:28.800261 [info]: parseLine
+2024-05-27 15:59:28.800269 [info]: 此次的行是：GET /download.html HTTP/1.1
+2024-05-27 15:59:28.800273 [info]: checkedIdx: 29
+2024-05-27 15:59:28.800667 [info]: parseLine
+2024-05-27 15:59:28.800695 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.800698 [info]: checkedIdx: 57
+2024-05-27 15:59:28.800795 [info]: parseLine
+2024-05-27 15:59:28.800799 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.800803 [info]: checkedIdx: 81
+2024-05-27 15:59:28.800884 [info]: parseLine
+2024-05-27 15:59:28.800915 [info]: 此次的行是：Upgrade-Insecure-Requests: 1
+2024-05-27 15:59:28.800920 [info]: checkedIdx: 111
+2024-05-27 15:59:28.801013 [info]: parseLine
+2024-05-27 15:59:28.801043 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.801048 [info]: checkedIdx: 250
+2024-05-27 15:59:28.801177 [info]: parseLine
+2024-05-27 15:59:28.801206 [info]: 此次的行是：Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-05-27 15:59:28.801211 [info]: checkedIdx: 395
+2024-05-27 15:59:28.801316 [info]: parseLine
+2024-05-27 15:59:28.801403 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.801408 [info]: checkedIdx: 447
+2024-05-27 15:59:28.801565 [info]: parseLine
+2024-05-27 15:59:28.801599 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.801605 [info]: checkedIdx: 479
+2024-05-27 15:59:28.801782 [info]: parseLine
+2024-05-27 15:59:28.801822 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.801831 [info]: checkedIdx: 545
+2024-05-27 15:59:28.802010 [info]: parseLine
+2024-05-27 15:59:28.802086 [info]: 此次的行是：
+2024-05-27 15:59:28.802093 [info]: checkedIdx: 547
+2024-05-27 15:59:28.802269 [debug]: 16本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.802303 [debug]: read all data success,total read 547 bytesa
+2024-05-27 15:59:28.802312 [info]: process
+2024-05-27 15:59:28.802343 [info]: request realFile:[../resources/download.html]
+2024-05-27 15:59:28.802364 [info]: [../resources/download.html] is exist!file size is: 4294
+2024-05-27 15:59:28.802370 [debug]: addContent file:[../resources/download.html]
+2024-05-27 15:59:28.802405 [debug]: open file:[../resources/download.html] success!
+2024-05-27 15:59:28.802463 [info]: mmap file [../resources/download.html] success!
+2024-05-27 15:59:28.803323 [info]: write complete
+2024-05-27 15:59:28.868548 [debug]: begin recv
+2024-05-27 15:59:28.868697 [debug]: 16本次读取408字节的数据,errno:11
+2024-05-27 15:59:28.868711 [info]: parseLine
+2024-05-27 15:59:28.868719 [info]: 此次的行是：GET /css/bootstrap.min.css HTTP/1.1
+2024-05-27 15:59:28.868724 [info]: checkedIdx: 37
+2024-05-27 15:59:28.869106 [info]: parseLine
+2024-05-27 15:59:28.869156 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.869164 [info]: checkedIdx: 65
+2024-05-27 15:59:28.869281 [info]: parseLine
+2024-05-27 15:59:28.869349 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.869451 [info]: checkedIdx: 89
+2024-05-27 15:59:28.869603 [info]: parseLine
+2024-05-27 15:59:28.869608 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.869611 [info]: checkedIdx: 228
+2024-05-27 15:59:28.869758 [info]: parseLine
+2024-05-27 15:59:28.869812 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:59:28.869821 [info]: checkedIdx: 256
+2024-05-27 15:59:28.869971 [info]: parseLine
+2024-05-27 15:59:28.870025 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.870033 [info]: checkedIdx: 308
+2024-05-27 15:59:28.870239 [info]: parseLine
+2024-05-27 15:59:28.870314 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.870342 [info]: checkedIdx: 340
+2024-05-27 15:59:28.870547 [info]: parseLine
+2024-05-27 15:59:28.870648 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.870658 [info]: checkedIdx: 406
+2024-05-27 15:59:28.870897 [info]: parseLine
+2024-05-27 15:59:28.871065 [info]: 此次的行是：
+2024-05-27 15:59:28.871078 [info]: checkedIdx: 408
+2024-05-27 15:59:28.871565 [debug]: 16本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.871808 [debug]: read all data success,total read 408 bytesa
+2024-05-27 15:59:28.871912 [info]: process
+2024-05-27 15:59:28.871971 [info]: request realFile:[../resources/css/bootstrap.min.css]
+2024-05-27 15:59:28.872014 [info]: [../resources/css/bootstrap.min.css] is exist!file size is: 121214
+2024-05-27 15:59:28.872045 [debug]: addContent file:[../resources/css/bootstrap.min.css]
+2024-05-27 15:59:28.872132 [debug]: open file:[../resources/css/bootstrap.min.css] success!
+2024-05-27 15:59:28.872305 [info]: mmap file [../resources/css/bootstrap.min.css] success!
+2024-05-27 15:59:28.874042 [info]: write complete
+2024-05-27 15:59:28.877182 [info]: accept a new client:17
+2024-05-27 15:59:28.877350 [info]: accept a new client:18
+2024-05-27 15:59:28.877527 [info]: accept a new client:26
+2024-05-27 15:59:28.877653 [info]: accept a new client:27
+2024-05-27 15:59:28.877686 [info]: accept a new client:28
+2024-05-27 15:59:28.878087 [debug]: begin recv
+2024-05-27 15:59:28.878122 [debug]: 17本次读取402字节的数据,errno:11
+2024-05-27 15:59:28.878132 [info]: parseLine
+2024-05-27 15:59:28.878135 [info]: 此次的行是：GET /css/animate.css HTTP/1.1
+2024-05-27 15:59:28.878143 [info]: checkedIdx: 31
+2024-05-27 15:59:28.878502 [info]: parseLine
+2024-05-27 15:59:28.878569 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.878579 [info]: checkedIdx: 59
+2024-05-27 15:59:28.878728 [info]: parseLine
+2024-05-27 15:59:28.878767 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.878774 [info]: checkedIdx: 83
+2024-05-27 15:59:28.878886 [info]: parseLine
+2024-05-27 15:59:28.878917 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.878923 [info]: checkedIdx: 222
+2024-05-27 15:59:28.879050 [info]: parseLine
+2024-05-27 15:59:28.879081 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:59:28.879086 [info]: checkedIdx: 250
+2024-05-27 15:59:28.879243 [info]: parseLine
+2024-05-27 15:59:28.879281 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.879296 [info]: checkedIdx: 302
+2024-05-27 15:59:28.879434 [info]: parseLine
+2024-05-27 15:59:28.879519 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.879539 [info]: checkedIdx: 334
+2024-05-27 15:59:28.879676 [info]: parseLine
+2024-05-27 15:59:28.879722 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.879729 [info]: checkedIdx: 400
+2024-05-27 15:59:28.879847 [info]: parseLine
+2024-05-27 15:59:28.879890 [info]: 此次的行是：
+2024-05-27 15:59:28.879897 [info]: checkedIdx: 402
+2024-05-27 15:59:28.880109 [debug]: 17本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.880180 [debug]: read all data success,total read 402 bytesa
+2024-05-27 15:59:28.880200 [info]: process
+2024-05-27 15:59:28.880224 [info]: request realFile:[../resources/css/animate.css]
+2024-05-27 15:59:28.880280 [info]: [../resources/css/animate.css] is exist!file size is: 72922
+2024-05-27 15:59:28.880293 [debug]: addContent file:[../resources/css/animate.css]
+2024-05-27 15:59:28.880318 [debug]: open file:[../resources/css/animate.css] success!
+2024-05-27 15:59:28.880364 [info]: mmap file [../resources/css/animate.css] success!
+2024-05-27 15:59:28.880442 [debug]: begin recv
+2024-05-27 15:59:28.880466 [debug]: 18本次读取409字节的数据,errno:11
+2024-05-27 15:59:28.880477 [info]: parseLine
+2024-05-27 15:59:28.880490 [info]: 此次的行是：GET /css/magnific-popup.css HTTP/1.1
+2024-05-27 15:59:28.880502 [info]: checkedIdx: 38
+2024-05-27 15:59:28.881019 [info]: parseLine
+2024-05-27 15:59:28.881101 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.881106 [info]: checkedIdx: 66
+2024-05-27 15:59:28.881388 [info]: parseLine
+2024-05-27 15:59:28.881415 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.881429 [info]: checkedIdx: 90
+2024-05-27 15:59:28.881591 [info]: parseLine
+2024-05-27 15:59:28.881619 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.881624 [info]: checkedIdx: 229
+2024-05-27 15:59:28.881846 [info]: parseLine
+2024-05-27 15:59:28.881900 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:59:28.881906 [info]: checkedIdx: 257
+2024-05-27 15:59:28.882138 [info]: parseLine
+2024-05-27 15:59:28.882167 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.882181 [info]: checkedIdx: 309
+2024-05-27 15:59:28.882397 [info]: parseLine
+2024-05-27 15:59:28.882420 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.882429 [info]: checkedIdx: 341
+2024-05-27 15:59:28.882752 [info]: parseLine
+2024-05-27 15:59:28.882804 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.882808 [info]: checkedIdx: 407
+2024-05-27 15:59:28.882950 [info]: parseLine
+2024-05-27 15:59:28.882973 [info]: 此次的行是：
+2024-05-27 15:59:28.882976 [info]: checkedIdx: 409
+2024-05-27 15:59:28.883139 [debug]: 18本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.883243 [debug]: read all data success,total read 409 bytesa
+2024-05-27 15:59:28.883278 [info]: process
+2024-05-27 15:59:28.883296 [info]: request realFile:[../resources/css/magnific-popup.css]
+2024-05-27 15:59:28.883311 [info]: [../resources/css/magnific-popup.css] is exist!file size is: 6951
+2024-05-27 15:59:28.883315 [debug]: addContent file:[../resources/css/magnific-popup.css]
+2024-05-27 15:59:28.883354 [debug]: open file:[../resources/css/magnific-popup.css] success!
+2024-05-27 15:59:28.883431 [info]: mmap file [../resources/css/magnific-popup.css] success!
+2024-05-27 15:59:28.883504 [debug]: begin recv
+2024-05-27 15:59:28.883561 [debug]: 26本次读取411字节的数据,errno:11
+2024-05-27 15:59:28.883596 [info]: parseLine
+2024-05-27 15:59:28.883601 [info]: 此次的行是：GET /css/font-awesome.min.css HTTP/1.1
+2024-05-27 15:59:28.883608 [info]: checkedIdx: 40
+2024-05-27 15:59:28.884082 [info]: parseLine
+2024-05-27 15:59:28.884151 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.884157 [info]: checkedIdx: 68
+2024-05-27 15:59:28.884262 [info]: parseLine
+2024-05-27 15:59:28.884322 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.884326 [info]: checkedIdx: 92
+2024-05-27 15:59:28.884457 [info]: parseLine
+2024-05-27 15:59:28.884483 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.884487 [info]: checkedIdx: 231
+2024-05-27 15:59:28.884592 [info]: parseLine
+2024-05-27 15:59:28.884618 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:59:28.884622 [info]: checkedIdx: 259
+2024-05-27 15:59:28.884715 [info]: parseLine
+2024-05-27 15:59:28.884726 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.884733 [info]: checkedIdx: 311
+2024-05-27 15:59:28.884850 [info]: parseLine
+2024-05-27 15:59:28.884876 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.884880 [info]: checkedIdx: 343
+2024-05-27 15:59:28.884994 [info]: parseLine
+2024-05-27 15:59:28.885022 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.885027 [info]: checkedIdx: 409
+2024-05-27 15:59:28.885170 [info]: parseLine
+2024-05-27 15:59:28.885182 [info]: 此次的行是：
+2024-05-27 15:59:28.885185 [info]: checkedIdx: 411
+2024-05-27 15:59:28.885396 [debug]: 26本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.885466 [debug]: read all data success,total read 411 bytesa
+2024-05-27 15:59:28.885479 [info]: process
+2024-05-27 15:59:28.885526 [info]: request realFile:[../resources/css/font-awesome.min.css]
+2024-05-27 15:59:28.885547 [info]: [../resources/css/font-awesome.min.css] is exist!file size is: 27392
+2024-05-27 15:59:28.885559 [debug]: addContent file:[../resources/css/font-awesome.min.css]
+2024-05-27 15:59:28.885593 [debug]: open file:[../resources/css/font-awesome.min.css] success!
+2024-05-27 15:59:28.885649 [info]: mmap file [../resources/css/font-awesome.min.css] success!
+2024-05-27 15:59:28.885687 [debug]: begin recv
+2024-05-27 15:59:28.885709 [debug]: 27本次读取400字节的数据,errno:11
+2024-05-27 15:59:28.885717 [info]: parseLine
+2024-05-27 15:59:28.885725 [info]: 此次的行是：GET /css/style.css HTTP/1.1
+2024-05-27 15:59:28.885733 [info]: checkedIdx: 29
+2024-05-27 15:59:28.885996 [info]: parseLine
+2024-05-27 15:59:28.886042 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.886049 [info]: checkedIdx: 57
+2024-05-27 15:59:28.886180 [info]: parseLine
+2024-05-27 15:59:28.886213 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.886218 [info]: checkedIdx: 81
+2024-05-27 15:59:28.886332 [info]: parseLine
+2024-05-27 15:59:28.886375 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.886380 [info]: checkedIdx: 220
+2024-05-27 15:59:28.886494 [info]: parseLine
+2024-05-27 15:59:28.886540 [info]: 此次的行是：Accept: text/css,*/*;q=0.1
+2024-05-27 15:59:28.886546 [info]: checkedIdx: 248
+2024-05-27 15:59:28.886670 [info]: parseLine
+2024-05-27 15:59:28.886715 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.886721 [info]: checkedIdx: 300
+2024-05-27 15:59:28.886872 [info]: parseLine
+2024-05-27 15:59:28.886896 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.886900 [info]: checkedIdx: 332
+2024-05-27 15:59:28.886996 [info]: parseLine
+2024-05-27 15:59:28.887065 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.887071 [info]: checkedIdx: 398
+2024-05-27 15:59:28.887246 [info]: parseLine
+2024-05-27 15:59:28.887290 [info]: 此次的行是：
+2024-05-27 15:59:28.887309 [info]: checkedIdx: 400
+2024-05-27 15:59:28.887463 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.887497 [debug]: read all data success,total read 400 bytesa
+2024-05-27 15:59:28.887506 [info]: process
+2024-05-27 15:59:28.887518 [info]: request realFile:[../resources/css/style.css]
+2024-05-27 15:59:28.887529 [info]: [../resources/css/style.css] is exist!file size is: 9807
+2024-05-27 15:59:28.887551 [debug]: addContent file:[../resources/css/style.css]
+2024-05-27 15:59:28.887566 [debug]: open file:[../resources/css/style.css] success!
+2024-05-27 15:59:28.887607 [info]: mmap file [../resources/css/style.css] success!
+2024-05-27 15:59:28.887647 [debug]: begin recv
+2024-05-27 15:59:28.887662 [debug]: 28本次读取384字节的数据,errno:11
+2024-05-27 15:59:28.887669 [info]: parseLine
+2024-05-27 15:59:28.887672 [info]: 此次的行是：GET /js/jquery.js HTTP/1.1
+2024-05-27 15:59:28.887679 [info]: checkedIdx: 28
+2024-05-27 15:59:28.888075 [info]: parseLine
+2024-05-27 15:59:28.888160 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.888180 [info]: checkedIdx: 56
+2024-05-27 15:59:28.888359 [info]: parseLine
+2024-05-27 15:59:28.888419 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.888438 [info]: checkedIdx: 80
+2024-05-27 15:59:28.888631 [info]: parseLine
+2024-05-27 15:59:28.888690 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.888697 [info]: checkedIdx: 219
+2024-05-27 15:59:28.888887 [info]: parseLine
+2024-05-27 15:59:28.888963 [info]: 此次的行是：Accept: */*
+2024-05-27 15:59:28.888971 [info]: checkedIdx: 232
+2024-05-27 15:59:28.889183 [info]: parseLine
+2024-05-27 15:59:28.889246 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.889253 [info]: checkedIdx: 284
+2024-05-27 15:59:28.889410 [info]: parseLine
+2024-05-27 15:59:28.889455 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.889470 [info]: checkedIdx: 316
+2024-05-27 15:59:28.889789 [info]: parseLine
+2024-05-27 15:59:28.889854 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.889880 [info]: checkedIdx: 382
+2024-05-27 15:59:28.890101 [info]: parseLine
+2024-05-27 15:59:28.890175 [info]: 此次的行是：
+2024-05-27 15:59:28.890183 [info]: checkedIdx: 384
+2024-05-27 15:59:28.890443 [debug]: 28本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.890500 [debug]: read all data success,total read 384 bytesa
+2024-05-27 15:59:28.890526 [info]: process
+2024-05-27 15:59:28.890557 [info]: request realFile:[../resources/js/jquery.js]
+2024-05-27 15:59:28.890613 [info]: [../resources/js/jquery.js] is exist!file size is: 85658
+2024-05-27 15:59:28.890626 [debug]: addContent file:[../resources/js/jquery.js]
+2024-05-27 15:59:28.890651 [debug]: open file:[../resources/js/jquery.js] success!
+2024-05-27 15:59:28.890731 [info]: mmap file [../resources/js/jquery.js] success!
+2024-05-27 15:59:28.892032 [info]: write complete
+2024-05-27 15:59:28.892233 [debug]: begin recv
+2024-05-27 15:59:28.892280 [debug]: 16本次读取391字节的数据,errno:11
+2024-05-27 15:59:28.892292 [info]: parseLine
+2024-05-27 15:59:28.892319 [info]: 此次的行是：GET /js/bootstrap.min.js HTTP/1.1
+2024-05-27 15:59:28.892369 [info]: checkedIdx: 35
+2024-05-27 15:59:28.892912 [info]: parseLine
+2024-05-27 15:59:28.892971 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.892995 [info]: checkedIdx: 63
+2024-05-27 15:59:28.893173 [info]: parseLine
+2024-05-27 15:59:28.893252 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.893271 [info]: checkedIdx: 87
+2024-05-27 15:59:28.893409 [info]: parseLine
+2024-05-27 15:59:28.893460 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.893483 [info]: checkedIdx: 226
+2024-05-27 15:59:28.893680 [info]: parseLine
+2024-05-27 15:59:28.893736 [info]: 此次的行是：Accept: */*
+2024-05-27 15:59:28.893758 [info]: checkedIdx: 239
+2024-05-27 15:59:28.893896 [info]: parseLine
+2024-05-27 15:59:28.893949 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.893982 [info]: checkedIdx: 291
+2024-05-27 15:59:28.894160 [info]: parseLine
+2024-05-27 15:59:28.894208 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.894228 [info]: checkedIdx: 323
+2024-05-27 15:59:28.894374 [info]: parseLine
+2024-05-27 15:59:28.894417 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.894447 [info]: checkedIdx: 389
+2024-05-27 15:59:28.894602 [info]: parseLine
+2024-05-27 15:59:28.894682 [info]: 此次的行是：
+2024-05-27 15:59:28.894691 [info]: checkedIdx: 391
+2024-05-27 15:59:28.894927 [debug]: 16本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.894975 [debug]: read all data success,total read 391 bytesa
+2024-05-27 15:59:28.894990 [info]: process
+2024-05-27 15:59:28.895016 [info]: request realFile:[../resources/js/bootstrap.min.js]
+2024-05-27 15:59:28.895043 [info]: [../resources/js/bootstrap.min.js] is exist!file size is: 36868
+2024-05-27 15:59:28.895055 [debug]: addContent file:[../resources/js/bootstrap.min.js]
+2024-05-27 15:59:28.895089 [debug]: open file:[../resources/js/bootstrap.min.js] success!
+2024-05-27 15:59:28.895172 [info]: mmap file [../resources/js/bootstrap.min.js] success!
+2024-05-27 15:59:28.895877 [info]: write complete
+2024-05-27 15:59:28.896477 [info]: write complete
+2024-05-27 15:59:28.896590 [info]: write complete
+2024-05-27 15:59:28.896937 [info]: write complete
+2024-05-27 15:59:28.897009 [debug]: begin recv
+2024-05-27 15:59:28.897068 [debug]: 17本次读取390字节的数据,errno:11
+2024-05-27 15:59:28.897080 [info]: parseLine
+2024-05-27 15:59:28.897091 [info]: 此次的行是：GET /js/smoothscroll.js HTTP/1.1
+2024-05-27 15:59:28.897100 [info]: checkedIdx: 34
+2024-05-27 15:59:28.897598 [info]: parseLine
+2024-05-27 15:59:28.897674 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.897681 [info]: checkedIdx: 62
+2024-05-27 15:59:28.897854 [info]: parseLine
+2024-05-27 15:59:28.897898 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.897905 [info]: checkedIdx: 86
+2024-05-27 15:59:28.898048 [info]: parseLine
+2024-05-27 15:59:28.898101 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.898108 [info]: checkedIdx: 225
+2024-05-27 15:59:28.898335 [info]: parseLine
+2024-05-27 15:59:28.898374 [info]: 此次的行是：Accept: */*
+2024-05-27 15:59:28.898380 [info]: checkedIdx: 238
+2024-05-27 15:59:28.898545 [info]: parseLine
+2024-05-27 15:59:28.898589 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.898598 [info]: checkedIdx: 290
+2024-05-27 15:59:28.898743 [info]: parseLine
+2024-05-27 15:59:28.898780 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.898786 [info]: checkedIdx: 322
+2024-05-27 15:59:28.898924 [info]: parseLine
+2024-05-27 15:59:28.898977 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.899016 [info]: checkedIdx: 388
+2024-05-27 15:59:28.899203 [info]: parseLine
+2024-05-27 15:59:28.899230 [info]: 此次的行是：
+2024-05-27 15:59:28.899248 [info]: checkedIdx: 390
+2024-05-27 15:59:28.899514 [debug]: 17本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.899544 [debug]: read all data success,total read 390 bytesa
+2024-05-27 15:59:28.899556 [info]: process
+2024-05-27 15:59:28.899584 [info]: request realFile:[../resources/js/smoothscroll.js]
+2024-05-27 15:59:28.899612 [info]: [../resources/js/smoothscroll.js] is exist!file size is: 4474
+2024-05-27 15:59:28.899628 [debug]: addContent file:[../resources/js/smoothscroll.js]
+2024-05-27 15:59:28.899666 [debug]: open file:[../resources/js/smoothscroll.js] success!
+2024-05-27 15:59:28.899800 [info]: mmap file [../resources/js/smoothscroll.js] success!
+2024-05-27 15:59:28.900919 [info]: write complete
+2024-05-27 15:59:28.901065 [debug]: begin recv
+2024-05-27 15:59:28.901127 [debug]: 18本次读取403字节的数据,errno:11
+2024-05-27 15:59:28.901146 [info]: parseLine
+2024-05-27 15:59:28.901160 [info]: 此次的行是：GET /js/jquery.magnific-popup.min.js HTTP/1.1
+2024-05-27 15:59:28.901170 [info]: checkedIdx: 47
+2024-05-27 15:59:28.901638 [info]: parseLine
+2024-05-27 15:59:28.901719 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.901727 [info]: checkedIdx: 75
+2024-05-27 15:59:28.901907 [info]: parseLine
+2024-05-27 15:59:28.901950 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.901961 [info]: checkedIdx: 99
+2024-05-27 15:59:28.902108 [info]: parseLine
+2024-05-27 15:59:28.902142 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.902163 [info]: checkedIdx: 238
+2024-05-27 15:59:28.902318 [info]: parseLine
+2024-05-27 15:59:28.902344 [info]: 此次的行是：Accept: */*
+2024-05-27 15:59:28.902363 [info]: checkedIdx: 251
+2024-05-27 15:59:28.902553 [info]: parseLine
+2024-05-27 15:59:28.902590 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.902606 [info]: checkedIdx: 303
+2024-05-27 15:59:28.902762 [info]: parseLine
+2024-05-27 15:59:28.902793 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.902812 [info]: checkedIdx: 335
+2024-05-27 15:59:28.902976 [info]: parseLine
+2024-05-27 15:59:28.903010 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.903026 [info]: checkedIdx: 401
+2024-05-27 15:59:28.903246 [info]: parseLine
+2024-05-27 15:59:28.903276 [info]: 此次的行是：
+2024-05-27 15:59:28.903283 [info]: checkedIdx: 403
+2024-05-27 15:59:28.903613 [debug]: 18本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.903645 [debug]: read all data success,total read 403 bytesa
+2024-05-27 15:59:28.903659 [info]: process
+2024-05-27 15:59:28.903682 [info]: request realFile:[../resources/js/jquery.magnific-popup.min.js]
+2024-05-27 15:59:28.903705 [info]: [../resources/js/jquery.magnific-popup.min.js] is exist!file size is: 20932
+2024-05-27 15:59:28.903720 [debug]: addContent file:[../resources/js/jquery.magnific-popup.min.js]
+2024-05-27 15:59:28.903741 [debug]: open file:[../resources/js/jquery.magnific-popup.min.js] success!
+2024-05-27 15:59:28.903765 [info]: mmap file [../resources/js/jquery.magnific-popup.min.js] success!
+2024-05-27 15:59:28.903804 [debug]: begin recv
+2024-05-27 15:59:28.903826 [debug]: 26本次读取400字节的数据,errno:11
+2024-05-27 15:59:28.903835 [info]: parseLine
+2024-05-27 15:59:28.903847 [info]: 此次的行是：GET /js/magnific-popup-options.js HTTP/1.1
+2024-05-27 15:59:28.903856 [info]: checkedIdx: 44
+2024-05-27 15:59:28.904315 [info]: parseLine
+2024-05-27 15:59:28.904410 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.904434 [info]: checkedIdx: 72
+2024-05-27 15:59:28.904567 [info]: parseLine
+2024-05-27 15:59:28.904581 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.904584 [info]: checkedIdx: 96
+2024-05-27 15:59:28.904717 [info]: parseLine
+2024-05-27 15:59:28.904730 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.904742 [info]: checkedIdx: 235
+2024-05-27 15:59:28.904853 [info]: parseLine
+2024-05-27 15:59:28.904866 [info]: 此次的行是：Accept: */*
+2024-05-27 15:59:28.904876 [info]: checkedIdx: 248
+2024-05-27 15:59:28.904965 [info]: parseLine
+2024-05-27 15:59:28.904975 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.904991 [info]: checkedIdx: 300
+2024-05-27 15:59:28.905085 [info]: parseLine
+2024-05-27 15:59:28.905097 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.905099 [info]: checkedIdx: 332
+2024-05-27 15:59:28.905192 [info]: parseLine
+2024-05-27 15:59:28.905203 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.905206 [info]: checkedIdx: 398
+2024-05-27 15:59:28.905299 [info]: parseLine
+2024-05-27 15:59:28.905311 [info]: 此次的行是：
+2024-05-27 15:59:28.905314 [info]: checkedIdx: 400
+2024-05-27 15:59:28.905495 [debug]: 26本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.905537 [debug]: read all data success,total read 400 bytesa
+2024-05-27 15:59:28.905545 [info]: process
+2024-05-27 15:59:28.905566 [info]: request realFile:[../resources/js/magnific-popup-options.js]
+2024-05-27 15:59:28.905585 [info]: [../resources/js/magnific-popup-options.js] is exist!file size is: 1069
+2024-05-27 15:59:28.905595 [debug]: addContent file:[../resources/js/magnific-popup-options.js]
+2024-05-27 15:59:28.905611 [debug]: open file:[../resources/js/magnific-popup-options.js] success!
+2024-05-27 15:59:28.905633 [info]: mmap file [../resources/js/magnific-popup-options.js] success!
+2024-05-27 15:59:28.905683 [debug]: begin recv
+2024-05-27 15:59:28.905724 [debug]: 27本次读取385字节的数据,errno:11
+2024-05-27 15:59:28.905736 [info]: parseLine
+2024-05-27 15:59:28.905745 [info]: 此次的行是：GET /js/wow.min.js HTTP/1.1
+2024-05-27 15:59:28.905751 [info]: checkedIdx: 29
+2024-05-27 15:59:28.906075 [info]: parseLine
+2024-05-27 15:59:28.906089 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.906092 [info]: checkedIdx: 57
+2024-05-27 15:59:28.906239 [info]: parseLine
+2024-05-27 15:59:28.906283 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.906286 [info]: checkedIdx: 81
+2024-05-27 15:59:28.906377 [info]: parseLine
+2024-05-27 15:59:28.906391 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.906401 [info]: checkedIdx: 220
+2024-05-27 15:59:28.906571 [info]: parseLine
+2024-05-27 15:59:28.906615 [info]: 此次的行是：Accept: */*
+2024-05-27 15:59:28.906630 [info]: checkedIdx: 233
+2024-05-27 15:59:28.906737 [info]: parseLine
+2024-05-27 15:59:28.906747 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.906750 [info]: checkedIdx: 285
+2024-05-27 15:59:28.906863 [info]: parseLine
+2024-05-27 15:59:28.906922 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.906925 [info]: checkedIdx: 317
+2024-05-27 15:59:28.907026 [info]: parseLine
+2024-05-27 15:59:28.907039 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.907050 [info]: checkedIdx: 383
+2024-05-27 15:59:28.907180 [info]: parseLine
+2024-05-27 15:59:28.907199 [info]: 此次的行是：
+2024-05-27 15:59:28.907220 [info]: checkedIdx: 385
+2024-05-27 15:59:28.907364 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.907405 [debug]: read all data success,total read 385 bytesa
+2024-05-27 15:59:28.907425 [info]: process
+2024-05-27 15:59:28.907443 [info]: request realFile:[../resources/js/wow.min.js]
+2024-05-27 15:59:28.907461 [info]: [../resources/js/wow.min.js] is exist!file size is: 7082
+2024-05-27 15:59:28.907469 [debug]: addContent file:[../resources/js/wow.min.js]
+2024-05-27 15:59:28.907489 [debug]: open file:[../resources/js/wow.min.js] success!
+2024-05-27 15:59:28.907517 [info]: mmap file [../resources/js/wow.min.js] success!
+2024-05-27 15:59:28.908037 [info]: write complete
+2024-05-27 15:59:28.908235 [debug]: begin recv
+2024-05-27 15:59:28.908277 [debug]: 28本次读取384字节的数据,errno:11
+2024-05-27 15:59:28.908371 [info]: parseLine
+2024-05-27 15:59:28.908393 [info]: 此次的行是：GET /js/custom.js HTTP/1.1
+2024-05-27 15:59:28.908404 [info]: checkedIdx: 28
+2024-05-27 15:59:28.909007 [info]: parseLine
+2024-05-27 15:59:28.909077 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.909100 [info]: checkedIdx: 56
+2024-05-27 15:59:28.909304 [info]: parseLine
+2024-05-27 15:59:28.909346 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.909352 [info]: checkedIdx: 80
+2024-05-27 15:59:28.909534 [info]: parseLine
+2024-05-27 15:59:28.909600 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.909607 [info]: checkedIdx: 219
+2024-05-27 15:59:28.909922 [info]: parseLine
+2024-05-27 15:59:28.909984 [info]: 此次的行是：Accept: */*
+2024-05-27 15:59:28.909992 [info]: checkedIdx: 232
+2024-05-27 15:59:28.910212 [info]: parseLine
+2024-05-27 15:59:28.910273 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.910304 [info]: checkedIdx: 284
+2024-05-27 15:59:28.910528 [info]: parseLine
+2024-05-27 15:59:28.910565 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.910579 [info]: checkedIdx: 316
+2024-05-27 15:59:28.910750 [info]: parseLine
+2024-05-27 15:59:28.910816 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.910834 [info]: checkedIdx: 382
+2024-05-27 15:59:28.911083 [info]: parseLine
+2024-05-27 15:59:28.911124 [info]: 此次的行是：
+2024-05-27 15:59:28.911132 [info]: checkedIdx: 384
+2024-05-27 15:59:28.911455 [debug]: 28本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.911519 [debug]: read all data success,total read 384 bytesa
+2024-05-27 15:59:28.911545 [info]: process
+2024-05-27 15:59:28.911613 [info]: request realFile:[../resources/js/custom.js]
+2024-05-27 15:59:28.911656 [info]: [../resources/js/custom.js] is exist!file size is: 1047
+2024-05-27 15:59:28.911677 [debug]: addContent file:[../resources/js/custom.js]
+2024-05-27 15:59:28.911700 [debug]: open file:[../resources/js/custom.js] success!
+2024-05-27 15:59:28.911724 [info]: mmap file [../resources/js/custom.js] success!
+2024-05-27 15:59:28.912545 [info]: write complete
+2024-05-27 15:59:28.912666 [info]: write complete
+2024-05-27 15:59:28.912741 [info]: write complete
+2024-05-27 15:59:28.912786 [info]: write complete
+2024-05-27 15:59:28.925866 [debug]: begin recv
+2024-05-27 15:59:28.925968 [debug]: 27本次读取458字节的数据,errno:11
+2024-05-27 15:59:28.925977 [info]: parseLine
+2024-05-27 15:59:28.925981 [info]: 此次的行是：GET /list.json HTTP/1.1
+2024-05-27 15:59:28.925983 [info]: checkedIdx: 25
+2024-05-27 15:59:28.926261 [info]: parseLine
+2024-05-27 15:59:28.926266 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:28.926269 [info]: checkedIdx: 53
+2024-05-27 15:59:28.926372 [info]: parseLine
+2024-05-27 15:59:28.926378 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:28.926381 [info]: checkedIdx: 77
+2024-05-27 15:59:28.926482 [info]: parseLine
+2024-05-27 15:59:28.926489 [info]: 此次的行是：Accept: application/json, text/javascript, */*; q=0.01
+2024-05-27 15:59:28.926492 [info]: checkedIdx: 133
+2024-05-27 15:59:28.926589 [info]: parseLine
+2024-05-27 15:59:28.926598 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:28.926601 [info]: checkedIdx: 272
+2024-05-27 15:59:28.926733 [info]: parseLine
+2024-05-27 15:59:28.926744 [info]: 此次的行是：X-Requested-With: XMLHttpRequest
+2024-05-27 15:59:28.926750 [info]: checkedIdx: 306
+2024-05-27 15:59:28.926864 [info]: parseLine
+2024-05-27 15:59:28.926878 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:28.926882 [info]: checkedIdx: 358
+2024-05-27 15:59:28.926996 [info]: parseLine
+2024-05-27 15:59:28.927010 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:28.927015 [info]: checkedIdx: 390
+2024-05-27 15:59:28.927202 [info]: parseLine
+2024-05-27 15:59:28.927212 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:28.927215 [info]: checkedIdx: 456
+2024-05-27 15:59:28.927355 [info]: parseLine
+2024-05-27 15:59:28.927372 [info]: 此次的行是：
+2024-05-27 15:59:28.927377 [info]: checkedIdx: 458
+2024-05-27 15:59:28.927572 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 15:59:28.927594 [debug]: read all data success,total read 458 bytesa
+2024-05-27 15:59:28.927604 [info]: process
+2024-05-27 15:59:28.927621 [info]: request realFile:[../resources/list.json]
+2024-05-27 15:59:28.927636 [info]: [../resources/list.json] is exist!file size is: 273
+2024-05-27 15:59:28.927644 [debug]: addContent file:[../resources/list.json]
+2024-05-27 15:59:28.927676 [debug]: open file:[../resources/list.json] success!
+2024-05-27 15:59:28.927730 [info]: mmap file [../resources/list.json] success!
+2024-05-27 15:59:28.928270 [info]: write complete
+2024-05-27 15:59:31.627627 [debug]: begin recv
+2024-05-27 15:59:31.627813 [debug]: 27本次读取420字节的数据,errno:11
+2024-05-27 15:59:31.627829 [info]: parseLine
+2024-05-27 15:59:31.627852 [info]: 此次的行是：GET /files/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240508222727.jpg HTTP/1.1
+2024-05-27 15:59:31.627859 [info]: checkedIdx: 77
+2024-05-27 15:59:31.628210 [info]: parseLine
+2024-05-27 15:59:31.628263 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:31.628270 [info]: checkedIdx: 105
+2024-05-27 15:59:31.628374 [info]: parseLine
+2024-05-27 15:59:31.628412 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:31.628418 [info]: checkedIdx: 129
+2024-05-27 15:59:31.628524 [info]: parseLine
+2024-05-27 15:59:31.628561 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:31.628567 [info]: checkedIdx: 181
+2024-05-27 15:59:31.628679 [info]: parseLine
+2024-05-27 15:59:31.628717 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:31.628726 [info]: checkedIdx: 320
+2024-05-27 15:59:31.628846 [info]: parseLine
+2024-05-27 15:59:31.628888 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:31.628896 [info]: checkedIdx: 352
+2024-05-27 15:59:31.629109 [info]: parseLine
+2024-05-27 15:59:31.629163 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:31.629181 [info]: checkedIdx: 418
+2024-05-27 15:59:31.629287 [info]: parseLine
+2024-05-27 15:59:31.629326 [info]: 此次的行是：
+2024-05-27 15:59:31.629333 [info]: checkedIdx: 420
+2024-05-27 15:59:31.629466 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 15:59:31.629506 [debug]: read all data success,total read 420 bytesa
+2024-05-27 15:59:31.629545 [info]: process
+2024-05-27 15:59:31.629577 [info]: request realFile:[../resources/files/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240508222727.jpg]
+2024-05-27 15:59:31.629611 [erro]: stat error:[../resources/files/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240508222727.jpg],file is not exist!
+2024-05-27 15:59:31.629626 [info]: addResponse:HTTP/1.1 404 Not Found
+Content-Length:49
+Connection:keep-alive
+Content-Type:text/html
+
+The requested file was not found on this server.
+
+2024-05-27 15:59:31.629931 [info]: write complete
+2024-05-27 15:59:38.497084 [debug]: begin recv
+2024-05-27 15:59:38.497228 [debug]: 27本次读取396字节的数据,errno:2
+2024-05-27 15:59:38.497236 [info]: parseLine
+2024-05-27 15:59:38.497239 [info]: 此次的行是：GET /files/%E8%BF%9B%E6%9D%A5%E5%90%A7.jpg HTTP/1.1
+2024-05-27 15:59:38.497243 [info]: checkedIdx: 53
+2024-05-27 15:59:38.497511 [info]: parseLine
+2024-05-27 15:59:38.497551 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:38.497557 [info]: checkedIdx: 81
+2024-05-27 15:59:38.497659 [info]: parseLine
+2024-05-27 15:59:38.497695 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:38.497700 [info]: checkedIdx: 105
+2024-05-27 15:59:38.497837 [info]: parseLine
+2024-05-27 15:59:38.497888 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:38.497894 [info]: checkedIdx: 157
+2024-05-27 15:59:38.497998 [info]: parseLine
+2024-05-27 15:59:38.498035 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:38.498041 [info]: checkedIdx: 296
+2024-05-27 15:59:38.498151 [info]: parseLine
+2024-05-27 15:59:38.498187 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:38.498193 [info]: checkedIdx: 328
+2024-05-27 15:59:38.498322 [info]: parseLine
+2024-05-27 15:59:38.498387 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:38.498393 [info]: checkedIdx: 394
+2024-05-27 15:59:38.498499 [info]: parseLine
+2024-05-27 15:59:38.498537 [info]: 此次的行是：
+2024-05-27 15:59:38.498542 [info]: checkedIdx: 396
+2024-05-27 15:59:38.498689 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 15:59:38.498730 [debug]: read all data success,total read 396 bytesa
+2024-05-27 15:59:38.498739 [info]: process
+2024-05-27 15:59:38.498750 [info]: request realFile:[../resources/files/%E8%BF%9B%E6%9D%A5%E5%90%A7.jpg]
+2024-05-27 15:59:38.498792 [erro]: stat error:[../resources/files/%E8%BF%9B%E6%9D%A5%E5%90%A7.jpg],file is not exist!
+2024-05-27 15:59:38.498839 [info]: addResponse:HTTP/1.1 404 Not Found
+Content-Length:49
+Connection:keep-alive
+Content-Type:text/html
+
+The requested file was not found on this server.
+
+2024-05-27 15:59:38.499010 [info]: write complete
+2024-05-27 15:59:41.583879 [debug]: begin recv
+2024-05-27 15:59:41.583979 [debug]: 27本次读取387字节的数据,errno:2
+2024-05-27 15:59:41.583986 [info]: parseLine
+2024-05-27 15:59:41.583989 [info]: 此次的行是：GET /files/%E6%B5%8B%E8%AF%95.txt HTTP/1.1
+2024-05-27 15:59:41.583992 [info]: checkedIdx: 44
+2024-05-27 15:59:41.584252 [info]: parseLine
+2024-05-27 15:59:41.584303 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:41.584310 [info]: checkedIdx: 72
+2024-05-27 15:59:41.584404 [info]: parseLine
+2024-05-27 15:59:41.584430 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:41.584436 [info]: checkedIdx: 96
+2024-05-27 15:59:41.584538 [info]: parseLine
+2024-05-27 15:59:41.584562 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:41.584568 [info]: checkedIdx: 148
+2024-05-27 15:59:41.584685 [info]: parseLine
+2024-05-27 15:59:41.584712 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:41.584718 [info]: checkedIdx: 287
+2024-05-27 15:59:41.584841 [info]: parseLine
+2024-05-27 15:59:41.584866 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:41.584872 [info]: checkedIdx: 319
+2024-05-27 15:59:41.584979 [info]: parseLine
+2024-05-27 15:59:41.585003 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:41.585015 [info]: checkedIdx: 385
+2024-05-27 15:59:41.585113 [info]: parseLine
+2024-05-27 15:59:41.585150 [info]: 此次的行是：
+2024-05-27 15:59:41.585156 [info]: checkedIdx: 387
+2024-05-27 15:59:41.585284 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 15:59:41.585324 [debug]: read all data success,total read 387 bytesa
+2024-05-27 15:59:41.585334 [info]: process
+2024-05-27 15:59:41.585350 [info]: request realFile:[../resources/files/%E6%B5%8B%E8%AF%95.txt]
+2024-05-27 15:59:41.585365 [erro]: stat error:[../resources/files/%E6%B5%8B%E8%AF%95.txt],file is not exist!
+2024-05-27 15:59:41.585400 [info]: addResponse:HTTP/1.1 404 Not Found
+Content-Length:49
+Connection:keep-alive
+Content-Type:text/html
+
+The requested file was not found on this server.
+
+2024-05-27 15:59:41.585553 [info]: write complete
+2024-05-27 15:59:43.327804 [debug]: begin recv
+2024-05-27 15:59:43.327999 [debug]: 27本次读取373字节的数据,errno:2
+2024-05-27 15:59:43.328014 [info]: parseLine
+2024-05-27 15:59:43.328018 [info]: 此次的行是：GET /files/test.txt HTTP/1.1
+2024-05-27 15:59:43.328022 [info]: checkedIdx: 30
+2024-05-27 15:59:43.328424 [info]: parseLine
+2024-05-27 15:59:43.328487 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 15:59:43.328497 [info]: checkedIdx: 58
+2024-05-27 15:59:43.328639 [info]: parseLine
+2024-05-27 15:59:43.328685 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 15:59:43.328708 [info]: checkedIdx: 82
+2024-05-27 15:59:43.328820 [info]: parseLine
+2024-05-27 15:59:43.328899 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 15:59:43.328916 [info]: checkedIdx: 134
+2024-05-27 15:59:43.329051 [info]: parseLine
+2024-05-27 15:59:43.329091 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 15:59:43.329099 [info]: checkedIdx: 273
+2024-05-27 15:59:43.329278 [info]: parseLine
+2024-05-27 15:59:43.329317 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 15:59:43.329323 [info]: checkedIdx: 305
+2024-05-27 15:59:43.329482 [info]: parseLine
+2024-05-27 15:59:43.329518 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 15:59:43.329524 [info]: checkedIdx: 371
+2024-05-27 15:59:43.329668 [info]: parseLine
+2024-05-27 15:59:43.329724 [info]: 此次的行是：
+2024-05-27 15:59:43.329731 [info]: checkedIdx: 373
+2024-05-27 15:59:43.329896 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 15:59:43.329924 [debug]: read all data success,total read 373 bytesa
+2024-05-27 15:59:43.329931 [info]: process
+2024-05-27 15:59:43.329943 [info]: request realFile:[../resources/files/test.txt]
+2024-05-27 15:59:43.329952 [info]: [../resources/files/test.txt] is exist!file size is: 6
+2024-05-27 15:59:43.329957 [debug]: addContent file:[../resources/files/test.txt]
+2024-05-27 15:59:43.329990 [debug]: open file:[../resources/files/test.txt] success!
+2024-05-27 15:59:43.330090 [info]: mmap file [../resources/files/test.txt] success!
+2024-05-27 15:59:43.363274 [info]: write complete
+2024-05-27 16:01:26.386693 [debug]: begin recv
+2024-05-27 16:01:26.386828 [debug]: 27本次读取404字节的数据,errno:11
+2024-05-27 16:01:26.386842 [info]: parseLine
+2024-05-27 16:01:26.386852 [info]: 此次的行是：GET /files/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D.md HTTP/1.1
+2024-05-27 16:01:26.386874 [info]: checkedIdx: 61
+2024-05-27 16:01:26.387278 [info]: parseLine
+2024-05-27 16:01:26.387318 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 16:01:26.387329 [info]: checkedIdx: 89
+2024-05-27 16:01:26.387464 [info]: parseLine
+2024-05-27 16:01:26.387520 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 16:01:26.387554 [info]: checkedIdx: 113
+2024-05-27 16:01:26.387685 [info]: parseLine
+2024-05-27 16:01:26.387716 [info]: 此次的行是：Referer: http://192.168.159.170:8080/download.html
+2024-05-27 16:01:26.387722 [info]: checkedIdx: 165
+2024-05-27 16:01:26.387830 [info]: parseLine
+2024-05-27 16:01:26.387853 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 16:01:26.387877 [info]: checkedIdx: 304
+2024-05-27 16:01:26.387994 [info]: parseLine
+2024-05-27 16:01:26.388020 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 16:01:26.388027 [info]: checkedIdx: 336
+2024-05-27 16:01:26.388142 [info]: parseLine
+2024-05-27 16:01:26.388169 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 16:01:26.388176 [info]: checkedIdx: 402
+2024-05-27 16:01:26.388294 [info]: parseLine
+2024-05-27 16:01:26.388320 [info]: 此次的行是：
+2024-05-27 16:01:26.388326 [info]: checkedIdx: 404
+2024-05-27 16:01:26.388462 [debug]: 27本次读取-1字节的数据,errno:11
+2024-05-27 16:01:26.388480 [debug]: read all data success,total read 404 bytesa
+2024-05-27 16:01:26.388502 [info]: process
+2024-05-27 16:01:26.388518 [info]: request realFile:[../resources/files/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D.md]
+2024-05-27 16:01:26.388549 [erro]: stat error:[../resources/files/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D.md],file is not exist!
+2024-05-27 16:01:26.388565 [info]: addResponse:HTTP/1.1 404 Not Found
+Content-Length:49
+Connection:keep-alive
+Content-Type:text/html
+
+The requested file was not found on this server.
+
+2024-05-27 16:01:26.388809 [info]: write complete
+2024-05-27 16:01:32.996177 [debug]: 16 closed!
+2024-05-27 16:01:32.996590 [debug]: 17 closed!
+2024-05-27 16:01:32.996748 [debug]: 26 closed!
+2024-05-27 16:01:32.996873 [debug]: 18 closed!
+2024-05-27 16:01:32.996975 [debug]: 28 closed!
+2024-05-27 16:01:32.997074 [debug]: 27 closed!
+2024-05-27 16:01:35.441461 [info]: accept a new client:16
+2024-05-27 16:01:35.441649 [debug]: begin recv
+2024-05-27 16:01:35.441687 [debug]: 16本次读取352字节的数据,errno:9
+2024-05-27 16:01:35.441704 [info]: parseLine
+2024-05-27 16:01:35.441707 [info]: 此次的行是：GET /files/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D.md HTTP/1.1
+2024-05-27 16:01:35.441783 [info]: checkedIdx: 61
+2024-05-27 16:01:35.442048 [info]: parseLine
+2024-05-27 16:01:35.442075 [info]: 此次的行是：Host: 192.168.159.170:8080
+2024-05-27 16:01:35.442100 [info]: checkedIdx: 89
+2024-05-27 16:01:35.442201 [info]: parseLine
+2024-05-27 16:01:35.442225 [info]: 此次的行是：Connection: keep-alive
+2024-05-27 16:01:35.442230 [info]: checkedIdx: 113
+2024-05-27 16:01:35.442334 [info]: parseLine
+2024-05-27 16:01:35.442352 [info]: 此次的行是：User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+2024-05-27 16:01:35.442357 [info]: checkedIdx: 252
+2024-05-27 16:01:35.442494 [info]: parseLine
+2024-05-27 16:01:35.442521 [info]: 此次的行是：Accept-Encoding: gzip, deflate
+2024-05-27 16:01:35.442608 [info]: checkedIdx: 284
+2024-05-27 16:01:35.442725 [info]: parseLine
+2024-05-27 16:01:35.442751 [info]: 此次的行是：Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+2024-05-27 16:01:35.442759 [info]: checkedIdx: 350
+2024-05-27 16:01:35.442876 [info]: parseLine
+2024-05-27 16:01:35.442902 [info]: 此次的行是：
+2024-05-27 16:01:35.442909 [info]: checkedIdx: 352
+2024-05-27 16:01:35.443041 [debug]: 16本次读取-1字节的数据,errno:11
+2024-05-27 16:01:35.443068 [debug]: read all data success,total read 352 bytesa
+2024-05-27 16:01:35.443080 [info]: process
+2024-05-27 16:01:35.443098 [info]: request realFile:[../resources/files/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D.md]
+2024-05-27 16:01:35.443110 [erro]: stat error:[../resources/files/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D.md],file is not exist!
+2024-05-27 16:01:35.443118 [info]: addResponse:HTTP/1.1 404 Not Found
+Content-Length:49
+Connection:keep-alive
+Content-Type:text/html
+
+The requested file was not found on this server.
+

@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-10 20:21:36
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-21 20:29:06
+ * @LastEditTime: 2024-05-27 15:45:56
  * @FilePath: /Project/my_Server/http/httpresponse.h
  * @Description: 
  * 
@@ -34,12 +34,13 @@ private:
         NO_REQUEST = 0,
         GET_REQUEST,
         BAD_REQUEST,
-        NO_RESOURSE,
+        NO_RESOURCE,
         FORBIDDENT_REQUEST,
         FILE_REQUEST,
         INTERNAL_ERROR,
         CLOSED_CONNECTION
     };
+    
 public:
     httpResponse(){
         code=-1;

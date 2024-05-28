@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:25
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-23 16:32:07
+ * @LastEditTime: 2024-05-27 15:46:23
  * @FilePath: /Project/my_Server/http/httprequest.h
  * @Description: 
  * 
@@ -30,7 +30,7 @@ enum HTTP_CODE
     NO_REQUEST = 0,
     GET_REQUEST,
     BAD_REQUEST,
-    NO_RESOURSE,
+    NO_RESOURCE,
     FORBIDDENT_REQUEST,
     FILE_REQUEST,
     INTERNAL_ERROR,

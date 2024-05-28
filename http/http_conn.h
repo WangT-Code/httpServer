@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 17:35:02
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-23 14:59:37
+ * @LastEditTime: 2024-05-27 15:46:04
  * @FilePath: /Project/my_Server/http/http_conn.h
  * @Description: 
  * 
@@ -53,7 +53,7 @@ public:
         GET_REQUEST,
         BAD_REQUEST,
         NO_RESOURCE,
-        FORBIDDEN_REQUEST,
+        FORBIDDENT_REQUEST,
         FILE_REQUEST,
         INTERNAL_ERROR,
         CLOSED_CONNECTION
