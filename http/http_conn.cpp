@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 17:35:14
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-27 15:57:25
+ * @LastEditTime: 2024-05-29 17:54:56
  * @FilePath: /Project/my_Server/http/http_conn.cpp
  * @Description: 
  * 
@@ -143,6 +143,7 @@ void http_conn::process(){
 void http_conn::closeConn(){
     if(connectFd!=-1){
         epollUtil::instance().removefd(connectFd);
+        LOG_INFO("close %d",connectFd);
         close(connectFd);
     }
 }

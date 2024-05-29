@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include<sys/epoll.h>
+#include "../log/log.h"
 class epollUtil{
 private:
     epollUtil(){};
@@ -26,7 +27,7 @@ public:
         return epoll_wait(epollFd,events,MAXEVENTS,-1);
     }
      void addfd(int fd,bool oneshot){
-        epoll_event event;
+        epoll_event event={0};
         event.data.fd=fd;
         event.events=EPOLLET|EPOLLIN|EPOLLRDHUP;
         if(oneshot)
@@ -35,17 +36,21 @@ public:
         setnonblocking(fd);
     }
      void removefd(int fd){
-        epoll_ctl(epollFd,EPOLL_CTL_DEL,fd,nullptr);
-        close(fd);
+        if (fd < 0) return;
+        epoll_event ev = {0};
+        ev.data.fd = fd;
+        epoll_ctl(epollFd, EPOLL_CTL_DEL, fd, &ev) == 0;
     }
      void modfd(int fd,int ev){
-        epoll_event event;
+        printf("set %d EPOLLIN\n",fd);
+        LOG_INFO("set %d EPOLLIN",fd);
+        epoll_event event={0};
         event.data.fd=fd;
         event.events=ev|EPOLLET|EPOLLONESHOT|EPOLLRDHUP;
         epoll_ctl(epollFd,EPOLL_CTL_MOD,fd,&event);
     }
     void setIn(int fd){
-        epoll_event event;
+        epoll_event event={0};
         event.data.fd=fd;
         event.events=EPOLLIN|EPOLLET|EPOLLONESHOT|EPOLLRDHUP;
         epoll_ctl(epollFd,EPOLL_CTL_MOD,fd,&event);

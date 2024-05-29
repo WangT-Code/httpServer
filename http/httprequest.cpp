@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:34
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-28 21:06:28
+ * @LastEditTime: 2024-05-29 20:42:13
  * @FilePath: /Project/my_Server/http/httprequest.cpp
  * @Description: 
  * 
@@ -12,6 +12,8 @@
 #include <json/json.h>
 #include <sys/socket.h>
 #include <regex>
+#include <fcntl.h>
+#include <unistd.h>
 #include <arpa/inet.h>
 #include <fstream>
 #include "../mysql_connection/sql_conn_pool.h"
@@ -60,6 +62,8 @@ void httpRequest::init(sockaddr_in client)
     // 初始化内容长度为0
     contentLen=0;
     tempRead=0;
+    totalBytes=0;
+    readedIdx=0;
     clientAddr=client;
     method="";
     path="";
@@ -72,11 +76,15 @@ void httpRequest::init(sockaddr_in client)
 }
 void httpRequest::init(){
      // 初始化读取缓冲区为全0
+    LOG_INFO("init() run once");
     memset(&readBuf, '\0', READBUFSIZE);
     // 初始化已读取索引和已检查索引为0
     readedIdx=0;
     checkedIdx=0;
     startLine=0;
+    totalBytes=0;
+    readedIdx=0;
+    
     // 初始化解析状态为请求行解析状态
     parseState=REQUEST_LINE;
     // 初始化内容长度为0
@@ -91,16 +99,19 @@ void httpRequest::init(){
 }
 bool httpRequest::read(int sockfd,int * saveError){
     // sockfd为ET模式
-    if(readedIdx>=READBUFSIZE){
-        return false;
-    }
-    readedIdx=0;
     tempRead=0;
     int byteRead=0;
-    totalBytes=0;
     LOG_DEBUG("begin recv");
+    memset(readBuf,'\0',READBUFSIZE);
+    
     while(true){
         tempRead=0;
+        int flag=fcntl(sockfd, F_GETFD);
+        if(flag==-1){
+            LOG_ERROR("套接字:%d无效或者关闭",sockfd);
+        }else{
+            LOG_INFO("套接字:%d有效",sockfd);
+        }
         byteRead=recv(sockfd,readBuf,READBUFSIZE-1,0);
         printf("%d本次读取%d字节的数据,errno:%d\n",sockfd,byteRead,errno);
         LOG_DEBUG("%d本次读取%d字节的数据,errno:%d",sockfd,byteRead,errno);
@@ -117,6 +128,8 @@ bool httpRequest::read(int sockfd,int * saveError){
                 }
                 else{
                     LOG_DEBUG("continue to read data,and registration EPOLLIN event");
+                    // LOG_DEBUG("continue to read data,run coninue");
+                    // continue;
                     *saveError=errno;
                     return false;
                 }
@@ -262,13 +275,13 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
             if(fileInfo.find("filename")!=fileInfo.end()){
                 std::ofstream ofs;
                 // 如果文件分多次发送，应该采用app，同时为避免重复上传，应该用md5做校验
-                ofs.open("/home/wt/Project/my_Server/resources/" +fileInfo["filename"], std::ios::app|std::ios::binary);
+                ofs.open("/home/wt/Project/my_Server/resources/files/" +fileInfo["filename"], std::ios::app|std::ios::binary);
                 if(!ofs.is_open()){
                     LOG_ERROR("open file error");
                 }
                 // 解析文件内容，文件内容以\r\n\r\n开始
                 // LOG_DEBUG("body:%s",body.c_str());
-                if((st=body.find("\r\n\r\n"))!=string::npos){
+                if(st&&(st=body.find("\r\n\r\n"))!=string::npos){
                     st+=strlen("\r\n\r\n");
                     //这里可以加个标志比如flag=1,然后在if里面进行判断，这样就不用每次都body.find("\r\n\r\n")
                 }
@@ -315,7 +328,7 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
                     //     LOG_DEBUG("写入的结束位置:%d",ed);
                     //     LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),ed-st);
                     // }
-                    LOG_DEBUG("写入的文件内容为：%s",&text[st]);
+                    // LOG_DEBUG("写入的文件内容为：%s",&text[st]);
                     ofs.close();
                 }
                 else {
@@ -325,13 +338,14 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
                         ofs.write(&text[st],tempRead-st-checkedIdx);
                         LOG_DEBUG("写入的结束位置:%d",tempRead-checkedIdx);
                         LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),tempRead-st-checkedIdx);
+                        st=0;
                     }
                     else{
                         ofs.write(&text[st],tempRead-st);
                         LOG_DEBUG("写入的结束位置:%d",tempRead);
                         LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),tempRead-st);
                     }
-                    LOG_DEBUG("写入的文件内容为：%s",&text[st]);
+                    // LOG_DEBUG("写入的文件内容为：%s",&text[st]);
                     ofs.close();  
                 } 
             }
@@ -346,6 +360,7 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
             }
             else return NO_REQUEST;
         }
+        else GET_REQUEST;
         
     }
     return GET_REQUEST;
@@ -412,6 +427,18 @@ void httpRequest::parseFormData(){
     st = body.find("filename=\"", ed) + strlen("filename=\"");
     ed = body.find("\"", st);
     fileInfo["filename"] = body.substr(st, ed - st);
+    string filepath="/home/wt/Project/my_Server/resources/files/" +fileInfo["filename"];
+    if(access(filepath.c_str(),F_OK)==0){
+        //文件存在,删除原来的文件
+        LOG_INFO("[%s] file is exist!",filepath.c_str());
+        if(unlink(filepath.c_str())==0){
+            LOG_INFO("remove [%s] file success!",filepath.c_str());
+        }
+        else{
+            LOG_INFO("remove [%s] file file!",filepath.c_str());
+        }
+    }
+
 }
 httpRequest::HTTP_CODE httpRequest::parse(){
     LINE_STATUS lineState=LINE_OK;
@@ -419,11 +446,20 @@ httpRequest::HTTP_CODE httpRequest::parse(){
     char* text=0;
     while((parseState==BODY&&lineState==LINE_OK)||((lineState=parseLine())==LINE_OK)){
         //获取刚刚解析的行内容
+        if(parseState==REQUEST_LINE){
+            LOG_INFO("当前的解析状态是解析:REQUEST_LINE");
+        }
+        else if(parseState==HEADERS){
+            LOG_INFO("当前的解析状态是解析:HEADERS");
+        }
+        else{
+            LOG_INFO("当前的解析状态是解析:BODY");
+        }
         text=getLine();
         //更新startLine
         startLine=checkedIdx;
-        LOG_INFO("此次的行是：%s",text);
-        LOG_INFO("checkedIdx: %lu",checkedIdx);
+        // LOG_INFO("此次的行是：%s",text);
+        // LOG_INFO("checkedIdx: %lu",checkedIdx);
         switch(parseState){
             case REQUEST_LINE:
                 ret=parseRequestLine(text);

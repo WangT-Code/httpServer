@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-20 10:54:29
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-22 10:24:04
+ * @LastEditTime: 2024-05-29 18:13:58
  * @FilePath: /Project/my_Server/http/test_server.cpp
  * @Description: 
  * 
@@ -31,6 +31,17 @@
 #include "../log/log.h"
 #include "httprequest.h"
 #include "httpresponse.h"
+enum HTTP_CODE
+    {
+        NO_REQUEST=0,
+        GET_REQUEST,
+        BAD_REQUEST,
+        NO_RESOURCE,
+        FORBIDDENT_REQUEST,
+        FILE_REQUEST,
+        INTERNAL_ERROR,
+        CLOSED_CONNECTION
+    };
 int main(){
 
     //初始化数据库连接池，日志系统
@@ -75,10 +86,11 @@ int main(){
     // 网站根目录
     std::string tempWeb("../resources");
     http_conn::setWebRoot("../resources");
-    http_conn conn[100];
+    http_conn conn[30];
     while(1){
         int res=epollUtil::instance().wait(events,max_event_num);
         // if(res=-1)LOG_ERROR("epoll wait");
+        LOG_DEBUG("res:%d",res);
         for(int i=0;i<res;i++){
             if(events[i].data.fd==listenFd){
                 printf("有新客户端接入\n");
@@ -90,10 +102,14 @@ int main(){
                     LOG_ERROR("accept error");
                     return 0;
                 }
+                // printf("accept a new client:%d",connFd);
                 LOG_INFO("accept a new client:%d",connFd);
                 http_conn::userCount++;
+                // printf("conn[conFd]初始化");
                 conn[connFd].init(connFd,client);
+                // printf("添加监听\n");
                 epollUtil::instance().addfd(connFd,1);
+
             }
             else if(events[i].events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)){
                 http_conn::userCount--;
@@ -105,14 +121,23 @@ int main(){
                 int err;
                 printf("开始读取内容\n");
                 printf("%d\n",events[i].data.fd);
-                conn[events[i].data.fd].getRequest().init();
+                // conn[events[i].data.fd].getRequest().init();
                 if(conn[events[i].data.fd].read(&err)){
                     printf("读取成功\n");
                     printf("读取完成，开始处理请求\n");
                     conn[events[i].data.fd].process();
                 }
                 else{
-                    conn[events[i].data.fd].closeConn();
+                    if(err==EAGAIN||err==EWOULDBLOCK){
+                        if(conn[events[i].data.fd].getRequest().getCode()==NO_REQUEST){
+                            epollUtil::instance().modfd(events[i].data.fd,EPOLLIN);
+                        }
+                        else{
+                            conn[events[i].data.fd].closeConn();
+                        }
+                    }
+                    else
+                        conn[events[i].data.fd].closeConn();
                 }
             }
             else if(events[i].events&EPOLLOUT){
@@ -120,7 +145,6 @@ int main(){
                 int err;
                 if(conn[events[i].data.fd].write(&err)){
                     printf("返回成功\n");
-                    //调整定时器
                 }
                 else{
                     printf("关闭连接\n");
