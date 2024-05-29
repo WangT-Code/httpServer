@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:25
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-29 19:52:19
+ * @LastEditTime: 2024-05-29 21:13:02
  * @FilePath: /Project/my_Server/http/httprequest.h
  * @Description: 
  * 
@@ -142,6 +142,7 @@ private:
     bool linger;//是否是长连接
     size_t contentLen;//存储请求体的长度
     int code;
+    int onceReadBodylen;// 记录一次读取中，请求体的长度
     char* curBody;
     // int code;
     // char* curBody;

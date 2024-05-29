@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:34
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-29 20:42:13
+ * @LastEditTime: 2024-05-29 21:37:36
  * @FilePath: /Project/my_Server/http/httprequest.cpp
  * @Description: 
  * 
@@ -64,6 +64,7 @@ void httpRequest::init(sockaddr_in client)
     tempRead=0;
     totalBytes=0;
     readedIdx=0;
+    onceReadBodylen=0;
     clientAddr=client;
     method="";
     path="";
@@ -84,7 +85,7 @@ void httpRequest::init(){
     startLine=0;
     totalBytes=0;
     readedIdx=0;
-    
+    onceReadBodylen=0;
     // 初始化解析状态为请求行解析状态
     parseState=REQUEST_LINE;
     // 初始化内容长度为0
@@ -143,6 +144,7 @@ bool httpRequest::read(int sockfd,int * saveError){
             LOG_DEBUG("对方关闭连接");
             return false;
         }
+        onceReadBodylen=byteRead;
         readedIdx+=byteRead;
         tempRead+=byteRead;
         totalBytes+=byteRead;
@@ -221,6 +223,8 @@ httpRequest::HTTP_CODE httpRequest::parseRequestHead(char* text){
     }
     //解析到\r\n空行了
     else if(contentLen){
+        onceReadBodylen-=checkedIdx;
+        LOG_INFO("请求体的长度：%d",onceReadBodylen);
         parseState=BODY;
         return NO_REQUEST;
     }
@@ -289,26 +293,13 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
                 LOG_DEBUG("开始位置st:%lu",st);
                 if(readedIdx>=(checkedIdx+contentLen)){
                     //说明是最后一次读取
-                    if(st){
-                        for(int i=0;i<boundary.size();++i){
-                            LOG_DEBUG("compare content is %s",text-checkedIdx+tempRead-boundary.size()-i);
-                            if(memcmp(text-checkedIdx+tempRead-boundary.size()-i,boundary.c_str(),boundary.size())==0){
-                                ed=tempRead-checkedIdx-boundary.size()-i-2;
-                                LOG_DEBUG("tempRead :%d,checkedIdx:%d,boundary.size():%d,i:%d",tempRead,checkedIdx,boundary.size(),i);
-                                LOG_DEBUG("find ok:%s",&text[tempRead-checkedIdx-boundary.size()-i]);
-                                break;
-                            }
-                        }
-                    }
-                    else{
-                        for(int i=0;i<boundary.size();++i){
-                            LOG_DEBUG("compare content is %s",text+tempRead-boundary.size()-i);
-                            if(memcmp(text+tempRead-boundary.size()-i,boundary.c_str(),boundary.size())==0){
-                                ed=tempRead-boundary.size()-i-2;
-                                LOG_DEBUG("tempRead :%d,boundary.size():%d,i:%d",tempRead,boundary.size(),i);
-                                LOG_DEBUG("find ok:%s",&text[tempRead-boundary.size()-i]);
-                                break;
-                            }
+                    for(int i=0;i<boundary.size();++i){
+                        LOG_DEBUG("compare content is %s",text+onceReadBodylen-boundary.size()-i);
+                        if(memcmp(text+onceReadBodylen-boundary.size()-i,boundary.c_str(),boundary.size())==0){
+                            ed=onceReadBodylen-boundary.size()-i-2;
+                            LOG_DEBUG("tempRead :%d,checkedIdx:%d,boundary.size():%d,i:%d",tempRead,checkedIdx,boundary.size(),i);
+                            LOG_DEBUG("find ok:%s",&text[onceReadBodylen-boundary.size()-i]);
+                            break;
                         }
                     }
                     LOG_DEBUG("结束位置ed:%u",ed); 
@@ -316,36 +307,22 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
                     text[ed]='\0';
                     LOG_DEBUG("写入的结束位置:%d",ed);
                     LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),ed-st);
-                    // if(st){
-                    //     ofs.write(&text[st],ed-st-checkedIdx);
-                    //     text[ed-checkedIdx]='\0';
-                    //     LOG_DEBUG("写入的结束位置:%d",ed-checkedIdx);
-                    //     LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),ed-st-checkedIdx);
-                    // }
-                    // else{
-                    //     ofs.write(&text[st],ed-st);
-                    //     text[ed]='\0';
-                    //     LOG_DEBUG("写入的结束位置:%d",ed);
-                    //     LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),ed-st);
-                    // }
-                    // LOG_DEBUG("写入的文件内容为：%s",&text[st]);
                     ofs.close();
                 }
                 else {
-                    LOG_DEBUG("结束位置ed:%lu",tempRead);
+                    LOG_DEBUG("结束位置ed:%lu",onceReadBodylen);
                     if(st){
                         //第一次读取时，还要去掉请求行和请求头的内容长度
-                        ofs.write(&text[st],tempRead-st-checkedIdx);
-                        LOG_DEBUG("写入的结束位置:%d",tempRead-checkedIdx);
-                        LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),tempRead-st-checkedIdx);
+                        ofs.write(&text[st],onceReadBodylen-st);
+                        LOG_DEBUG("写入的结束位置:%d",onceReadBodylen);
+                        LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),onceReadBodylen-st);
                         st=0;
                     }
                     else{
-                        ofs.write(&text[st],tempRead-st);
-                        LOG_DEBUG("写入的结束位置:%d",tempRead);
-                        LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),tempRead-st);
+                        ofs.write(&text[st],onceReadBodylen-st);
+                        LOG_DEBUG("写入的结束位置:%d",onceReadBodylen);
+                        LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),onceReadBodylen-st);
                     }
-                    // LOG_DEBUG("写入的文件内容为：%s",&text[st]);
                     ofs.close();  
                 } 
             }
