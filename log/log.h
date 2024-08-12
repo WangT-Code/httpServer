@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-04-30 11:21:13
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-29 10:31:59
+ * @LastEditTime: 2024-06-04 10:28:27
  * @FilePath: /Project/my_Server/log/log.h
  * @Description: 
  * 
@@ -98,9 +98,5 @@ private:
 #define LOG_INFO(format, ...) if(!log::getInstance()->isClose()) {log::getInstance()->write(1,format,##__VA_ARGS__); log::getInstance()->flush();}
 #define LOG_WARN(format, ...) if(!log::getInstance()->isClose()) {log::getInstance()->write(2,format,##__VA_ARGS__); log::getInstance()->flush();}
 #define LOG_ERROR(format, ...) if(!log::getInstance()->isClose()) {log::getInstance()->write(3,format,##__VA_ARGS__); log::getInstance()->flush();}
-
-
-
-
 
 #endif 

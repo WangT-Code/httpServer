@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-07 16:49:44
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-07 21:35:09
+ * @LastEditTime: 2024-06-03 17:43:30
  * @FilePath: /Project/my_Server/timer/heaptimer.h
  * @Description: 
  * 
@@ -58,16 +58,20 @@ class heapTimer{
             heap.clear();
             ref.clear();
         };
+        void deleteWithFd(int fd){
+            if(ref.count(fd)){
+                //存在,就删除
+                deleteAt(ref[fd]);
+            }
+        }
+        
    private:
         void siftup(size_t i);
         void siftdown(size_t i);
         void deleteAt(size_t i);
         void swapNode(size_t i, size_t j);
-        
     public:
         std::vector<timeNode> heap;
         std::unordered_map<int, size_t> ref;
-    
-        
  };
 #endif

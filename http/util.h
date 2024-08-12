@@ -16,15 +16,24 @@ public:
     }
 private:
     int epollFd;
+    struct epoll_event* pevents;
+    int epoll_event_num;
 public:
+    void init(epoll_event* p,int event_num){
+        pevents=p;
+        epoll_event_num=event_num;
+    }
      void setupepollfd(int eFd){
+        if(eFd<0){
+            LOG_ERROR("epoll create error!");
+        }
         epollFd=eFd;
     }
     int getepollfd(){
         return epollFd;
     }
-    int wait(epoll_event* events,int MAXEVENTS){
-        return epoll_wait(epollFd,events,MAXEVENTS,-1);
+    int wait(int timeoutMs){
+        return epoll_wait(epollFd,pevents,epoll_event_num,timeoutMs);
     }
      void addfd(int fd,bool oneshot){
         epoll_event event={0};
@@ -39,10 +48,9 @@ public:
         if (fd < 0) return;
         epoll_event ev = {0};
         ev.data.fd = fd;
-        epoll_ctl(epollFd, EPOLL_CTL_DEL, fd, &ev) == 0;
+        epoll_ctl(epollFd, EPOLL_CTL_DEL, fd, &ev);
     }
      void modfd(int fd,int ev){
-        printf("set %d EPOLLIN\n",fd);
         LOG_INFO("set %d EPOLLIN",fd);
         epoll_event event={0};
         event.data.fd=fd;
@@ -60,6 +68,12 @@ public:
         int new_option=old_option|O_NONBLOCK;
         fcntl(fd,F_SETFL,new_option);
         return old_option;
+    }
+    int getFd(int i){
+        return pevents[i].data.fd;
+    }
+    uint32_t getEvents(int i){
+        return pevents[i].events;
     }
 };
 #endif

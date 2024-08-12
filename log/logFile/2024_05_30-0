@@ -1,0 +1,149 @@
+2024-05-30 12:29:53.941320 [info]: init() run once
+2024-05-30 12:30:01.287081 [debug]: res:1
+2024-05-30 12:30:01.287213 [debug]: begin recv
+2024-05-30 12:30:01.287223 [info]: 套接字:28有效
+2024-05-30 12:30:01.287235 [debug]: 28本次读取513字节的数据,errno:11
+2024-05-30 12:30:01.287239 [info]: parseLine
+2024-05-30 12:30:01.287242 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-05-30 12:30:01.287555 [info]: parseLine
+2024-05-30 12:30:01.287568 [info]: 当前的解析状态是解析:HEADERS
+2024-05-30 12:30:01.287655 [info]: parseLine
+2024-05-30 12:30:01.287665 [info]: 当前的解析状态是解析:HEADERS
+2024-05-30 12:30:01.287746 [info]: parseLine
+2024-05-30 12:30:01.287757 [info]: 当前的解析状态是解析:HEADERS
+2024-05-30 12:30:01.287855 [info]: parseLine
+2024-05-30 12:30:01.287864 [info]: 当前的解析状态是解析:HEADERS
+2024-05-30 12:30:01.287955 [info]: parseLine
+2024-05-30 12:30:01.287996 [info]: 当前的解析状态是解析:HEADERS
+2024-05-30 12:30:01.288087 [info]: parseLine
+2024-05-30 12:30:01.288115 [info]: 当前的解析状态是解析:HEADERS
+2024-05-30 12:30:01.288210 [info]: parseLine
+2024-05-30 12:30:01.288237 [info]: 当前的解析状态是解析:HEADERS
+2024-05-30 12:30:01.288342 [info]: 套接字:28有效
+2024-05-30 12:30:01.288362 [debug]: 28本次读取-1字节的数据,errno:11
+2024-05-30 12:30:01.288373 [debug]: read all data success,total read 513 bytesa
+2024-05-30 12:30:01.288383 [info]: process
+2024-05-30 12:30:01.288390 [erro]: 
+2024-05-30 12:30:01.288397 [info]: request realFile:[/home/wt/Project/my_Server/resources/files/“一起来看可以治愈一切的风景～”.mp4]
+2024-05-30 12:30:01.288411 [info]: [/home/wt/Project/my_Server/resources/files/“一起来看可以治愈一切的风景～”.mp4] is exist!file size is: 22412180
+2024-05-30 12:30:01.288419 [debug]: addContent file:[/home/wt/Project/my_Server/resources/files/“一起来看可以治愈一切的风景～”.mp4]
+2024-05-30 12:30:01.288435 [debug]: open file:[/home/wt/Project/my_Server/resources/files/“一起来看可以治愈一切的风景～”.mp4] success!
+2024-05-30 12:30:01.288456 [info]: mmap file [/home/wt/Project/my_Server/resources/files/“一起来看可以治愈一切的风景～”.mp4] success!
+2024-05-30 12:30:01.288467 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.288478 [info]: init() run once
+2024-05-30 12:30:01.288487 [debug]: res:1
+2024-05-30 12:30:01.314779 [info]: write EAGAIN
+2024-05-30 12:30:01.314864 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.314885 [info]: init() run once
+2024-05-30 12:30:01.316423 [debug]: res:1
+2024-05-30 12:30:01.318451 [info]: write EAGAIN
+2024-05-30 12:30:01.318494 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.318514 [info]: init() run once
+2024-05-30 12:30:01.318527 [debug]: res:1
+2024-05-30 12:30:01.321053 [info]: write EAGAIN
+2024-05-30 12:30:01.321085 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.321105 [info]: init() run once
+2024-05-30 12:30:01.321139 [debug]: res:1
+2024-05-30 12:30:01.338766 [info]: write EAGAIN
+2024-05-30 12:30:01.339079 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.339108 [info]: init() run once
+2024-05-30 12:30:01.339129 [debug]: res:1
+2024-05-30 12:30:01.358262 [info]: write EAGAIN
+2024-05-30 12:30:01.358376 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.358386 [info]: init() run once
+2024-05-30 12:30:01.365225 [debug]: res:1
+2024-05-30 12:30:01.382537 [info]: write EAGAIN
+2024-05-30 12:30:01.382768 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.382803 [info]: init() run once
+2024-05-30 12:30:01.382846 [debug]: res:1
+2024-05-30 12:30:01.387136 [info]: write EAGAIN
+2024-05-30 12:30:01.387343 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.387446 [info]: init() run once
+2024-05-30 12:30:01.388887 [debug]: res:1
+2024-05-30 12:30:01.414260 [info]: write EAGAIN
+2024-05-30 12:30:01.414785 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.414948 [info]: init() run once
+2024-05-30 12:30:01.415765 [debug]: res:1
+2024-05-30 12:30:01.463490 [info]: write EAGAIN
+2024-05-30 12:30:01.463820 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.463869 [info]: init() run once
+2024-05-30 12:30:01.464541 [debug]: res:1
+2024-05-30 12:30:01.484910 [info]: write EAGAIN
+2024-05-30 12:30:01.485466 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.485560 [info]: init() run once
+2024-05-30 12:30:01.485772 [debug]: res:1
+2024-05-30 12:30:01.500340 [info]: write EAGAIN
+2024-05-30 12:30:01.500445 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.500485 [info]: init() run once
+2024-05-30 12:30:01.501968 [debug]: res:1
+2024-05-30 12:30:01.507757 [info]: write EAGAIN
+2024-05-30 12:30:01.507991 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.508033 [info]: init() run once
+2024-05-30 12:30:01.510512 [debug]: res:1
+2024-05-30 12:30:01.526593 [info]: write EAGAIN
+2024-05-30 12:30:01.526750 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.526766 [info]: init() run once
+2024-05-30 12:30:01.526794 [debug]: res:1
+2024-05-30 12:30:01.540384 [info]: write EAGAIN
+2024-05-30 12:30:01.540884 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.540933 [info]: init() run once
+2024-05-30 12:30:01.542881 [debug]: res:1
+2024-05-30 12:30:01.565147 [info]: write EAGAIN
+2024-05-30 12:30:01.565373 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.565414 [info]: init() run once
+2024-05-30 12:30:01.575211 [debug]: res:1
+2024-05-30 12:30:01.699264 [info]: write EAGAIN
+2024-05-30 12:30:01.699377 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.699398 [info]: init() run once
+2024-05-30 12:30:01.700316 [debug]: res:1
+2024-05-30 12:30:01.836686 [info]: write EAGAIN
+2024-05-30 12:30:01.836791 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.836823 [info]: init() run once
+2024-05-30 12:30:01.839303 [debug]: res:1
+2024-05-30 12:30:01.922220 [info]: write EAGAIN
+2024-05-30 12:30:01.922427 [info]: set 28 EPOLLIN
+2024-05-30 12:30:01.922494 [info]: init() run once
+2024-05-30 12:30:01.929530 [debug]: res:1
+2024-05-30 12:30:02.091343 [info]: write EAGAIN
+2024-05-30 12:30:02.091442 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.091483 [info]: init() run once
+2024-05-30 12:30:02.094760 [debug]: res:1
+2024-05-30 12:30:02.222630 [info]: write EAGAIN
+2024-05-30 12:30:02.222768 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.222793 [info]: init() run once
+2024-05-30 12:30:02.226247 [debug]: res:1
+2024-05-30 12:30:02.264836 [info]: write EAGAIN
+2024-05-30 12:30:02.265055 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.265094 [info]: init() run once
+2024-05-30 12:30:02.271348 [debug]: res:1
+2024-05-30 12:30:02.312950 [info]: write EAGAIN
+2024-05-30 12:30:02.313057 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.313073 [info]: init() run once
+2024-05-30 12:30:02.317021 [debug]: res:1
+2024-05-30 12:30:02.347833 [info]: write EAGAIN
+2024-05-30 12:30:02.347931 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.347943 [info]: init() run once
+2024-05-30 12:30:02.350882 [debug]: res:1
+2024-05-30 12:30:02.368534 [info]: write EAGAIN
+2024-05-30 12:30:02.368979 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.369043 [info]: init() run once
+2024-05-30 12:30:02.373746 [debug]: res:1
+2024-05-30 12:30:02.450576 [info]: write EAGAIN
+2024-05-30 12:30:02.450717 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.450757 [info]: init() run once
+2024-05-30 12:30:02.456381 [debug]: res:1
+2024-05-30 12:30:02.639793 [info]: write EAGAIN
+2024-05-30 12:30:02.640117 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.640224 [info]: init() run once
+2024-05-30 12:30:02.655041 [debug]: res:1
+2024-05-30 12:30:02.779053 [info]: write EAGAIN
+2024-05-30 12:30:02.779293 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.779362 [info]: init() run once
+2024-05-30 12:30:02.789962 [debug]: res:1
+2024-05-30 12:30:02.826534 [info]: write EAGAIN
+2024-05-30 12:30:02.826750 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.826877 [info]: init() run once
+2024-05-30 12:30:02.834282 [debug]: res:1
+2024-05-30 12:30:02.840363 [info]: write complete
+2024-05-30 12:30:02.841191 [info]: set 28 EPOLLIN
+2024-05-30 12:30:02.841295 [info]: init() run once

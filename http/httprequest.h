@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:25
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-29 21:13:02
+ * @LastEditTime: 2024-06-03 16:11:40
  * @FilePath: /Project/my_Server/http/httprequest.h
  * @Description: 
  * 
@@ -14,13 +14,16 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <errno.h>
+#include <fstream>
 #include <mysql/mysql.h>
 #include <regex>
+#include <vector>
 #include <netinet/in.h>
 #include "../log/log.h"
 #include "../mysql_connection/sql_conn_pool.h"
 using std::string;
 using std::unordered_map;
+using std::vector;
 using std::unordered_set;
 //负责处理用户的http请求报文
 class httpRequest{
@@ -53,7 +56,7 @@ enum LINE_STATUS
 public:
     httpRequest(){};
     ~httpRequest()=default;
-    void init(sockaddr_in client);
+    void init(sockaddr_in client,const char* webroot);
     void init();
     //从sockfd中读取数据到readBuf中
     bool read(int sockfd,int * saveError);
@@ -64,6 +67,7 @@ public:
     HTTP_CODE parse();
     bool isKeepAlive() const;
 private:
+    
     void parseFromUrlEncoded();
     void parseFormData();
     int convertHex(char ch);
@@ -123,7 +127,21 @@ public:
     std::unordered_map<std::string,std::string>& getUser(){
         return postUser;
     }
-
+    void clear(){
+        readedIdx=checkedIdx=startLine=0;
+        memset(readBuf,0,READBUFSIZE);
+        parseState=REQUEST_LINE;
+        totalBytes=0;
+        st=0;
+        ed=0;
+        linger=false;
+        contentLen=0;
+        code=NO_REQUEST;
+        onceReadBodylen=0;
+        headers.clear();
+        postUser.clear();
+        fileInfo.clear();
+    }
 private:
     static const int READBUFSIZE=8192;
     sockaddr_in clientAddr;
@@ -133,19 +151,15 @@ private:
     char readBuf[READBUFSIZE];//存储报文数据
     PARSE_STATE parseState;//当前的解析状态
     string method,path,version,body,boundary;
-   //记录一次读取的数据的个数
-    int tempRead=0;
     //记录一次读取中的所有字节数量
     int totalBytes=0;
-    // size_t st = 0, ed = 0;
-    size_t st=0,ed=0;
+    size_t st=0,ed=0;//记录请求体的开始与结束位置
     bool linger;//是否是长连接
     size_t contentLen;//存储请求体的长度
     int code;
     int onceReadBodylen;// 记录一次读取中，请求体的长度
     char* curBody;
-    // int code;
-    // char* curBody;
+    string webRoot;//网站根目录
     unordered_map<string,string> headers;//存储请求头中的信息
     unordered_map<string,string> postUser;//存储用户登陆注册时的信息
     unordered_map<string,string> fileInfo;//存储用户上传文件的信息

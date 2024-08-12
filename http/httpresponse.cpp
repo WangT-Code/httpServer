@@ -58,7 +58,7 @@ bool httpResponse::addResponse(const char*format,...){
     }
     va_list arg_list;
     va_start(arg_list,format);
-    int len=vsnprintf(writeBuf+writeEdIdx,WRITEBUFSIZE-1-writeEdIdx,format,arg_list);
+    size_t len=vsnprintf(writeBuf+writeEdIdx,WRITEBUFSIZE-1-writeEdIdx,format,arg_list);
     if(len>=(WRITEBUFSIZE-1-writeEdIdx)){
         va_end(arg_list);
         return false;
@@ -185,8 +185,7 @@ bool httpResponse::write( int sockfd,int *saveErrno){
     }
     while(1){
         int bytes_write=writev(sockfd,writeV,writeVcnt);
-        printf("%d此次返回%d字节数据,错误代码为:%d\n",sockfd,bytes_write,errno);
-        if(bytes_write==0)sleep(2);
+        // printf("%d此次返回%d字节数据,错误代码为:%d\n",sockfd,bytes_write,errno);
         if(-1==bytes_write){
             if(errno==EAGAIN){
                 *saveErrno = errno;
@@ -211,11 +210,11 @@ bool httpResponse::write( int sockfd,int *saveErrno){
             writeV[0].iov_base=writeBuf+byteHaveSend;
             writeV[0].iov_len-=byteHaveSend;
         }
-        if(byteToSend>0 && errno ==EAGAIN){
-            LOG_INFO("write EAGAIN");
-            epollUtil::instance().modfd(sockfd,EPOLLOUT);
-            return true;
-        }
+        // if(byteToSend>0 && errno ==EAGAIN){
+        //     LOG_INFO("write EAGAIN");
+        //     epollUtil::instance().modfd(sockfd,EPOLLOUT);
+        //     return true;
+        // }
         if(byteToSend<=0){
             LOG_INFO("write complete");
             unMapFile();

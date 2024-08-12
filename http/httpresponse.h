@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-10 20:21:36
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-27 15:45:56
+ * @LastEditTime: 2024-06-04 10:32:55
  * @FilePath: /Project/my_Server/http/httpresponse.h
  * @Description: 
  * 
@@ -59,7 +59,6 @@ public:
         byteToSend=0;
         realFile="";
         unMapFile();
-
     }
     bool makeResponse();
     bool write( int sockfd,int *saveErrno);
@@ -78,19 +77,19 @@ public:
     iovec* getIovec(){
         return writeV;
     }
-    
-public:
-    static const int WRITEBUFSIZE=8192;
-private:
-    
-    bool addContent();
-    bool addResponse(const char* format,...);
     void unMapFile(){
         if(fileAddress){
             munmap(fileAddress,fileState.st_size);
             fileAddress=nullptr;
         }
     };
+public:
+    static const size_t WRITEBUFSIZE=8192;
+private:
+    
+    bool addContent();
+    bool addResponse(const char* format,...);
+    
     void mapToWriteV(){
         writeV[0].iov_base=writeBuf;
         writeV[0].iov_len=writeEdIdx;
@@ -108,8 +107,8 @@ private:
     struct iovec writeV[2];
     int writeVcnt;
     struct stat fileState;
-    int byteToSend;//记录总共有多少字节需要发送
-    int byteHaveSend;//已经发送多少字节
+    size_t byteToSend;//记录总共有多少字节需要发送
+    size_t byteHaveSend;//已经发送多少字节
     static const unordered_map<string, string> SUFFIX_TYPE;
     static const unordered_map<int, string> CODE_STATUS;
     static const unordered_map<int, string> CODE_PATH;

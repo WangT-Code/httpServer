@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-20 10:54:29
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-29 18:13:58
+ * @LastEditTime: 2024-06-03 20:52:14
  * @FilePath: /Project/my_Server/http/test_server.cpp
  * @Description: 
  * 
@@ -84,11 +84,12 @@ int main(){
     }
 
     // 网站根目录
-    std::string tempWeb("../resources");
-    http_conn::setWebRoot("../resources");
+    http_conn::webRoot="./home/wt/Project/my_Server/resources";
+    epollUtil::instance().setupepollfd(epoll_create(10));
+    epollUtil::instance().init(&events[0],0);
     http_conn conn[30];
     while(1){
-        int res=epollUtil::instance().wait(events,max_event_num);
+        int res=epollUtil::instance().wait(-1);
         // if(res=-1)LOG_ERROR("epoll wait");
         LOG_DEBUG("res:%d",res);
         for(int i=0;i<res;i++){

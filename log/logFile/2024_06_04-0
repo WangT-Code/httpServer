@@ -1,0 +1,1157 @@
+2024-06-04 11:34:34.967969 [info]: ========== Server init ==========
+2024-06-04 11:34:34.968007 [info]: Port:8080, OpenLinger: false
+2024-06-04 11:34:34.968013 [info]: LogSys level: 1
+2024-06-04 11:34:34.968015 [info]: srcDir: /home/wt/Project/my_Server/resources
+2024-06-04 11:34:34.968017 [info]: SqlConnPool num: 20, ThreadPool num: 10
+2024-06-04 11:34:34.968020 [info]: ========= Server start =========
+2024-06-04 11:34:34.968023 [info]: tick
+2024-06-04 11:34:37.564692 [info]: enentCnt:[1]
+2024-06-04 11:34:37.567380 [info]: Client[32](192.168.159.1:54669) in, user count:2
+2024-06-04 11:34:37.567769 [erro]: accept error
+2024-06-04 11:34:37.567787 [info]: tick
+2024-06-04 11:34:37.567803 [info]: enentCnt:[1]
+2024-06-04 11:34:37.567812 [debug]: ip:[192.168.159.1],sockfd:[32],begin recv
+2024-06-04 11:34:37.567822 [info]: 套接字:32有效
+2024-06-04 11:34:37.567978 [debug]: 32本次读取542字节的数据,errno:11
+2024-06-04 11:34:37.567989 [info]: parseLine
+2024-06-04 11:34:37.567998 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.568360 [info]: parseLine
+2024-06-04 11:34:37.568393 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.568452 [info]: parseLine
+2024-06-04 11:34:37.568462 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.568535 [info]: parseLine
+2024-06-04 11:34:37.568543 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.568585 [info]: parseLine
+2024-06-04 11:34:37.568591 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.568693 [info]: parseLine
+2024-06-04 11:34:37.568711 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.568794 [info]: parseLine
+2024-06-04 11:34:37.568872 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.568916 [info]: parseLine
+2024-06-04 11:34:37.568924 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.568958 [info]: parseLine
+2024-06-04 11:34:37.568966 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.569003 [info]: parseLine
+2024-06-04 11:34:37.569011 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.569091 [info]: 套接字:32有效
+2024-06-04 11:34:37.569124 [debug]: 32本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.569138 [debug]: read all data success,total read 542 bytesa
+2024-06-04 11:34:37.569160 [info]: tick
+2024-06-04 11:34:37.569407 [info]: process
+2024-06-04 11:34:37.569546 [erro]: 
+2024-06-04 11:34:37.569621 [info]: request realFile:[/home/wt/Project/my_Server/resources/register.html]
+2024-06-04 11:34:37.569644 [info]: [/home/wt/Project/my_Server/resources/register.html] is exist!file size is: 7981
+2024-06-04 11:34:37.569656 [debug]: addContent file:[/home/wt/Project/my_Server/resources/register.html]
+2024-06-04 11:34:37.569676 [debug]: open file:[/home/wt/Project/my_Server/resources/register.html] success!
+2024-06-04 11:34:37.569690 [info]: mmap file [/home/wt/Project/my_Server/resources/register.html] success!
+2024-06-04 11:34:37.569697 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.569717 [info]: init() run once
+2024-06-04 11:34:37.569730 [info]: enentCnt:[1]
+2024-06-04 11:34:37.572230 [info]: write complete
+2024-06-04 11:34:37.572479 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.572503 [info]: tick
+2024-06-04 11:34:37.707741 [info]: enentCnt:[1]
+2024-06-04 11:34:37.707835 [debug]: ip:[192.168.159.1],sockfd:[32],begin recv
+2024-06-04 11:34:37.707844 [info]: 套接字:32有效
+2024-06-04 11:34:37.707873 [debug]: 32本次读取408字节的数据,errno:11
+2024-06-04 11:34:37.707876 [info]: parseLine
+2024-06-04 11:34:37.707878 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.707962 [info]: parseLine
+2024-06-04 11:34:37.707966 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.707991 [info]: parseLine
+2024-06-04 11:34:37.707995 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.708013 [info]: parseLine
+2024-06-04 11:34:37.708016 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.708051 [info]: parseLine
+2024-06-04 11:34:37.708054 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.708073 [info]: parseLine
+2024-06-04 11:34:37.708077 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.708097 [info]: parseLine
+2024-06-04 11:34:37.708101 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.708120 [info]: parseLine
+2024-06-04 11:34:37.708124 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.708143 [info]: parseLine
+2024-06-04 11:34:37.708147 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.708186 [info]: 套接字:32有效
+2024-06-04 11:34:37.708195 [debug]: 32本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.708200 [debug]: read all data success,total read 408 bytesa
+2024-06-04 11:34:37.708220 [info]: process
+2024-06-04 11:34:37.708326 [erro]: 
+2024-06-04 11:34:37.708337 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/bootstrap.min.css]
+2024-06-04 11:34:37.708358 [info]: [/home/wt/Project/my_Server/resources/css/bootstrap.min.css] is exist!file size is: 121214
+2024-06-04 11:34:37.708366 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/bootstrap.min.css]
+2024-06-04 11:34:37.708392 [debug]: open file:[/home/wt/Project/my_Server/resources/css/bootstrap.min.css] success!
+2024-06-04 11:34:37.708409 [info]: mmap file [/home/wt/Project/my_Server/resources/css/bootstrap.min.css] success!
+2024-06-04 11:34:37.708413 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.708423 [info]: init() run once
+2024-06-04 11:34:37.708477 [info]: tick
+2024-06-04 11:34:37.708525 [info]: enentCnt:[1]
+2024-06-04 11:34:37.711620 [info]: write complete
+2024-06-04 11:34:37.712068 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.712133 [info]: tick
+2024-06-04 11:34:37.723669 [info]: enentCnt:[2]
+2024-06-04 11:34:37.724936 [info]: Client[33](192.168.159.1:54670) in, user count:5
+2024-06-04 11:34:37.725065 [info]: Client[34](192.168.159.1:54671) in, user count:8
+2024-06-04 11:34:37.725170 [info]: Client[35](192.168.159.1:54672) in, user count:11
+2024-06-04 11:34:37.725223 [info]: Client[37](192.168.159.1:54673) in, user count:14
+2024-06-04 11:34:37.725271 [info]: Client[38](192.168.159.1:54674) in, user count:17
+2024-06-04 11:34:37.725325 [erro]: accept error
+2024-06-04 11:34:37.725356 [debug]: ip:[192.168.159.1],sockfd:[32],begin recv
+2024-06-04 11:34:37.725375 [info]: 套接字:32有效
+2024-06-04 11:34:37.725438 [debug]: 32本次读取402字节的数据,errno:11
+2024-06-04 11:34:37.725517 [info]: parseLine
+2024-06-04 11:34:37.725551 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.725707 [info]: parseLine
+2024-06-04 11:34:37.725741 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.725802 [info]: parseLine
+2024-06-04 11:34:37.725824 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.725875 [info]: parseLine
+2024-06-04 11:34:37.725894 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.725956 [info]: parseLine
+2024-06-04 11:34:37.726007 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.726068 [info]: parseLine
+2024-06-04 11:34:37.726086 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.726132 [info]: parseLine
+2024-06-04 11:34:37.726148 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.726190 [info]: parseLine
+2024-06-04 11:34:37.726206 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.726241 [info]: parseLine
+2024-06-04 11:34:37.726262 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.726349 [info]: 套接字:32有效
+2024-06-04 11:34:37.726404 [debug]: 32本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.726433 [debug]: read all data success,total read 402 bytesa
+2024-06-04 11:34:37.726466 [info]: tick
+2024-06-04 11:34:37.726480 [info]: process
+2024-06-04 11:34:37.726678 [erro]: 
+2024-06-04 11:34:37.726497 [info]: enentCnt:[5]
+2024-06-04 11:34:37.726716 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/animate.css]
+2024-06-04 11:34:37.726806 [debug]: ip:[192.168.159.1],sockfd:[33],begin recv
+2024-06-04 11:34:37.726824 [info]: [/home/wt/Project/my_Server/resources/css/animate.css] is exist!file size is: 72922
+2024-06-04 11:34:37.726841 [info]: 套接字:33有效
+2024-06-04 11:34:37.726847 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/animate.css]
+2024-06-04 11:34:37.726924 [debug]: open file:[/home/wt/Project/my_Server/resources/css/animate.css] success!
+2024-06-04 11:34:37.727221 [info]: mmap file [/home/wt/Project/my_Server/resources/css/animate.css] success!
+2024-06-04 11:34:37.726965 [debug]: 33本次读取409字节的数据,errno:11
+2024-06-04 11:34:37.727241 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.727293 [info]: parseLine
+2024-06-04 11:34:37.727316 [info]: init() run once
+2024-06-04 11:34:37.727317 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.727511 [info]: parseLine
+2024-06-04 11:34:37.727596 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.727662 [info]: parseLine
+2024-06-04 11:34:37.727694 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.727749 [info]: parseLine
+2024-06-04 11:34:37.727772 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.727835 [info]: parseLine
+2024-06-04 11:34:37.727855 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.727900 [info]: parseLine
+2024-06-04 11:34:37.727924 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.727965 [info]: parseLine
+2024-06-04 11:34:37.727983 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.728028 [info]: parseLine
+2024-06-04 11:34:37.728060 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.728369 [info]: parseLine
+2024-06-04 11:34:37.728727 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.729184 [info]: 套接字:33有效
+2024-06-04 11:34:37.729291 [debug]: 33本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.729328 [debug]: read all data success,total read 409 bytesa
+2024-06-04 11:34:37.729384 [debug]: ip:[192.168.159.1],sockfd:[34],begin recv
+2024-06-04 11:34:37.729392 [info]: process
+2024-06-04 11:34:37.729762 [erro]: 
+2024-06-04 11:34:37.729821 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/magnific-popup.css]
+2024-06-04 11:34:37.730017 [info]: [/home/wt/Project/my_Server/resources/css/magnific-popup.css] is exist!file size is: 6951
+2024-06-04 11:34:37.729403 [info]: 套接字:34有效
+2024-06-04 11:34:37.730116 [debug]: 34本次读取411字节的数据,errno:11
+2024-06-04 11:34:37.730146 [info]: parseLine
+2024-06-04 11:34:37.730168 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.730042 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/magnific-popup.css]
+2024-06-04 11:34:37.730212 [debug]: open file:[/home/wt/Project/my_Server/resources/css/magnific-popup.css] success!
+2024-06-04 11:34:37.730247 [info]: mmap file [/home/wt/Project/my_Server/resources/css/magnific-popup.css] success!
+2024-06-04 11:34:37.730259 [info]: set 33 EPOLLIN
+2024-06-04 11:34:37.730298 [info]: init() run once
+2024-06-04 11:34:37.730361 [info]: parseLine
+2024-06-04 11:34:37.730387 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.730438 [info]: parseLine
+2024-06-04 11:34:37.730464 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.730517 [info]: parseLine
+2024-06-04 11:34:37.730599 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.730683 [info]: parseLine
+2024-06-04 11:34:37.730730 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.730804 [info]: parseLine
+2024-06-04 11:34:37.730826 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.730876 [info]: parseLine
+2024-06-04 11:34:37.730897 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.730955 [info]: parseLine
+2024-06-04 11:34:37.730989 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.731038 [info]: parseLine
+2024-06-04 11:34:37.731092 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.731888 [info]: 套接字:34有效
+2024-06-04 11:34:37.731979 [debug]: 34本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.733216 [debug]: read all data success,total read 411 bytesa
+2024-06-04 11:34:37.733283 [info]: process
+2024-06-04 11:34:37.733404 [erro]: 
+2024-06-04 11:34:37.733446 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/font-awesome.min.css]
+2024-06-04 11:34:37.733682 [info]: [/home/wt/Project/my_Server/resources/css/font-awesome.min.css] is exist!file size is: 27392
+2024-06-04 11:34:37.733748 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/font-awesome.min.css]
+2024-06-04 11:34:37.733777 [debug]: open file:[/home/wt/Project/my_Server/resources/css/font-awesome.min.css] success!
+2024-06-04 11:34:37.733834 [info]: mmap file [/home/wt/Project/my_Server/resources/css/font-awesome.min.css] success!
+2024-06-04 11:34:37.733850 [info]: set 34 EPOLLIN
+2024-06-04 11:34:37.733925 [info]: init() run once
+2024-06-04 11:34:37.734075 [debug]: ip:[192.168.159.1],sockfd:[35],begin recv
+2024-06-04 11:34:37.734146 [info]: 套接字:35有效
+2024-06-04 11:34:37.734264 [debug]: 35本次读取400字节的数据,errno:11
+2024-06-04 11:34:37.734297 [info]: parseLine
+2024-06-04 11:34:37.734331 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.734679 [info]: parseLine
+2024-06-04 11:34:37.734752 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.734851 [info]: parseLine
+2024-06-04 11:34:37.734904 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.735199 [info]: parseLine
+2024-06-04 11:34:37.735286 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.735427 [info]: parseLine
+2024-06-04 11:34:37.735520 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.735597 [info]: parseLine
+2024-06-04 11:34:37.735637 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.735727 [info]: parseLine
+2024-06-04 11:34:37.735784 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.735877 [info]: parseLine
+2024-06-04 11:34:37.735930 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.736019 [info]: parseLine
+2024-06-04 11:34:37.736060 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.736220 [info]: 套接字:35有效
+2024-06-04 11:34:37.736412 [debug]: 35本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.736800 [debug]: read all data success,total read 400 bytesa
+2024-06-04 11:34:37.737082 [debug]: ip:[192.168.159.1],sockfd:[37],begin recv
+2024-06-04 11:34:37.737092 [info]: process
+2024-06-04 11:34:37.737268 [erro]: 
+2024-06-04 11:34:37.737286 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/style.css]
+2024-06-04 11:34:37.737155 [info]: 套接字:37有效
+2024-06-04 11:34:37.737385 [info]: [/home/wt/Project/my_Server/resources/css/style.css] is exist!file size is: 9807
+2024-06-04 11:34:37.737445 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/style.css]
+2024-06-04 11:34:37.737450 [debug]: 37本次读取396字节的数据,errno:11
+2024-06-04 11:34:37.737558 [info]: parseLine
+2024-06-04 11:34:37.737577 [debug]: open file:[/home/wt/Project/my_Server/resources/css/style.css] success!
+2024-06-04 11:34:37.737593 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.737610 [info]: mmap file [/home/wt/Project/my_Server/resources/css/style.css] success!
+2024-06-04 11:34:37.737624 [info]: set 35 EPOLLIN
+2024-06-04 11:34:37.737661 [info]: init() run once
+2024-06-04 11:34:37.737910 [info]: parseLine
+2024-06-04 11:34:37.737975 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.738105 [info]: parseLine
+2024-06-04 11:34:37.738821 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.739132 [info]: parseLine
+2024-06-04 11:34:37.739309 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.739450 [info]: parseLine
+2024-06-04 11:34:37.739472 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.739608 [info]: parseLine
+2024-06-04 11:34:37.739670 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.739719 [info]: parseLine
+2024-06-04 11:34:37.739733 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.739787 [info]: parseLine
+2024-06-04 11:34:37.739808 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.739860 [info]: parseLine
+2024-06-04 11:34:37.739882 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.739976 [info]: 套接字:37有效
+2024-06-04 11:34:37.740064 [debug]: 37本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.740155 [debug]: read all data success,total read 396 bytesa
+2024-06-04 11:34:37.740211 [debug]: ip:[192.168.159.1],sockfd:[38],begin recv
+2024-06-04 11:34:37.740216 [info]: process
+2024-06-04 11:34:37.740417 [erro]: 
+2024-06-04 11:34:37.740435 [info]: request realFile:[/home/wt/Project/my_Server/resources/login.css]
+2024-06-04 11:34:37.740242 [info]: 套接字:38有效
+2024-06-04 11:34:37.740502 [info]: [/home/wt/Project/my_Server/resources/login.css] is exist!file size is: 4467
+2024-06-04 11:34:37.740528 [debug]: addContent file:[/home/wt/Project/my_Server/resources/login.css]
+2024-06-04 11:34:37.740546 [debug]: 38本次读取388字节的数据,errno:11
+2024-06-04 11:34:37.740563 [info]: parseLine
+2024-06-04 11:34:37.740552 [debug]: open file:[/home/wt/Project/my_Server/resources/login.css] success!
+2024-06-04 11:34:37.740566 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.740583 [info]: mmap file [/home/wt/Project/my_Server/resources/login.css] success!
+2024-06-04 11:34:37.740598 [info]: set 37 EPOLLIN
+2024-06-04 11:34:37.740617 [info]: init() run once
+2024-06-04 11:34:37.740785 [info]: parseLine
+2024-06-04 11:34:37.740892 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.741344 [info]: parseLine
+2024-06-04 11:34:37.741433 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.741585 [info]: parseLine
+2024-06-04 11:34:37.741629 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.741704 [info]: parseLine
+2024-06-04 11:34:37.741802 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.741917 [info]: parseLine
+2024-06-04 11:34:37.741942 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.742023 [info]: parseLine
+2024-06-04 11:34:37.742062 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.742120 [info]: parseLine
+2024-06-04 11:34:37.742146 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.742232 [info]: parseLine
+2024-06-04 11:34:37.742266 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.742553 [info]: 套接字:38有效
+2024-06-04 11:34:37.743537 [debug]: 38本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.743712 [debug]: read all data success,total read 388 bytesa
+2024-06-04 11:34:37.743830 [info]: tick
+2024-06-04 11:34:37.743880 [info]: enentCnt:[5]
+2024-06-04 11:34:37.743881 [info]: process
+2024-06-04 11:34:37.744305 [erro]: 
+2024-06-04 11:34:37.744352 [info]: request realFile:[/home/wt/Project/my_Server/resources/jquery-latest.js]
+2024-06-04 11:34:37.744382 [info]: [/home/wt/Project/my_Server/resources/jquery-latest.js] is exist!file size is: 282765
+2024-06-04 11:34:37.744422 [debug]: addContent file:[/home/wt/Project/my_Server/resources/jquery-latest.js]
+2024-06-04 11:34:37.744467 [debug]: open file:[/home/wt/Project/my_Server/resources/jquery-latest.js] success!
+2024-06-04 11:34:37.744517 [info]: mmap file [/home/wt/Project/my_Server/resources/jquery-latest.js] success!
+2024-06-04 11:34:37.744529 [info]: set 38 EPOLLIN
+2024-06-04 11:34:37.744553 [info]: init() run once
+2024-06-04 11:34:37.747169 [info]: write complete
+2024-06-04 11:34:37.747359 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.747785 [info]: write complete
+2024-06-04 11:34:37.747844 [info]: set 33 EPOLLIN
+2024-06-04 11:34:37.748765 [info]: write complete
+2024-06-04 11:34:37.748869 [info]: set 34 EPOLLIN
+2024-06-04 11:34:37.749456 [info]: write complete
+2024-06-04 11:34:37.749551 [info]: set 35 EPOLLIN
+2024-06-04 11:34:37.749844 [info]: write complete
+2024-06-04 11:34:37.749882 [info]: set 37 EPOLLIN
+2024-06-04 11:34:37.749903 [info]: tick
+2024-06-04 11:34:37.749918 [info]: enentCnt:[1]
+2024-06-04 11:34:37.759815 [info]: write complete
+2024-06-04 11:34:37.760134 [info]: set 38 EPOLLIN
+2024-06-04 11:34:37.760195 [info]: tick
+2024-06-04 11:34:37.760222 [info]: enentCnt:[5]
+2024-06-04 11:34:37.760245 [debug]: ip:[192.168.159.1],sockfd:[37],begin recv
+2024-06-04 11:34:37.760269 [info]: 套接字:37有效
+2024-06-04 11:34:37.760344 [debug]: 37本次读取446字节的数据,errno:11
+2024-06-04 11:34:37.760374 [info]: parseLine
+2024-06-04 11:34:37.760396 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.760549 [info]: parseLine
+2024-06-04 11:34:37.760627 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.760713 [info]: parseLine
+2024-06-04 11:34:37.760733 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.760781 [info]: parseLine
+2024-06-04 11:34:37.760797 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.760864 [info]: parseLine
+2024-06-04 11:34:37.760903 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.760980 [info]: parseLine
+2024-06-04 11:34:37.761003 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.761059 [info]: parseLine
+2024-06-04 11:34:37.761096 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.761191 [info]: parseLine
+2024-06-04 11:34:37.761213 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.761267 [info]: parseLine
+2024-06-04 11:34:37.761289 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.761695 [info]: 套接字:37有效
+2024-06-04 11:34:37.761969 [debug]: 37本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.762063 [debug]: read all data success,total read 446 bytesa
+2024-06-04 11:34:37.762105 [info]: process
+2024-06-04 11:34:37.762208 [erro]: 
+2024-06-04 11:34:37.762234 [info]: request realFile:[/home/wt/Project/my_Server/resources/img/waoku.jpg]
+2024-06-04 11:34:37.762434 [info]: [/home/wt/Project/my_Server/resources/img/waoku.jpg] is exist!file size is: 36253
+2024-06-04 11:34:37.762515 [debug]: addContent file:[/home/wt/Project/my_Server/resources/img/waoku.jpg]
+2024-06-04 11:34:37.762550 [debug]: open file:[/home/wt/Project/my_Server/resources/img/waoku.jpg] success!
+2024-06-04 11:34:37.762579 [info]: mmap file [/home/wt/Project/my_Server/resources/img/waoku.jpg] success!
+2024-06-04 11:34:37.762587 [info]: set 37 EPOLLIN
+2024-06-04 11:34:37.762616 [info]: init() run once
+2024-06-04 11:34:37.762702 [debug]: ip:[192.168.159.1],sockfd:[35],begin recv
+2024-06-04 11:34:37.762777 [info]: 套接字:35有效
+2024-06-04 11:34:37.762889 [debug]: 35本次读取384字节的数据,errno:11
+2024-06-04 11:34:37.762930 [info]: parseLine
+2024-06-04 11:34:37.762966 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.763195 [info]: parseLine
+2024-06-04 11:34:37.763329 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.763491 [info]: parseLine
+2024-06-04 11:34:37.763538 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.763608 [info]: parseLine
+2024-06-04 11:34:37.763945 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.764284 [info]: parseLine
+2024-06-04 11:34:37.764374 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.764498 [info]: parseLine
+2024-06-04 11:34:37.764549 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.764646 [info]: parseLine
+2024-06-04 11:34:37.764706 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.764806 [info]: parseLine
+2024-06-04 11:34:37.764843 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.764938 [info]: parseLine
+2024-06-04 11:34:37.765006 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.765183 [info]: 套接字:35有效
+2024-06-04 11:34:37.765380 [debug]: 35本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.765449 [debug]: read all data success,total read 384 bytesa
+2024-06-04 11:34:37.765849 [debug]: ip:[192.168.159.1],sockfd:[34],begin recv
+2024-06-04 11:34:37.765875 [info]: process
+2024-06-04 11:34:37.766025 [erro]: 
+2024-06-04 11:34:37.766046 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/jquery.js]
+2024-06-04 11:34:37.766066 [info]: [/home/wt/Project/my_Server/resources/js/jquery.js] is exist!file size is: 85658
+2024-06-04 11:34:37.766074 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/jquery.js]
+2024-06-04 11:34:37.766099 [debug]: open file:[/home/wt/Project/my_Server/resources/js/jquery.js] success!
+2024-06-04 11:34:37.765941 [info]: 套接字:34有效
+2024-06-04 11:34:37.766117 [info]: mmap file [/home/wt/Project/my_Server/resources/js/jquery.js] success!
+2024-06-04 11:34:37.766292 [info]: set 35 EPOLLIN
+2024-06-04 11:34:37.766312 [info]: init() run once
+2024-06-04 11:34:37.767007 [debug]: 34本次读取391字节的数据,errno:11
+2024-06-04 11:34:37.767075 [info]: parseLine
+2024-06-04 11:34:37.767107 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.767711 [info]: parseLine
+2024-06-04 11:34:37.769959 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.770314 [info]: parseLine
+2024-06-04 11:34:37.770340 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.770393 [info]: parseLine
+2024-06-04 11:34:37.770402 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.770480 [info]: parseLine
+2024-06-04 11:34:37.770489 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.770980 [info]: parseLine
+2024-06-04 11:34:37.771254 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.771373 [info]: parseLine
+2024-06-04 11:34:37.771383 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.771438 [info]: parseLine
+2024-06-04 11:34:37.771446 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.771507 [info]: parseLine
+2024-06-04 11:34:37.771517 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.771754 [info]: 套接字:34有效
+2024-06-04 11:34:37.772016 [debug]: 34本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.772082 [debug]: read all data success,total read 391 bytesa
+2024-06-04 11:34:37.772122 [info]: process
+2024-06-04 11:34:37.772170 [erro]: 
+2024-06-04 11:34:37.772138 [debug]: ip:[192.168.159.1],sockfd:[33],begin recv
+2024-06-04 11:34:37.772186 [info]: 套接字:33有效
+2024-06-04 11:34:37.772201 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/bootstrap.min.js]
+2024-06-04 11:34:37.772214 [debug]: 33本次读取390字节的数据,errno:11
+2024-06-04 11:34:37.772220 [info]: parseLine
+2024-06-04 11:34:37.772224 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.772307 [info]: [/home/wt/Project/my_Server/resources/js/bootstrap.min.js] is exist!file size is: 36868
+2024-06-04 11:34:37.772348 [info]: parseLine
+2024-06-04 11:34:37.772354 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.772355 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/bootstrap.min.js]
+2024-06-04 11:34:37.772393 [info]: parseLine
+2024-06-04 11:34:37.772399 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.772412 [debug]: open file:[/home/wt/Project/my_Server/resources/js/bootstrap.min.js] success!
+2024-06-04 11:34:37.772429 [info]: parseLine
+2024-06-04 11:34:37.772435 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.772489 [info]: parseLine
+2024-06-04 11:34:37.772501 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.772491 [info]: mmap file [/home/wt/Project/my_Server/resources/js/bootstrap.min.js] success!
+2024-06-04 11:34:37.772536 [info]: parseLine
+2024-06-04 11:34:37.772644 [info]: set 34 EPOLLIN
+2024-06-04 11:34:37.772658 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.772867 [info]: parseLine
+2024-06-04 11:34:37.772874 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.772916 [info]: parseLine
+2024-06-04 11:34:37.772922 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.772970 [info]: parseLine
+2024-06-04 11:34:37.772977 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.773632 [info]: init() run once
+2024-06-04 11:34:37.773726 [info]: 套接字:33有效
+2024-06-04 11:34:37.773862 [debug]: 33本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.773968 [debug]: read all data success,total read 390 bytesa
+2024-06-04 11:34:37.774028 [debug]: ip:[192.168.159.1],sockfd:[32],begin recv
+2024-06-04 11:34:37.774043 [info]: process
+2024-06-04 11:34:37.774108 [erro]: 
+2024-06-04 11:34:37.774051 [info]: 套接字:32有效
+2024-06-04 11:34:37.774138 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/smoothscroll.js]
+2024-06-04 11:34:37.774266 [info]: [/home/wt/Project/my_Server/resources/js/smoothscroll.js] is exist!file size is: 4474
+2024-06-04 11:34:37.774331 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/smoothscroll.js]
+2024-06-04 11:34:37.774271 [debug]: 32本次读取403字节的数据,errno:11
+2024-06-04 11:34:37.774398 [debug]: open file:[/home/wt/Project/my_Server/resources/js/smoothscroll.js] success!
+2024-06-04 11:34:37.774399 [info]: parseLine
+2024-06-04 11:34:37.774470 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.774493 [info]: mmap file [/home/wt/Project/my_Server/resources/js/smoothscroll.js] success!
+2024-06-04 11:34:37.774515 [info]: set 33 EPOLLIN
+2024-06-04 11:34:37.774565 [info]: parseLine
+2024-06-04 11:34:37.774570 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.774593 [info]: parseLine
+2024-06-04 11:34:37.774596 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.774615 [info]: parseLine
+2024-06-04 11:34:37.774618 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.774656 [info]: parseLine
+2024-06-04 11:34:37.774659 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.774679 [info]: parseLine
+2024-06-04 11:34:37.774681 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.774711 [info]: parseLine
+2024-06-04 11:34:37.774716 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.774751 [info]: parseLine
+2024-06-04 11:34:37.774755 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.774779 [info]: parseLine
+2024-06-04 11:34:37.774782 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.775140 [info]: init() run once
+2024-06-04 11:34:37.775169 [info]: 套接字:32有效
+2024-06-04 11:34:37.775238 [debug]: 32本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.775315 [debug]: read all data success,total read 403 bytesa
+2024-06-04 11:34:37.775343 [info]: tick
+2024-06-04 11:34:37.775358 [info]: enentCnt:[5]
+2024-06-04 11:34:37.775440 [info]: process
+2024-06-04 11:34:37.775469 [erro]: 
+2024-06-04 11:34:37.775492 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js]
+2024-06-04 11:34:37.775521 [info]: [/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js] is exist!file size is: 20932
+2024-06-04 11:34:37.775539 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js]
+2024-06-04 11:34:37.775555 [debug]: open file:[/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js] success!
+2024-06-04 11:34:37.775590 [info]: mmap file [/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js] success!
+2024-06-04 11:34:37.775596 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.775651 [info]: init() run once
+2024-06-04 11:34:37.776359 [info]: write complete
+2024-06-04 11:34:37.776482 [info]: set 37 EPOLLIN
+2024-06-04 11:34:37.776503 [debug]: ip:[192.168.159.1],sockfd:[38],begin recv
+2024-06-04 11:34:37.776510 [info]: 套接字:38有效
+2024-06-04 11:34:37.776530 [debug]: 38本次读取400字节的数据,errno:11
+2024-06-04 11:34:37.776535 [info]: parseLine
+2024-06-04 11:34:37.776538 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.776650 [info]: parseLine
+2024-06-04 11:34:37.776656 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.776698 [info]: parseLine
+2024-06-04 11:34:37.776702 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.776735 [info]: parseLine
+2024-06-04 11:34:37.776738 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.776788 [info]: parseLine
+2024-06-04 11:34:37.776791 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.776813 [info]: parseLine
+2024-06-04 11:34:37.776816 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.776837 [info]: parseLine
+2024-06-04 11:34:37.776840 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.776859 [info]: parseLine
+2024-06-04 11:34:37.776862 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.776883 [info]: parseLine
+2024-06-04 11:34:37.776886 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.776912 [info]: 套接字:38有效
+2024-06-04 11:34:37.776923 [debug]: 38本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.776928 [debug]: read all data success,total read 400 bytesa
+2024-06-04 11:34:37.776947 [info]: process
+2024-06-04 11:34:37.776954 [erro]: 
+2024-06-04 11:34:37.776965 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/magnific-popup-options.js]
+2024-06-04 11:34:37.776981 [info]: [/home/wt/Project/my_Server/resources/js/magnific-popup-options.js] is exist!file size is: 1069
+2024-06-04 11:34:37.776988 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/magnific-popup-options.js]
+2024-06-04 11:34:37.777042 [debug]: open file:[/home/wt/Project/my_Server/resources/js/magnific-popup-options.js] success!
+2024-06-04 11:34:37.777071 [info]: mmap file [/home/wt/Project/my_Server/resources/js/magnific-popup-options.js] success!
+2024-06-04 11:34:37.777139 [info]: set 38 EPOLLIN
+2024-06-04 11:34:37.777213 [info]: init() run once
+2024-06-04 11:34:37.778225 [info]: write complete
+2024-06-04 11:34:37.778510 [info]: set 35 EPOLLIN
+2024-06-04 11:34:37.778761 [info]: write complete
+2024-06-04 11:34:37.778807 [info]: set 34 EPOLLIN
+2024-06-04 11:34:37.778865 [info]: write complete
+2024-06-04 11:34:37.778882 [info]: set 33 EPOLLIN
+2024-06-04 11:34:37.778894 [info]: tick
+2024-06-04 11:34:37.778910 [info]: enentCnt:[2]
+2024-06-04 11:34:37.778973 [info]: write complete
+2024-06-04 11:34:37.778994 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.779145 [info]: write complete
+2024-06-04 11:34:37.779170 [info]: set 38 EPOLLIN
+2024-06-04 11:34:37.779181 [info]: tick
+2024-06-04 11:34:37.790606 [info]: enentCnt:[1]
+2024-06-04 11:34:37.790851 [debug]: ip:[192.168.159.1],sockfd:[38],begin recv
+2024-06-04 11:34:37.790897 [info]: 套接字:38有效
+2024-06-04 11:34:37.790963 [debug]: 38本次读取385字节的数据,errno:11
+2024-06-04 11:34:37.790991 [info]: parseLine
+2024-06-04 11:34:37.791009 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.791173 [info]: parseLine
+2024-06-04 11:34:37.791277 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.791403 [info]: parseLine
+2024-06-04 11:34:37.791471 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.791569 [info]: parseLine
+2024-06-04 11:34:37.791635 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.791713 [info]: parseLine
+2024-06-04 11:34:37.791738 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.791786 [info]: parseLine
+2024-06-04 11:34:37.791803 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.791853 [info]: parseLine
+2024-06-04 11:34:37.791870 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.791919 [info]: parseLine
+2024-06-04 11:34:37.791937 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.791986 [info]: parseLine
+2024-06-04 11:34:37.792003 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.792073 [info]: 套接字:38有效
+2024-06-04 11:34:37.792104 [debug]: 38本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.792128 [debug]: read all data success,total read 385 bytesa
+2024-06-04 11:34:37.792182 [info]: tick
+2024-06-04 11:34:37.792204 [info]: process
+2024-06-04 11:34:37.792228 [erro]: 
+2024-06-04 11:34:37.792214 [info]: enentCnt:[1]
+2024-06-04 11:34:37.792245 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/wow.min.js]
+2024-06-04 11:34:37.792259 [debug]: ip:[192.168.159.1],sockfd:[32],begin recv
+2024-06-04 11:34:37.792276 [info]: 套接字:32有效
+2024-06-04 11:34:37.792264 [info]: [/home/wt/Project/my_Server/resources/js/wow.min.js] is exist!file size is: 7082
+2024-06-04 11:34:37.792292 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/wow.min.js]
+2024-06-04 11:34:37.792299 [debug]: 32本次读取384字节的数据,errno:11
+2024-06-04 11:34:37.792392 [debug]: open file:[/home/wt/Project/my_Server/resources/js/wow.min.js] success!
+2024-06-04 11:34:37.792436 [info]: parseLine
+2024-06-04 11:34:37.792687 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:37.792761 [info]: mmap file [/home/wt/Project/my_Server/resources/js/wow.min.js] success!
+2024-06-04 11:34:37.792782 [info]: set 38 EPOLLIN
+2024-06-04 11:34:37.792897 [info]: init() run once
+2024-06-04 11:34:37.792935 [info]: parseLine
+2024-06-04 11:34:37.792977 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.793083 [info]: parseLine
+2024-06-04 11:34:37.793169 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.793370 [info]: parseLine
+2024-06-04 11:34:37.793541 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.793639 [info]: parseLine
+2024-06-04 11:34:37.793664 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.793724 [info]: parseLine
+2024-06-04 11:34:37.793758 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.793829 [info]: parseLine
+2024-06-04 11:34:37.793873 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.793968 [info]: parseLine
+2024-06-04 11:34:37.794013 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.794120 [info]: parseLine
+2024-06-04 11:34:37.794296 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:37.795371 [info]: 套接字:32有效
+2024-06-04 11:34:37.795784 [debug]: 32本次读取-1字节的数据,errno:11
+2024-06-04 11:34:37.803355 [debug]: read all data success,total read 384 bytesa
+2024-06-04 11:34:37.803455 [info]: tick
+2024-06-04 11:34:37.803489 [info]: enentCnt:[1]
+2024-06-04 11:34:37.803507 [info]: process
+2024-06-04 11:34:37.803537 [erro]: 
+2024-06-04 11:34:37.803558 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/custom.js]
+2024-06-04 11:34:37.803581 [info]: [/home/wt/Project/my_Server/resources/js/custom.js] is exist!file size is: 1047
+2024-06-04 11:34:37.803591 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/custom.js]
+2024-06-04 11:34:37.803622 [debug]: open file:[/home/wt/Project/my_Server/resources/js/custom.js] success!
+2024-06-04 11:34:37.803682 [info]: mmap file [/home/wt/Project/my_Server/resources/js/custom.js] success!
+2024-06-04 11:34:37.803690 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.803735 [info]: init() run once
+2024-06-04 11:34:37.804265 [info]: write complete
+2024-06-04 11:34:37.804560 [info]: set 38 EPOLLIN
+2024-06-04 11:34:37.804605 [info]: tick
+2024-06-04 11:34:37.805365 [info]: enentCnt:[1]
+2024-06-04 11:34:37.806992 [info]: write complete
+2024-06-04 11:34:37.807416 [info]: set 32 EPOLLIN
+2024-06-04 11:34:37.807495 [info]: tick
+2024-06-04 11:34:42.095236 [info]: enentCnt:[1]
+2024-06-04 11:34:42.095365 [debug]: ip:[192.168.159.1],sockfd:[38],begin recv
+2024-06-04 11:34:42.095408 [info]: 套接字:38有效
+2024-06-04 11:34:42.095452 [debug]: 38本次读取705字节的数据,errno:11
+2024-06-04 11:34:42.095465 [info]: parseLine
+2024-06-04 11:34:42.095493 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.095632 [info]: parseLine
+2024-06-04 11:34:42.095647 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.095711 [info]: parseLine
+2024-06-04 11:34:42.095723 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.095765 [info]: parseLine
+2024-06-04 11:34:42.095793 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.095823 [info]: parseLine
+2024-06-04 11:34:42.095948 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.095998 [info]: parseLine
+2024-06-04 11:34:42.096012 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.096051 [info]: parseLine
+2024-06-04 11:34:42.096064 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.096092 [info]: parseLine
+2024-06-04 11:34:42.096104 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.096133 [info]: parseLine
+2024-06-04 11:34:42.096145 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.096178 [info]: parseLine
+2024-06-04 11:34:42.096190 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.096221 [info]: parseLine
+2024-06-04 11:34:42.096232 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.096262 [info]: parseLine
+2024-06-04 11:34:42.096275 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.096303 [info]: parseLine
+2024-06-04 11:34:42.096315 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.096344 [info]: parseLine
+2024-06-04 11:34:42.096367 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.096394 [info]: 请求体的长度：30
+2024-06-04 11:34:42.096406 [info]: 当前的解析状态是解析:BODY
+2024-06-04 11:34:42.096420 [debug]: client ip is:192.168.159.1 , tag:0
+2024-06-04 11:34:42.096435 [debug]: verify name: 11111 pwd: 222222
+2024-06-04 11:34:42.096480 [info]: MYSQL RAII Successful!
+2024-06-04 11:34:42.096492 [info]: MYSQL RAII Release!
+2024-06-04 11:34:42.096505 [debug]: Register!
+2024-06-04 11:34:42.096518 [debug]: sqlOrder:SELECT username,passwd FROM user WHERE username='11111' LIMIT 1
+2024-06-04 11:34:42.111484 [debug]: sqlOrder:INSERT INTO user(username, passwd) VALUES('11111','222222')
+2024-06-04 11:34:42.156606 [debug]: INSERT success:11111 222222
+2024-06-04 11:34:42.156793 [debug]: user regirster success!
+2024-06-04 11:34:42.156843 [info]: client ip is:192.168.159.1 login success
+2024-06-04 11:34:42.156884 [info]: 套接字:38有效
+2024-06-04 11:34:42.156920 [debug]: 38本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.156942 [debug]: read all data success,total read 705 bytesa
+2024-06-04 11:34:42.156988 [info]: tick
+2024-06-04 11:34:42.157382 [info]: process
+2024-06-04 11:34:42.157432 [erro]: 
+2024-06-04 11:34:42.157460 [info]: method:POST,url:/welcome.html
+2024-06-04 11:34:42.157588 [debug]: addContent file:[/home/wt/Project/my_Server/resources/welcome.html]
+2024-06-04 11:34:42.157626 [debug]: open file:[/home/wt/Project/my_Server/resources/welcome.html] success!
+2024-06-04 11:34:42.157764 [info]: mmap file [/home/wt/Project/my_Server/resources/welcome.html] success!
+2024-06-04 11:34:42.157777 [info]: set 38 EPOLLIN
+2024-06-04 11:34:42.157797 [info]: init() run once
+2024-06-04 11:34:42.157798 [info]: enentCnt:[1]
+2024-06-04 11:34:42.158953 [info]: write complete
+2024-06-04 11:34:42.159034 [info]: set 38 EPOLLIN
+2024-06-04 11:34:42.159068 [info]: tick
+2024-06-04 11:34:42.232208 [info]: enentCnt:[1]
+2024-06-04 11:34:42.232450 [debug]: ip:[192.168.159.1],sockfd:[38],begin recv
+2024-06-04 11:34:42.232550 [info]: 套接字:38有效
+2024-06-04 11:34:42.232620 [debug]: 38本次读取403字节的数据,errno:11
+2024-06-04 11:34:42.232645 [info]: parseLine
+2024-06-04 11:34:42.232666 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.232874 [info]: parseLine
+2024-06-04 11:34:42.232922 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.233011 [info]: parseLine
+2024-06-04 11:34:42.233083 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.233201 [info]: parseLine
+2024-06-04 11:34:42.233252 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.233337 [info]: parseLine
+2024-06-04 11:34:42.233358 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.233413 [info]: parseLine
+2024-06-04 11:34:42.233449 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.233559 [info]: parseLine
+2024-06-04 11:34:42.233584 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.233654 [info]: parseLine
+2024-06-04 11:34:42.233696 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.233781 [info]: parseLine
+2024-06-04 11:34:42.233889 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.233987 [info]: 套接字:38有效
+2024-06-04 11:34:42.234021 [debug]: 38本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.234062 [debug]: read all data success,total read 403 bytesa
+2024-06-04 11:34:42.234093 [info]: process
+2024-06-04 11:34:42.234105 [erro]: 
+2024-06-04 11:34:42.234117 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/bootstrap.min.css]
+2024-06-04 11:34:42.234136 [info]: [/home/wt/Project/my_Server/resources/css/bootstrap.min.css] is exist!file size is: 121214
+2024-06-04 11:34:42.234146 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/bootstrap.min.css]
+2024-06-04 11:34:42.234177 [debug]: open file:[/home/wt/Project/my_Server/resources/css/bootstrap.min.css] success!
+2024-06-04 11:34:42.234245 [info]: mmap file [/home/wt/Project/my_Server/resources/css/bootstrap.min.css] success!
+2024-06-04 11:34:42.234253 [info]: set 38 EPOLLIN
+2024-06-04 11:34:42.234288 [info]: init() run once
+2024-06-04 11:34:42.234318 [info]: tick
+2024-06-04 11:34:42.234379 [info]: enentCnt:[1]
+2024-06-04 11:34:42.235135 [info]: write complete
+2024-06-04 11:34:42.235314 [info]: set 38 EPOLLIN
+2024-06-04 11:34:42.235395 [info]: tick
+2024-06-04 11:34:42.244767 [info]: enentCnt:[5]
+2024-06-04 11:34:42.244879 [debug]: ip:[192.168.159.1],sockfd:[32],begin recv
+2024-06-04 11:34:42.244907 [info]: 套接字:32有效
+2024-06-04 11:34:42.244953 [debug]: 32本次读取397字节的数据,errno:11
+2024-06-04 11:34:42.244967 [info]: parseLine
+2024-06-04 11:34:42.244979 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.245115 [info]: parseLine
+2024-06-04 11:34:42.245139 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.245202 [info]: parseLine
+2024-06-04 11:34:42.245218 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.245265 [info]: parseLine
+2024-06-04 11:34:42.245315 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.245355 [info]: parseLine
+2024-06-04 11:34:42.245372 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.245434 [info]: parseLine
+2024-06-04 11:34:42.245447 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.245477 [info]: parseLine
+2024-06-04 11:34:42.245536 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.245584 [info]: parseLine
+2024-06-04 11:34:42.245605 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.245636 [info]: parseLine
+2024-06-04 11:34:42.245650 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.245685 [info]: 套接字:32有效
+2024-06-04 11:34:42.245730 [debug]: 32本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.245771 [debug]: read all data success,total read 397 bytesa
+2024-06-04 11:34:42.245802 [debug]: ip:[192.168.159.1],sockfd:[33],begin recv
+2024-06-04 11:34:42.245840 [info]: 套接字:33有效
+2024-06-04 11:34:42.245871 [debug]: 33本次读取404字节的数据,errno:11
+2024-06-04 11:34:42.245886 [info]: parseLine
+2024-06-04 11:34:42.245901 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.245934 [info]: process
+2024-06-04 11:34:42.245964 [erro]: 
+2024-06-04 11:34:42.245991 [info]: parseLine
+2024-06-04 11:34:42.245992 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/animate.css]
+2024-06-04 11:34:42.246016 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.246020 [info]: [/home/wt/Project/my_Server/resources/css/animate.css] is exist!file size is: 72922
+2024-06-04 11:34:42.246033 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/animate.css]
+2024-06-04 11:34:42.246053 [debug]: open file:[/home/wt/Project/my_Server/resources/css/animate.css] success!
+2024-06-04 11:34:42.246056 [info]: parseLine
+2024-06-04 11:34:42.246075 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.246116 [info]: mmap file [/home/wt/Project/my_Server/resources/css/animate.css] success!
+2024-06-04 11:34:42.246126 [info]: set 32 EPOLLIN
+2024-06-04 11:34:42.246148 [info]: init() run once
+2024-06-04 11:34:42.246150 [info]: parseLine
+2024-06-04 11:34:42.246230 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.246304 [info]: parseLine
+2024-06-04 11:34:42.246316 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.246360 [info]: parseLine
+2024-06-04 11:34:42.246374 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.246404 [info]: parseLine
+2024-06-04 11:34:42.246423 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.246452 [info]: parseLine
+2024-06-04 11:34:42.246464 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.246505 [info]: parseLine
+2024-06-04 11:34:42.246534 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.246570 [info]: 套接字:33有效
+2024-06-04 11:34:42.246591 [debug]: 33本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.246637 [debug]: read all data success,total read 404 bytesa
+2024-06-04 11:34:42.246657 [info]: process
+2024-06-04 11:34:42.246664 [erro]: 
+2024-06-04 11:34:42.246673 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/magnific-popup.css]
+2024-06-04 11:34:42.246684 [info]: [/home/wt/Project/my_Server/resources/css/magnific-popup.css] is exist!file size is: 6951
+2024-06-04 11:34:42.246688 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/magnific-popup.css]
+2024-06-04 11:34:42.246699 [debug]: open file:[/home/wt/Project/my_Server/resources/css/magnific-popup.css] success!
+2024-06-04 11:34:42.246728 [info]: mmap file [/home/wt/Project/my_Server/resources/css/magnific-popup.css] success!
+2024-06-04 11:34:42.246731 [info]: set 33 EPOLLIN
+2024-06-04 11:34:42.246738 [info]: init() run once
+2024-06-04 11:34:42.246787 [debug]: ip:[192.168.159.1],sockfd:[34],begin recv
+2024-06-04 11:34:42.246806 [info]: 套接字:34有效
+2024-06-04 11:34:42.246826 [debug]: 34本次读取406字节的数据,errno:11
+2024-06-04 11:34:42.246843 [info]: parseLine
+2024-06-04 11:34:42.246891 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.247020 [info]: parseLine
+2024-06-04 11:34:42.247091 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.247155 [info]: parseLine
+2024-06-04 11:34:42.247169 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.247200 [info]: parseLine
+2024-06-04 11:34:42.247214 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.247255 [info]: parseLine
+2024-06-04 11:34:42.247291 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.247334 [info]: parseLine
+2024-06-04 11:34:42.247347 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.247379 [info]: parseLine
+2024-06-04 11:34:42.247392 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.247424 [info]: parseLine
+2024-06-04 11:34:42.247439 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.247472 [info]: parseLine
+2024-06-04 11:34:42.247488 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.247539 [info]: 套接字:34有效
+2024-06-04 11:34:42.247560 [debug]: 34本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.247576 [debug]: read all data success,total read 406 bytesa
+2024-06-04 11:34:42.247595 [info]: process
+2024-06-04 11:34:42.247602 [erro]: 
+2024-06-04 11:34:42.247625 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/font-awesome.min.css]
+2024-06-04 11:34:42.247636 [info]: [/home/wt/Project/my_Server/resources/css/font-awesome.min.css] is exist!file size is: 27392
+2024-06-04 11:34:42.247641 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/font-awesome.min.css]
+2024-06-04 11:34:42.247649 [debug]: open file:[/home/wt/Project/my_Server/resources/css/font-awesome.min.css] success!
+2024-06-04 11:34:42.247669 [info]: mmap file [/home/wt/Project/my_Server/resources/css/font-awesome.min.css] success!
+2024-06-04 11:34:42.247673 [info]: set 34 EPOLLIN
+2024-06-04 11:34:42.247704 [info]: init() run once
+2024-06-04 11:34:42.247728 [debug]: ip:[192.168.159.1],sockfd:[35],begin recv
+2024-06-04 11:34:42.247770 [info]: 套接字:35有效
+2024-06-04 11:34:42.248045 [debug]: 35本次读取395字节的数据,errno:11
+2024-06-04 11:34:42.248323 [info]: parseLine
+2024-06-04 11:34:42.248397 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.248521 [info]: parseLine
+2024-06-04 11:34:42.248561 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.248609 [info]: parseLine
+2024-06-04 11:34:42.248625 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.248654 [info]: parseLine
+2024-06-04 11:34:42.248668 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.248711 [info]: parseLine
+2024-06-04 11:34:42.248727 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.248761 [info]: parseLine
+2024-06-04 11:34:42.248776 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.248807 [info]: parseLine
+2024-06-04 11:34:42.248823 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.248886 [info]: parseLine
+2024-06-04 11:34:42.248925 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.248994 [info]: parseLine
+2024-06-04 11:34:42.249022 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.249117 [info]: 套接字:35有效
+2024-06-04 11:34:42.249169 [debug]: 35本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.249195 [debug]: read all data success,total read 395 bytesa
+2024-06-04 11:34:42.249256 [debug]: ip:[192.168.159.1],sockfd:[37],begin recv
+2024-06-04 11:34:42.249292 [info]: 套接字:37有效
+2024-06-04 11:34:42.249339 [debug]: 37本次读取379字节的数据,errno:11
+2024-06-04 11:34:42.249363 [info]: parseLine
+2024-06-04 11:34:42.249390 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.249570 [info]: parseLine
+2024-06-04 11:34:42.249608 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.249661 [info]: parseLine
+2024-06-04 11:34:42.249693 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.249741 [info]: parseLine
+2024-06-04 11:34:42.249791 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.249898 [info]: parseLine
+2024-06-04 11:34:42.249947 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.250002 [info]: parseLine
+2024-06-04 11:34:42.250019 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.250053 [info]: parseLine
+2024-06-04 11:34:42.250070 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.250101 [info]: parseLine
+2024-06-04 11:34:42.250116 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.250148 [info]: parseLine
+2024-06-04 11:34:42.250161 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.250201 [info]: 套接字:37有效
+2024-06-04 11:34:42.250223 [debug]: 37本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.250241 [debug]: read all data success,total read 379 bytesa
+2024-06-04 11:34:42.250262 [info]: tick
+2024-06-04 11:34:42.250285 [info]: enentCnt:[3]
+2024-06-04 11:34:42.251097 [info]: write complete
+2024-06-04 11:34:42.251217 [info]: set 32 EPOLLIN
+2024-06-04 11:34:42.251598 [info]: write complete
+2024-06-04 11:34:42.251706 [info]: set 33 EPOLLIN
+2024-06-04 11:34:42.252143 [info]: write complete
+2024-06-04 11:34:42.252198 [info]: set 34 EPOLLIN
+2024-06-04 11:34:42.252218 [info]: tick
+2024-06-04 11:34:42.257107 [info]: process
+2024-06-04 11:34:42.259621 [erro]: 
+2024-06-04 11:34:42.259823 [info]: request realFile:[/home/wt/Project/my_Server/resources/css/style.css]
+2024-06-04 11:34:42.259866 [info]: [/home/wt/Project/my_Server/resources/css/style.css] is exist!file size is: 9807
+2024-06-04 11:34:42.259903 [debug]: addContent file:[/home/wt/Project/my_Server/resources/css/style.css]
+2024-06-04 11:34:42.259946 [debug]: open file:[/home/wt/Project/my_Server/resources/css/style.css] success!
+2024-06-04 11:34:42.259992 [info]: mmap file [/home/wt/Project/my_Server/resources/css/style.css] success!
+2024-06-04 11:34:42.260026 [info]: set 35 EPOLLIN
+2024-06-04 11:34:42.260061 [info]: init() run once
+2024-06-04 11:34:42.260070 [info]: process
+2024-06-04 11:34:42.260073 [erro]: 
+2024-06-04 11:34:42.260079 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/jquery.js]
+2024-06-04 11:34:42.260101 [info]: [/home/wt/Project/my_Server/resources/js/jquery.js] is exist!file size is: 85658
+2024-06-04 11:34:42.260180 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/jquery.js]
+2024-06-04 11:34:42.260191 [debug]: open file:[/home/wt/Project/my_Server/resources/js/jquery.js] success!
+2024-06-04 11:34:42.260118 [info]: enentCnt:[1]
+2024-06-04 11:34:42.260209 [info]: mmap file [/home/wt/Project/my_Server/resources/js/jquery.js] success!
+2024-06-04 11:34:42.260277 [info]: set 37 EPOLLIN
+2024-06-04 11:34:42.260292 [info]: init() run once
+2024-06-04 11:34:42.260968 [info]: write complete
+2024-06-04 11:34:42.261072 [info]: set 35 EPOLLIN
+2024-06-04 11:34:42.261113 [info]: tick
+2024-06-04 11:34:42.261136 [info]: enentCnt:[1]
+2024-06-04 11:34:42.261808 [info]: write complete
+2024-06-04 11:34:42.261933 [info]: set 37 EPOLLIN
+2024-06-04 11:34:42.261966 [info]: tick
+2024-06-04 11:34:42.280892 [info]: enentCnt:[6]
+2024-06-04 11:34:42.281152 [debug]: ip:[192.168.159.1],sockfd:[35],begin recv
+2024-06-04 11:34:42.281186 [info]: 套接字:35有效
+2024-06-04 11:34:42.281243 [debug]: 35本次读取452字节的数据,errno:11
+2024-06-04 11:34:42.281259 [info]: parseLine
+2024-06-04 11:34:42.281276 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.281398 [info]: parseLine
+2024-06-04 11:34:42.281416 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.281453 [info]: parseLine
+2024-06-04 11:34:42.281470 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.281549 [info]: parseLine
+2024-06-04 11:34:42.281570 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.281621 [info]: parseLine
+2024-06-04 11:34:42.281651 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.281701 [info]: parseLine
+2024-06-04 11:34:42.281716 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.281749 [info]: parseLine
+2024-06-04 11:34:42.281782 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.281810 [info]: parseLine
+2024-06-04 11:34:42.281823 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.281853 [info]: parseLine
+2024-06-04 11:34:42.281865 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.281900 [info]: 套接字:35有效
+2024-06-04 11:34:42.281917 [debug]: 35本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.281931 [debug]: read all data success,total read 452 bytesa
+2024-06-04 11:34:42.281956 [info]: process
+2024-06-04 11:34:42.281965 [erro]: 
+2024-06-04 11:34:42.281977 [info]: request realFile:[/home/wt/Project/my_Server/resources/images/profile-image.jpg]
+2024-06-04 11:34:42.282003 [info]: [/home/wt/Project/my_Server/resources/images/profile-image.jpg] is exist!file size is: 27791
+2024-06-04 11:34:42.282011 [debug]: addContent file:[/home/wt/Project/my_Server/resources/images/profile-image.jpg]
+2024-06-04 11:34:42.282038 [debug]: open file:[/home/wt/Project/my_Server/resources/images/profile-image.jpg] success!
+2024-06-04 11:34:42.282098 [info]: mmap file [/home/wt/Project/my_Server/resources/images/profile-image.jpg] success!
+2024-06-04 11:34:42.282104 [info]: set 35 EPOLLIN
+2024-06-04 11:34:42.282114 [info]: init() run once
+2024-06-04 11:34:42.282134 [debug]: ip:[192.168.159.1],sockfd:[32],begin recv
+2024-06-04 11:34:42.282152 [info]: 套接字:32有效
+2024-06-04 11:34:42.282170 [debug]: 32本次读取386字节的数据,errno:11
+2024-06-04 11:34:42.282196 [info]: parseLine
+2024-06-04 11:34:42.282207 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.282306 [info]: parseLine
+2024-06-04 11:34:42.282321 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.282358 [info]: parseLine
+2024-06-04 11:34:42.282373 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.282403 [info]: parseLine
+2024-06-04 11:34:42.282418 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.282460 [info]: parseLine
+2024-06-04 11:34:42.282496 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.282533 [info]: parseLine
+2024-06-04 11:34:42.282549 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.282582 [info]: parseLine
+2024-06-04 11:34:42.282596 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.282626 [info]: parseLine
+2024-06-04 11:34:42.282640 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.282672 [info]: parseLine
+2024-06-04 11:34:42.282686 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.282719 [info]: 套接字:32有效
+2024-06-04 11:34:42.282737 [debug]: 32本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.282751 [debug]: read all data success,total read 386 bytesa
+2024-06-04 11:34:42.282818 [debug]: ip:[192.168.159.1],sockfd:[34],begin recv
+2024-06-04 11:34:42.282885 [info]: 套接字:34有效
+2024-06-04 11:34:42.282886 [info]: process
+2024-06-04 11:34:42.282913 [debug]: 34本次读取385字节的数据,errno:11
+2024-06-04 11:34:42.282942 [erro]: 
+2024-06-04 11:34:42.283026 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/bootstrap.min.js]
+2024-06-04 11:34:42.283042 [info]: [/home/wt/Project/my_Server/resources/js/bootstrap.min.js] is exist!file size is: 36868
+2024-06-04 11:34:42.283047 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/bootstrap.min.js]
+2024-06-04 11:34:42.283059 [debug]: open file:[/home/wt/Project/my_Server/resources/js/bootstrap.min.js] success!
+2024-06-04 11:34:42.283076 [info]: mmap file [/home/wt/Project/my_Server/resources/js/bootstrap.min.js] success!
+2024-06-04 11:34:42.283105 [info]: set 32 EPOLLIN
+2024-06-04 11:34:42.283119 [info]: init() run once
+2024-06-04 11:34:42.283131 [info]: parseLine
+2024-06-04 11:34:42.283151 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.283227 [info]: parseLine
+2024-06-04 11:34:42.283240 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.283270 [info]: parseLine
+2024-06-04 11:34:42.283282 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.283309 [info]: parseLine
+2024-06-04 11:34:42.283321 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.283356 [info]: parseLine
+2024-06-04 11:34:42.283369 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.283396 [info]: parseLine
+2024-06-04 11:34:42.283408 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.283453 [info]: parseLine
+2024-06-04 11:34:42.283465 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.283502 [info]: parseLine
+2024-06-04 11:34:42.283514 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.283549 [info]: parseLine
+2024-06-04 11:34:42.283561 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.283595 [info]: 套接字:34有效
+2024-06-04 11:34:42.283612 [debug]: 34本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.283625 [debug]: read all data success,total read 385 bytesa
+2024-06-04 11:34:42.283668 [debug]: ip:[192.168.159.1],sockfd:[33],begin recv
+2024-06-04 11:34:42.283691 [info]: 套接字:33有效
+2024-06-04 11:34:42.283712 [debug]: 33本次读取398字节的数据,errno:11
+2024-06-04 11:34:42.283724 [info]: parseLine
+2024-06-04 11:34:42.283730 [info]: process
+2024-06-04 11:34:42.283766 [erro]: 
+2024-06-04 11:34:42.283776 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/smoothscroll.js]
+2024-06-04 11:34:42.283785 [info]: [/home/wt/Project/my_Server/resources/js/smoothscroll.js] is exist!file size is: 4474
+2024-06-04 11:34:42.283788 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/smoothscroll.js]
+2024-06-04 11:34:42.283827 [debug]: open file:[/home/wt/Project/my_Server/resources/js/smoothscroll.js] success!
+2024-06-04 11:34:42.283838 [info]: mmap file [/home/wt/Project/my_Server/resources/js/smoothscroll.js] success!
+2024-06-04 11:34:42.283841 [info]: set 34 EPOLLIN
+2024-06-04 11:34:42.283846 [info]: init() run once
+2024-06-04 11:34:42.283735 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.283948 [info]: parseLine
+2024-06-04 11:34:42.283966 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.283996 [info]: parseLine
+2024-06-04 11:34:42.284023 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284051 [info]: parseLine
+2024-06-04 11:34:42.284064 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284123 [info]: parseLine
+2024-06-04 11:34:42.284136 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284187 [info]: parseLine
+2024-06-04 11:34:42.284200 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284242 [info]: parseLine
+2024-06-04 11:34:42.284254 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284293 [info]: parseLine
+2024-06-04 11:34:42.284318 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284346 [info]: parseLine
+2024-06-04 11:34:42.284357 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284389 [info]: 套接字:33有效
+2024-06-04 11:34:42.284404 [debug]: 33本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.284417 [debug]: read all data success,total read 398 bytesa
+2024-06-04 11:34:42.284451 [debug]: ip:[192.168.159.1],sockfd:[38],begin recv
+2024-06-04 11:34:42.284472 [info]: 套接字:38有效
+2024-06-04 11:34:42.284490 [debug]: 38本次读取395字节的数据,errno:11
+2024-06-04 11:34:42.284494 [info]: process
+2024-06-04 11:34:42.284501 [info]: parseLine
+2024-06-04 11:34:42.284541 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.284510 [erro]: 
+2024-06-04 11:34:42.284557 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js]
+2024-06-04 11:34:42.284573 [info]: [/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js] is exist!file size is: 20932
+2024-06-04 11:34:42.284581 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js]
+2024-06-04 11:34:42.284593 [debug]: open file:[/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js] success!
+2024-06-04 11:34:42.284605 [info]: mmap file [/home/wt/Project/my_Server/resources/js/jquery.magnific-popup.min.js] success!
+2024-06-04 11:34:42.284612 [info]: set 33 EPOLLIN
+2024-06-04 11:34:42.284619 [info]: init() run once
+2024-06-04 11:34:42.284639 [info]: parseLine
+2024-06-04 11:34:42.284672 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284733 [info]: parseLine
+2024-06-04 11:34:42.284756 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284790 [info]: parseLine
+2024-06-04 11:34:42.284818 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284851 [info]: parseLine
+2024-06-04 11:34:42.284868 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284898 [info]: parseLine
+2024-06-04 11:34:42.284914 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284944 [info]: parseLine
+2024-06-04 11:34:42.284961 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.284992 [info]: parseLine
+2024-06-04 11:34:42.285008 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.285040 [info]: parseLine
+2024-06-04 11:34:42.285056 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.285101 [info]: 套接字:38有效
+2024-06-04 11:34:42.285120 [debug]: 38本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.285137 [debug]: read all data success,total read 395 bytesa
+2024-06-04 11:34:42.285169 [info]: process
+2024-06-04 11:34:42.285183 [erro]: 
+2024-06-04 11:34:42.285194 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/magnific-popup-options.js]
+2024-06-04 11:34:42.285211 [info]: [/home/wt/Project/my_Server/resources/js/magnific-popup-options.js] is exist!file size is: 1069
+2024-06-04 11:34:42.285222 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/magnific-popup-options.js]
+2024-06-04 11:34:42.285241 [debug]: open file:[/home/wt/Project/my_Server/resources/js/magnific-popup-options.js] success!
+2024-06-04 11:34:42.285272 [info]: mmap file [/home/wt/Project/my_Server/resources/js/magnific-popup-options.js] success!
+2024-06-04 11:34:42.285275 [info]: set 38 EPOLLIN
+2024-06-04 11:34:42.285284 [info]: init() run once
+2024-06-04 11:34:42.285313 [debug]: ip:[192.168.159.1],sockfd:[37],begin recv
+2024-06-04 11:34:42.285353 [info]: 套接字:37有效
+2024-06-04 11:34:42.285383 [debug]: 37本次读取380字节的数据,errno:11
+2024-06-04 11:34:42.285398 [info]: parseLine
+2024-06-04 11:34:42.285413 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.285548 [info]: parseLine
+2024-06-04 11:34:42.285575 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.285612 [info]: parseLine
+2024-06-04 11:34:42.285632 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.285672 [info]: parseLine
+2024-06-04 11:34:42.285692 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.285731 [info]: parseLine
+2024-06-04 11:34:42.285749 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.285783 [info]: parseLine
+2024-06-04 11:34:42.285804 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.285841 [info]: parseLine
+2024-06-04 11:34:42.285861 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.285893 [info]: parseLine
+2024-06-04 11:34:42.285909 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.285941 [info]: parseLine
+2024-06-04 11:34:42.285958 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.286007 [info]: 套接字:37有效
+2024-06-04 11:34:42.286056 [debug]: 37本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.286087 [debug]: read all data success,total read 380 bytesa
+2024-06-04 11:34:42.286149 [info]: tick
+2024-06-04 11:34:42.286208 [info]: enentCnt:[5]
+2024-06-04 11:34:42.286336 [info]: write complete
+2024-06-04 11:34:42.286417 [info]: set 35 EPOLLIN
+2024-06-04 11:34:42.286530 [info]: write complete
+2024-06-04 11:34:42.286582 [info]: set 32 EPOLLIN
+2024-06-04 11:34:42.286649 [info]: write complete
+2024-06-04 11:34:42.286708 [info]: set 34 EPOLLIN
+2024-06-04 11:34:42.286814 [info]: write complete
+2024-06-04 11:34:42.286864 [info]: set 33 EPOLLIN
+2024-06-04 11:34:42.286921 [info]: write complete
+2024-06-04 11:34:42.286939 [info]: set 38 EPOLLIN
+2024-06-04 11:34:42.286955 [info]: tick
+2024-06-04 11:34:42.289264 [info]: process
+2024-06-04 11:34:42.289391 [erro]: 
+2024-06-04 11:34:42.289425 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/wow.min.js]
+2024-06-04 11:34:42.289567 [info]: [/home/wt/Project/my_Server/resources/js/wow.min.js] is exist!file size is: 7082
+2024-06-04 11:34:42.289581 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/wow.min.js]
+2024-06-04 11:34:42.289627 [debug]: open file:[/home/wt/Project/my_Server/resources/js/wow.min.js] success!
+2024-06-04 11:34:42.289724 [info]: mmap file [/home/wt/Project/my_Server/resources/js/wow.min.js] success!
+2024-06-04 11:34:42.289785 [info]: set 37 EPOLLIN
+2024-06-04 11:34:42.289807 [info]: init() run once
+2024-06-04 11:34:42.289822 [info]: enentCnt:[1]
+2024-06-04 11:34:42.290349 [info]: write complete
+2024-06-04 11:34:42.290419 [info]: set 37 EPOLLIN
+2024-06-04 11:34:42.290452 [info]: tick
+2024-06-04 11:34:42.300271 [info]: enentCnt:[1]
+2024-06-04 11:34:42.300466 [debug]: ip:[192.168.159.1],sockfd:[37],begin recv
+2024-06-04 11:34:42.300503 [info]: 套接字:37有效
+2024-06-04 11:34:42.300564 [debug]: 37本次读取379字节的数据,errno:11
+2024-06-04 11:34:42.300584 [info]: parseLine
+2024-06-04 11:34:42.300600 [info]: 当前的解析状态是解析:REQUEST_LINE
+2024-06-04 11:34:42.300782 [info]: parseLine
+2024-06-04 11:34:42.300816 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.300874 [info]: parseLine
+2024-06-04 11:34:42.300903 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.300936 [info]: parseLine
+2024-06-04 11:34:42.300951 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.301012 [info]: parseLine
+2024-06-04 11:34:42.301041 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.301095 [info]: parseLine
+2024-06-04 11:34:42.301139 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.301175 [info]: parseLine
+2024-06-04 11:34:42.301203 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.301322 [info]: parseLine
+2024-06-04 11:34:42.301460 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.301596 [info]: parseLine
+2024-06-04 11:34:42.301639 [info]: 当前的解析状态是解析:HEADERS
+2024-06-04 11:34:42.301711 [info]: 套接字:37有效
+2024-06-04 11:34:42.301740 [debug]: 37本次读取-1字节的数据,errno:11
+2024-06-04 11:34:42.301763 [debug]: read all data success,total read 379 bytesa
+2024-06-04 11:34:42.301805 [info]: process
+2024-06-04 11:34:42.301819 [erro]: 
+2024-06-04 11:34:42.301833 [info]: request realFile:[/home/wt/Project/my_Server/resources/js/custom.js]
+2024-06-04 11:34:42.301859 [info]: [/home/wt/Project/my_Server/resources/js/custom.js] is exist!file size is: 1047
+2024-06-04 11:34:42.301870 [debug]: addContent file:[/home/wt/Project/my_Server/resources/js/custom.js]
+2024-06-04 11:34:42.301904 [debug]: open file:[/home/wt/Project/my_Server/resources/js/custom.js] success!
+2024-06-04 11:34:42.301966 [info]: mmap file [/home/wt/Project/my_Server/resources/js/custom.js] success!
+2024-06-04 11:34:42.301973 [info]: set 37 EPOLLIN
+2024-06-04 11:34:42.301989 [info]: init() run once
+2024-06-04 11:34:42.302017 [info]: tick
+2024-06-04 11:34:42.302046 [info]: enentCnt:[1]
+2024-06-04 11:34:42.319568 [info]: write complete
+2024-06-04 11:34:42.320013 [info]: set 37 EPOLLIN
+2024-06-04 11:34:42.320144 [info]: tick
+2024-06-04 11:34:47.291230 [info]: enentCnt:[0]
+2024-06-04 11:34:47.291385 [info]: tick
+2024-06-04 11:34:47.291440 [info]: socket:[35] time is over
+2024-06-04 11:34:47.291727 [info]: close 35 success!
+2024-06-04 11:34:47.291780 [info]: ip:[192.168.159.1],port:[54672],socket:[35] quit
+2024-06-04 11:34:47.291797 [info]: socket:[34] time is over
+2024-06-04 11:34:47.291908 [info]: close 34 success!
+2024-06-04 11:34:47.291949 [info]: ip:[192.168.159.1],port:[54671],socket:[34] quit
+2024-06-04 11:34:47.291969 [info]: socket:[38] time is over
+2024-06-04 11:34:47.292074 [info]: close 38 success!
+2024-06-04 11:34:47.292114 [info]: ip:[192.168.159.1],port:[54674],socket:[38] quit

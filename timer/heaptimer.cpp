@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-07 16:49:54
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-07 21:37:00
+ * @LastEditTime: 2024-06-04 11:15:56
  * @FilePath: /Project/my_Server/timer/heaptimer.cpp
  * @Description: 
  * 
@@ -86,7 +86,6 @@ void heapTimer::add(int fd, int timeOut, const TimeoutCallBack& cb)
         // 调整堆
         siftdown(ref[fd]);
         siftup(ref[fd]);
-
     }
 }
 void heapTimer::adjust(int fd, int newExpires){
@@ -111,6 +110,7 @@ void heapTimer::tick(){
         if(std::chrono::duration_cast<MS>(temp_node.expires - Clock::now()).count()<0){
             //当前节点过期
             // 执行当前描述符的回调函数
+            LOG_INFO("socket:[%d] time is over",temp_node.fd);
             temp_node.cb();
             //弹出
             pop();

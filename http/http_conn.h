@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 17:35:02
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-27 15:46:04
+ * @LastEditTime: 2024-06-03 20:50:22
  * @FilePath: /Project/my_Server/http/http_conn.h
  * @Description: 
  * 
@@ -16,7 +16,9 @@
 #include <atomic>
 #include <unistd.h>
 #include <string>
-#include <string>
+#include <arpa/inet.h>
+#include <dirent.h>
+#include <json/json.h>
 #include "util.h"
 #include "../log/log.h"
 #include "httprequest.h"
@@ -66,35 +68,46 @@ public:
     };
 public:
     http_conn(){};
-    http_conn(int connectfd,const sockaddr_in& client){init(connectfd,client);};
+    http_conn(int connectfd,const sockaddr_in client){init(connectfd,client);};
     ~http_conn(){};
 public:
-    void init(int connectfd,const sockaddr_in& client);
+    void init(int connectfd,const sockaddr_in client);
     void process();
     void closeConn();
     bool read(int* saveErrno){
         return request.read(connectFd,saveErrno);
     };
     bool write(int* saveErrno){
-        bool ans = response.write(connectFd,saveErrno);
-        request.init();
-        return ans;
+        return response.write(connectFd,saveErrno);
     };
+    char* getIp(){
+        return inet_ntoa(client.sin_addr);
+    }
+    //获取端口
+    int getPort(){
+        return ntohs(client.sin_port);
+    }
+
+private:
+    // 获取dir目录下的所有文件名字
+    vector<string> getFiles(string dir);
+    //更新list.json文件
+    void writeJson(std::ofstream& ofs,Json::Value& root);
+    
     // bool process_read();
     // bool process_write();
 public:
     static atomic<int> userCount; 
     static char* webRoot;
-    static void setWebRoot(char* webRoot){
-        http_conn::webRoot=webRoot;
-    }
+    // static void setWebRoot(char* webRoot){
+    //     http_conn::webRoot=webRoot;
+    // }
 private:
     std::string realFile;
     int connectFd;//通信套接字
     sockaddr_in client;//客户信息
     HTTP_CODE code;//状态码
     struct stat fileState;
-    char* fileAddress;
     int ret;
     httpRequest request;
     httpResponse response;

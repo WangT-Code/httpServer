@@ -2,20 +2,18 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:34
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-05-29 21:37:36
+ * @LastEditTime: 2024-08-12 17:31:21
  * @FilePath: /Project/my_Server/http/httprequest.cpp
  * @Description: 
  * 
  * Copyright (c) 2024 by wt(wangtuam@163.com), All Rights Reserved. 
  */
 #include "httprequest.h"
-#include <json/json.h>
 #include <sys/socket.h>
 #include <regex>
 #include <fcntl.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <fstream>
 #include "../mysql_connection/sql_conn_pool.h"
 const char CRLF[] = "\r\n";
 const unordered_set<string> httpRequest::DEFAULTHTML
@@ -47,8 +45,8 @@ const unordered_map<string, int> httpRequest::DEFAULTHTMLTAG
  * @param 无
  * @return 无
  */
-void httpRequest::init(sockaddr_in client)
-{
+void httpRequest::init(sockaddr_in client,const char* root)
+{   
     // 初始化读取缓冲区为全0
     memset(&readBuf, '\0', READBUFSIZE);
     // 初始化已读取索引和已检查索引为0
@@ -61,16 +59,18 @@ void httpRequest::init(sockaddr_in client)
     parseState=REQUEST_LINE;
     // 初始化内容长度为0
     contentLen=0;
-    tempRead=0;
     totalBytes=0;
     readedIdx=0;
     onceReadBodylen=0;
+    code=0;
     clientAddr=client;
+    curBody=0;
     method="";
     path="";
     version="";
     body="";
     boundary="";
+    webRoot=root;
     headers.clear();
     postUser.clear();
     fileInfo.clear();
@@ -84,12 +84,15 @@ void httpRequest::init(){
     checkedIdx=0;
     startLine=0;
     totalBytes=0;
-    readedIdx=0;
+    st=0;
+    ed=0;
+    // 初始化内容长度为0
+    contentLen=0;
+    code=0;
     onceReadBodylen=0;
     // 初始化解析状态为请求行解析状态
     parseState=REQUEST_LINE;
-    // 初始化内容长度为0
-    contentLen=0;
+    curBody=0;
     method="";
     path="";
     version="";
@@ -100,13 +103,10 @@ void httpRequest::init(){
 }
 bool httpRequest::read(int sockfd,int * saveError){
     // sockfd为ET模式
-    tempRead=0;
     int byteRead=0;
-    LOG_DEBUG("begin recv");
+    LOG_DEBUG("ip:[%s],sockfd:[%d],begin recv",inet_ntoa(clientAddr.sin_addr),sockfd);
     memset(readBuf,'\0',READBUFSIZE);
-    
     while(true){
-        tempRead=0;
         int flag=fcntl(sockfd, F_GETFD);
         if(flag==-1){
             LOG_ERROR("套接字:%d无效或者关闭",sockfd);
@@ -114,23 +114,19 @@ bool httpRequest::read(int sockfd,int * saveError){
             LOG_INFO("套接字:%d有效",sockfd);
         }
         byteRead=recv(sockfd,readBuf,READBUFSIZE-1,0);
-        printf("%d本次读取%d字节的数据,errno:%d\n",sockfd,byteRead,errno);
-        LOG_DEBUG("%d本次读取%d字节的数据,errno:%d",sockfd,byteRead,errno);
-        // LOG_DEBUG("使用strlen函数的值是:%d",strlen(readBuf));
-        // LOG_DEBUG("读取的数据是:%s",readBuf);
+        // printf("%d本次读取%d字节的数据,errno:%d\n",sockfd,byteRead,errno);
+        // LOG_DEBUG("%d本次读取%d字节的数据,errno:%d",sockfd,byteRead,errno);s
         if(byteRead<0){
             //没有更多数据可读
             if((errno==EAGAIN||errno==EWOULDBLOCK)){
                 if(code==GET_REQUEST){
-                    printf("total read %d bytesa \n",totalBytes);
+                    // printf("total read %d bytesa \n",totalBytes);
                     LOG_DEBUG("read all data success,total read %d bytesa",totalBytes);
                     *saveError=errno;
                     return true;
                 }
                 else{
                     LOG_DEBUG("continue to read data,and registration EPOLLIN event");
-                    // LOG_DEBUG("continue to read data,run coninue");
-                    // continue;
                     *saveError=errno;
                     return false;
                 }
@@ -146,21 +142,20 @@ bool httpRequest::read(int sockfd,int * saveError){
         }
         onceReadBodylen=byteRead;
         readedIdx+=byteRead;
-        tempRead+=byteRead;
         totalBytes+=byteRead;
         code=parse();
         memset(readBuf,'\0',READBUFSIZE);
-        printf("code:%d\n",code);
+        // printf("code:%d\n",code);
         startLine=0;
     }
     code=parse();
-    printf("code:%d\n",code);
+    // printf("code:%d\n",code);
     return true;
 }
 httpRequest::LINE_STATUS httpRequest::parseLine()
 {   
     // 请求体不用解析
-    LOG_INFO("parseLine");
+    // LOG_INFO("parseLine");
     char temp;
     for(;checkedIdx<readedIdx;++checkedIdx){
         temp=readBuf[checkedIdx];
@@ -239,7 +234,6 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
     {   
         if(readedIdx<(contentLen+checkedIdx)){
             //可以将部分数据写入文件
-            //先判断是否已经获得文件名字，如果没有则返回NO_REQUEST,否则打开文件将部分数据先写入文件
             return NO_REQUEST;
         }
         text[readedIdx] = '\0';
@@ -270,16 +264,16 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
             parseFormData();
         }
         //此时的checkedIdx是请求体的起始位置
-        LOG_DEBUG("readedIdx:%d",readedIdx);
-        LOG_DEBUG("checkedIdx:%d",checkedIdx);
-        LOG_DEBUG("contentLen:%d",contentLen);
+        // LOG_DEBUG("readedIdx:%d",readedIdx);
+        // LOG_DEBUG("checkedIdx:%d",checkedIdx);
+        // LOG_DEBUG("contentLen:%d",contentLen);
         if(readedIdx<=(checkedIdx+contentLen)){
             //可以将部分数据写入文件
             //先判断是否已经获得文件名字，如果没有则返回NO_REQUEST,否则打开文件将部分数据先写入文件
             if(fileInfo.find("filename")!=fileInfo.end()){
                 std::ofstream ofs;
                 // 如果文件分多次发送，应该采用app，同时为避免重复上传，应该用md5做校验
-                ofs.open("/home/wt/Project/my_Server/resources/files/" +fileInfo["filename"], std::ios::app|std::ios::binary);
+                ofs.open(webRoot+"/files/" +fileInfo["filename"], std::ios::app|std::ios::binary);
                 if(!ofs.is_open()){
                     LOG_ERROR("open file error");
                 }
@@ -293,35 +287,35 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
                 LOG_DEBUG("开始位置st:%lu",st);
                 if(readedIdx>=(checkedIdx+contentLen)){
                     //说明是最后一次读取
-                    for(int i=0;i<boundary.size();++i){
-                        LOG_DEBUG("compare content is %s",text+onceReadBodylen-boundary.size()-i);
+                    for(size_t i=0;i<boundary.size();++i){
+                        // LOG_DEBUG("compare content is %s",text+onceReadBodylen-boundary.size()-i);
                         if(memcmp(text+onceReadBodylen-boundary.size()-i,boundary.c_str(),boundary.size())==0){
                             ed=onceReadBodylen-boundary.size()-i-2;
-                            LOG_DEBUG("tempRead :%d,checkedIdx:%d,boundary.size():%d,i:%d",tempRead,checkedIdx,boundary.size(),i);
+                            // LOG_DEBUG("onceReadBodylen :%d,checkedIdx:%d,boundary.size():%d,i:%d",onceReadBodylen,checkedIdx,boundary.size(),i);
                             LOG_DEBUG("find ok:%s",&text[onceReadBodylen-boundary.size()-i]);
                             break;
                         }
                     }
-                    LOG_DEBUG("结束位置ed:%u",ed); 
+                    // LOG_DEBUG("结束位置ed:%u",ed); 
                     ofs.write(&text[st],ed-st);
                     text[ed]='\0';
-                    LOG_DEBUG("写入的结束位置:%d",ed);
-                    LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),ed-st);
+                    // LOG_DEBUG("写入的结束位置:%d",ed);
+                    // LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),ed-st);
                     ofs.close();
                 }
                 else {
-                    LOG_DEBUG("结束位置ed:%lu",onceReadBodylen);
+                    // LOG_DEBUG("结束位置ed:%lu",onceReadBodylen);
                     if(st){
                         //第一次读取时，还要去掉请求行和请求头的内容长度
                         ofs.write(&text[st],onceReadBodylen-st);
-                        LOG_DEBUG("写入的结束位置:%d",onceReadBodylen);
-                        LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),onceReadBodylen-st);
+                        // LOG_DEBUG("写入的结束位置:%d",onceReadBodylen);
+                        // LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),onceReadBodylen-st);
                         st=0;
                     }
                     else{
                         ofs.write(&text[st],onceReadBodylen-st);
-                        LOG_DEBUG("写入的结束位置:%d",onceReadBodylen);
-                        LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),onceReadBodylen-st);
+                        // LOG_DEBUG("写入的结束位置:%d",onceReadBodylen);
+                        // LOG_INFO("client ip is:%s append content to file:[%s]!,add content length is:%d",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str(),onceReadBodylen-st);
                     }
                     ofs.close();  
                 } 
@@ -329,16 +323,15 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
             if(readedIdx==(checkedIdx+contentLen)){
                 LOG_INFO("client ip is:%s upload file:%s success!",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str());
                 std::ofstream ofs1;
-                ofs1.open("/home/wt/Project/my_Server/resources/response.txt", std::ios::ate);
-                ofs1 << "/home/wt/Project/my_Server/resources/response.txt" << fileInfo["filename"];
+                ofs1.open(webRoot+"/response.txt", std::ios::ate);
+                ofs1 << webRoot+"/response.txt" << fileInfo["filename"];
                 ofs1.close();
                 path = "/response.txt";
                 return GET_REQUEST;
             }
             else return NO_REQUEST;
         }
-        else GET_REQUEST;
-        
+        else return BAD_REQUEST;
     }
     return GET_REQUEST;
 }
@@ -404,7 +397,7 @@ void httpRequest::parseFormData(){
     st = body.find("filename=\"", ed) + strlen("filename=\"");
     ed = body.find("\"", st);
     fileInfo["filename"] = body.substr(st, ed - st);
-    string filepath="/home/wt/Project/my_Server/resources/files/" +fileInfo["filename"];
+    string filepath=webRoot+"/files/" +fileInfo["filename"];
     if(access(filepath.c_str(),F_OK)==0){
         //文件存在,删除原来的文件
         LOG_INFO("[%s] file is exist!",filepath.c_str());
@@ -423,15 +416,15 @@ httpRequest::HTTP_CODE httpRequest::parse(){
     char* text=0;
     while((parseState==BODY&&lineState==LINE_OK)||((lineState=parseLine())==LINE_OK)){
         //获取刚刚解析的行内容
-        if(parseState==REQUEST_LINE){
-            LOG_INFO("当前的解析状态是解析:REQUEST_LINE");
-        }
-        else if(parseState==HEADERS){
-            LOG_INFO("当前的解析状态是解析:HEADERS");
-        }
-        else{
-            LOG_INFO("当前的解析状态是解析:BODY");
-        }
+        // if(parseState==REQUEST_LINE){
+        //     LOG_INFO("当前的解析状态是解析:REQUEST_LINE");
+        // }
+        // else if(parseState==HEADERS){
+        //     LOG_INFO("当前的解析状态是解析:HEADERS");
+        // }
+        // else{
+        //     LOG_INFO("当前的解析状态是解析:BODY");
+        // }
         text=getLine();
         //更新startLine
         startLine=checkedIdx;
@@ -529,7 +522,7 @@ bool httpRequest::checkUser(int tag){
         if(row==nullptr){
             //信息没有被使用可以注册
             bzero(sqlOrder, 256);
-            snprintf(sqlOrder, 256,"INSERT INTO user(username, passwd) VALUES('%s','%s')", postUser["username"].c_str(), postUser["passwd"].c_str());
+            snprintf(sqlOrder, 256,"INSERT INTO user(username, passwd) VALUES('%s','%s')", postUser["username"].c_str(), postUser["password"].c_str());
             LOG_DEBUG("sqlOrder:%s", sqlOrder);
             //插入成功返回0，失败返回非0
             if(mysql_query(mysql, sqlOrder)){
@@ -539,7 +532,7 @@ bool httpRequest::checkUser(int tag){
             }
             else {
                 //插入成功
-                LOG_DEBUG("INSERT success:%s %s",postUser["username"].c_str(), postUser["passwd"].c_str());
+                LOG_DEBUG("INSERT success:%s %s",postUser["username"].c_str(), postUser["password"].c_str());
                 LOG_DEBUG("user regirster success!");
                 return true;
             }
