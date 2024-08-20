@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:34
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-08-12 17:31:21
+ * @LastEditTime: 2024-08-13 16:35:11
  * @FilePath: /Project/my_Server/http/httprequest.cpp
  * @Description: 
  * 
@@ -77,7 +77,7 @@ void httpRequest::init(sockaddr_in client,const char* root)
 }
 void httpRequest::init(){
      // 初始化读取缓冲区为全0
-    LOG_INFO("init() run once");
+    // LOG_INFO("init() run once");
     memset(&readBuf, '\0', READBUFSIZE);
     // 初始化已读取索引和已检查索引为0
     readedIdx=0;
@@ -104,15 +104,15 @@ void httpRequest::init(){
 bool httpRequest::read(int sockfd,int * saveError){
     // sockfd为ET模式
     int byteRead=0;
-    LOG_DEBUG("ip:[%s],sockfd:[%d],begin recv",inet_ntoa(clientAddr.sin_addr),sockfd);
+    // LOG_DEBUG("ip:[%s],sockfd:[%d],begin recv",inet_ntoa(clientAddr.sin_addr),sockfd);
     memset(readBuf,'\0',READBUFSIZE);
     while(true){
-        int flag=fcntl(sockfd, F_GETFD);
-        if(flag==-1){
-            LOG_ERROR("套接字:%d无效或者关闭",sockfd);
-        }else{
-            LOG_INFO("套接字:%d有效",sockfd);
-        }
+        // int flag=fcntl(sockfd, F_GETFD);
+        // if(flag==-1){
+        //     LOG_ERROR("套接字:%d无效或者关闭",sockfd);
+        // }else{
+        //     LOG_INFO("套接字:%d有效",sockfd);
+        // }
         byteRead=recv(sockfd,readBuf,READBUFSIZE-1,0);
         // printf("%d本次读取%d字节的数据,errno:%d\n",sockfd,byteRead,errno);
         // LOG_DEBUG("%d本次读取%d字节的数据,errno:%d",sockfd,byteRead,errno);s
@@ -121,12 +121,12 @@ bool httpRequest::read(int sockfd,int * saveError){
             if((errno==EAGAIN||errno==EWOULDBLOCK)){
                 if(code==GET_REQUEST){
                     // printf("total read %d bytesa \n",totalBytes);
-                    LOG_DEBUG("read all data success,total read %d bytesa",totalBytes);
+                    // LOG_DEBUG("read all data success,total read %d bytesa",totalBytes);
                     *saveError=errno;
                     return true;
                 }
                 else{
-                    LOG_DEBUG("continue to read data,and registration EPOLLIN event");
+                    // LOG_DEBUG("continue to read data,and registration EPOLLIN event");
                     *saveError=errno;
                     return false;
                 }
@@ -137,7 +137,7 @@ bool httpRequest::read(int sockfd,int * saveError){
         }
         else if(byteRead==0){
             //对方关闭连接
-            LOG_DEBUG("对方关闭连接");
+            // LOG_DEBUG("对方关闭连接");
             return false;
         }
         onceReadBodylen=byteRead;
@@ -243,7 +243,7 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
         parseFromUrlEncoded();//解析表单数据
         if(DEFAULTHTMLTAG.count(path)){
             int tag=DEFAULTHTMLTAG.find(path)->second;
-            LOG_DEBUG("client ip is:%s , tag:%d",inet_ntoa(clientAddr.sin_addr),tag);
+            // LOG_DEBUG("client ip is:%s , tag:%d",inet_ntoa(clientAddr.sin_addr),tag);
             if(checkUser(tag)){
                 LOG_INFO("client ip is:%s login success",inet_ntoa(clientAddr.sin_addr));
                 path="/welcome.html";
@@ -284,7 +284,7 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
                     //这里可以加个标志比如flag=1,然后在if里面进行判断，这样就不用每次都body.find("\r\n\r\n")
                 }
                 else st=0;
-                LOG_DEBUG("开始位置st:%lu",st);
+                // LOG_DEBUG("开始位置st:%lu",st);
                 if(readedIdx>=(checkedIdx+contentLen)){
                     //说明是最后一次读取
                     for(size_t i=0;i<boundary.size();++i){
@@ -292,7 +292,7 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
                         if(memcmp(text+onceReadBodylen-boundary.size()-i,boundary.c_str(),boundary.size())==0){
                             ed=onceReadBodylen-boundary.size()-i-2;
                             // LOG_DEBUG("onceReadBodylen :%d,checkedIdx:%d,boundary.size():%d,i:%d",onceReadBodylen,checkedIdx,boundary.size(),i);
-                            LOG_DEBUG("find ok:%s",&text[onceReadBodylen-boundary.size()-i]);
+                            // LOG_DEBUG("find ok:%s",&text[onceReadBodylen-boundary.size()-i]);
                             break;
                         }
                     }
@@ -321,7 +321,7 @@ httpRequest::HTTP_CODE httpRequest::parseRequestBody(char*text){
                 } 
             }
             if(readedIdx==(checkedIdx+contentLen)){
-                LOG_INFO("client ip is:%s upload file:%s success!",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str());
+                // LOG_INFO("client ip is:%s upload file:%s success!",inet_ntoa(clientAddr.sin_addr),fileInfo["filename"].c_str());
                 std::ofstream ofs1;
                 ofs1.open(webRoot+"/response.txt", std::ios::ate);
                 ofs1 << webRoot+"/response.txt" << fileInfo["filename"];
@@ -392,7 +392,7 @@ void httpRequest::parseFormData(){
     if (body.size() == 0) return;
     ed = body.find(CRLF);
     boundary = body.substr(0, ed);
-    printf("parse boundary:%s\n",boundary.c_str());
+    // printf("parse boundary:%s\n",boundary.c_str());
     // 解析文件信息
     st = body.find("filename=\"", ed) + strlen("filename=\"");
     ed = body.find("\"", st);
@@ -400,7 +400,7 @@ void httpRequest::parseFormData(){
     string filepath=webRoot+"/files/" +fileInfo["filename"];
     if(access(filepath.c_str(),F_OK)==0){
         //文件存在,删除原来的文件
-        LOG_INFO("[%s] file is exist!",filepath.c_str());
+        // LOG_INFO("[%s] file is exist!",filepath.c_str());
         if(unlink(filepath.c_str())==0){
             LOG_INFO("remove [%s] file success!",filepath.c_str());
         }

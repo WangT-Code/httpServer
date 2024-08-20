@@ -83,7 +83,7 @@ void http_conn::process(){
         if(request.getMethod()=="POST"){
             //给用户返回成功信息
             code=GET_REQUEST;
-            LOG_INFO("method:POST,url:%s",request.getUrl().c_str());
+            // LOG_INFO("method:POST,url:%s",request.getUrl().c_str());
             std::string url=request.getUrl();
             realFile=string(webRoot)+url;
             this->response.init(realFile,code,this->request.isLinger());
@@ -115,7 +115,7 @@ void http_conn::process(){
                     Json::Value file;
                     for (int i = 0; i < (int)files.size(); i++)
                     {   
-                        LOG_INFO("s",files[i].c_str());
+                        // LOG_INFO("s",files[i].c_str());
                         file["filename"] = files[i];
                         root.append(file);
                     }
@@ -125,7 +125,7 @@ void http_conn::process(){
                 }
             }
 
-            LOG_INFO("request realFile:[%s]",realFile.c_str());
+            // LOG_INFO("request realFile:[%s]",realFile.c_str());
             //先判断页面是否存在
             // printf("stat:%d\n",stat(realFile.c_str(),&fileState));
             if(stat(realFile.c_str(),&fileState)<0){
@@ -160,7 +160,7 @@ void http_conn::process(){
                 // return ;
             }
             code=FILE_REQUEST;
-            LOG_INFO("[%s] is exist!file size is: %ld",realFile.c_str(),fileState.st_size);
+            // LOG_INFO("[%s] is exist!file size is: %ld",realFile.c_str(),fileState.st_size);
             this->response.init(realFile,code,this->request.isLinger());
             this->response.makeResponse();
             epollUtil::instance().modfd(connectFd,EPOLLOUT);
@@ -193,7 +193,7 @@ void http_conn::closeConn(){
     }
 }
 vector<string> http_conn::getFiles(string dir){
-    LOG_INFO("getfiles:[%s]",dir.c_str());
+    // LOG_INFO("getfiles:[%s]",dir.c_str());
     vector<string> files;
     DIR* pDir=nullptr;
     struct dirent* pEnt=NULL;

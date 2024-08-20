@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-06-02 15:46:44
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-06-04 11:14:18
+ * @LastEditTime: 2024-08-14 10:05:10
  * @FilePath: /Project/my_Server/webserver/webserver.cpp
  * @Description: 
  * 
@@ -10,6 +10,7 @@
  */
 #include "webserver.h"
 #include "../threadpool/threadpool.h"
+#include "../threadpool/workthreadpool.h"
 #include "../http/util.h"
 #include "../timer/heaptimer.h"
 webserver::webserver(int port,  int timeoutMs, bool optLinger,
@@ -25,12 +26,12 @@ webserver::webserver(int port,  int timeoutMs, bool optLinger,
             strncat(webRoot,"/resources",16);
             
             epollUtil::instance().setupepollfd(epoll_create(10));
-            epollUtil::instance().init(&events[0],timeoutMs);
+            epollUtil::instance().init(&events[0],1024);
             // 创建监听套接字,并绑定
             initSocket();
             // 初始化线程池
-            threadpool<http_conn>::instance()->init(threadNum,maxRequests);
-
+            // threadpool<http_conn>::instance()->init(5,maxRequests);
+            workthreadpool::instance()->init(threadNum,maxRequests);
             // 初始化数据库连接池
             sql_conn_pool::instance()->init("localhost",sqlPort,sqlUser,sqlPwd,dbName,connPoolNum);
             
@@ -72,7 +73,7 @@ void webserver::start(){
         }
         //定时事件是通过epollwait实现，而不是通过信号来实现
         int eventCnt=epollUtil::instance().wait(timeMs);
-        LOG_INFO("enentCnt:[%d]",eventCnt);
+        // LOG_INFO("enentCnt:[%d]",eventCnt);
         for(int i=0;i<eventCnt;i++){
             int fd=epollUtil::instance().getFd(i);
             uint32_t events=epollUtil::instance().getEvents(i);
@@ -85,11 +86,11 @@ void webserver::start(){
             }
             else if(events & EPOLLIN){
                 //有数据可读
-                dealRead(fd);
+                dealRead(&users[fd]);
             }
             else if(events & EPOLLOUT){
                 //有数据可写
-                dealWrite(fd);
+                dealWrite(&users[fd]);
             }else{
                 LOG_ERROR("unknown event");
             }
@@ -129,38 +130,51 @@ void webserver::dealListen(){
     }
     return;
 }
-void webserver::dealRead(int fd){
+void webserver::onRead(http_conn* client){
+    workthreadpool::instance()->addTask(std::bind(&webserver::dealRead,this,client));
+}
+void webserver::onProcess(http_conn* client){
+    //添加任务
+    client->process();
+}
+void webserver::onWrite(http_conn* client){
+    workthreadpool::instance()->addTask(std::bind(&webserver::dealWrite,this,client));
+
+}
+void webserver::dealRead(http_conn* client){
     int err;
-    if(users[fd].read(&err)){
+    if(client->read(&err)){
         //读取完毕，添加任务
-        threadpool<http_conn>::instance()->append(&users[fd]);
+        // threadpool<http_conn>::instance()->append(client);
+        // onProcess(client);
+        client->process();
         //重置定时器
-        timer->adjust(fd,timeoutMs);
+        timer->adjust(client->getFd(),timeoutMs);
     }
     else {
         if(err==EAGAIN||err==EWOULDBLOCK){
-            if(users[fd].getRequest().getCode()==0){
+            if(client->getRequest().getCode()==0){
                 //请求不完整，从新注册EPOLLIN|EPOLLONESHOT事件
-                epollUtil::instance().modfd(fd,EPOLLIN);
-                timer->adjust(fd,timeoutMs);
+                epollUtil::instance().modfd(client->getFd(),EPOLLIN);
+                timer->adjust(client->getFd(),timeoutMs);
             }
             else{
                 //请求出错
-                closeConn(fd);
+                closeConn(client->getFd());
             }
         }
         else{
             //读错误
-            closeConn(fd);
+            closeConn(client->getFd());
         }
     }
 }
-void webserver::dealWrite(int fd){
+void webserver::dealWrite(http_conn* client){
     int err;
-    if(users[fd].write(&err)){
+    if(client->write(&err)){
         //epollout事件的注册已经下放到write中
         //写完了，添加任务
-        timer->adjust(fd,timeoutMs);
+        timer->adjust(client->getFd(),timeoutMs);
         // if(!users[fd].getRequest().isLinger()){
         //     // 不是长连接，直接关闭连接
         //     closeConn(fd);
@@ -168,7 +182,7 @@ void webserver::dealWrite(int fd){
     }
     else{
         //出错
-        closeConn(fd);
+        closeConn(client->getFd());
     }
 }
 void webserver::closeConn(int fd){

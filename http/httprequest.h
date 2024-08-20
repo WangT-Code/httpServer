@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 20:23:25
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-06-03 16:11:40
+ * @LastEditTime: 2024-08-13 16:32:00
  * @FilePath: /Project/my_Server/http/httprequest.h
  * @Description: 
  * 
@@ -143,7 +143,7 @@ public:
         fileInfo.clear();
     }
 private:
-    static const int READBUFSIZE=8192;
+    static const int READBUFSIZE=65536;
     sockaddr_in clientAddr;
     size_t readedIdx;//读缓冲区中已经读入的字符个数，也就是读取字符的下一个位置
     size_t checkedIdx;//指向已经解析字符的下一个位置

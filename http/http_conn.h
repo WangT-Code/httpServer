@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-05-08 17:35:02
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-06-03 20:50:22
+ * @LastEditTime: 2024-08-14 09:53:20
  * @FilePath: /Project/my_Server/http/http_conn.h
  * @Description: 
  * 
@@ -87,7 +87,9 @@ public:
     int getPort(){
         return ntohs(client.sin_port);
     }
-
+    int getFd(){
+        return connectFd;
+    }
 private:
     // 获取dir目录下的所有文件名字
     vector<string> getFiles(string dir);

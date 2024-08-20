@@ -2,7 +2,7 @@
  * @Author: wt wangtuam@163.com
  * @Date: 2024-06-02 15:46:28
  * @LastEditors: wt wangtuam@163.com
- * @LastEditTime: 2024-06-03 20:36:56
+ * @LastEditTime: 2024-08-14 10:01:04
  * @FilePath: /Project/my_Server/webserver/webserver.h
  * @Description: 
  * 
@@ -24,8 +24,11 @@ public:
 private:
     void initSocket();//创建监听套接字，并向epoll注册事件
     void dealListen();
-    void dealRead(int fd);
-    void dealWrite(int fd);
+    void onRead(http_conn* client);
+    void onWrite(http_conn* client);
+    void onProcess(http_conn* client);
+    void dealRead(http_conn* client);
+    void dealWrite(http_conn* client);
     void closeConn(int fd);
     void addClient(int fd,sockaddr_in addr);
 private:
