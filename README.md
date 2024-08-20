@@ -17,4 +17,6 @@ make
 
 ## 效果展示
 
-
+![image](https://github.com/WangT-Code/httpServer/blob/master/1.gif)
+![image](https://github.com/WangT-Code/httpServer/blob/master/2.gif)
+![image](https://github.com/WangT-Code/httpServer/blob/master/3.gif)
